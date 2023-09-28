@@ -19,7 +19,7 @@ project only. No any back-end API is called.
 ## Access link
 The official website of Console Art Cybernetic
 can be accessible via the link below:<br/>
-- https://cacybernetic.github.io/
+- https://cacybernetic.github.io
 
 ## Final result
 This is the final result of the project:<br/><br/>
