@@ -1,0 +1,123 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic banner placeholders stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @file: placeholders.scss
+* @created: 2023-06-18
+* @updated: 2023-09-27
+* @version: 0.0.4
+*/
+
+// Custom dependencies.
+@import "./_variables.scss";
+
+// Inline center flexbox.
+%banner-inline-center-flexbox {
+	justify-content: center;
+  display: inline-flex;
+}
+
+// Column flexbox.
+%banner-column-flexbox {
+	flex-direction: column;
+	display: flex;
+}
+
+// Free trial button.
+%banner-free-trial-button {
+	border: 1px solid $banner-primary-color;
+	display: inline-block;
+	margin-bottom: 15px;
+	border-radius: 4px;
+	margin-right: 13px;
+	// Hover effect.
+	&:hover {
+		background-color: $banner-btn-bg-color;
+	}
+	// From 1080 to 770.
+	@media #{$banner-1080} {
+		font-size: 16px;
+	}
+	// From 770 to 0.
+	@media #{$banner-770} {
+		width: 100%;
+	}
+}
+
+// First label.
+%banner-first-label {
+	color: $banner-primary-color;
+	margin-top: 78px;
+	// From 1080 to 770.
+	@media #{$banner-1080} {
+		font-size: 13px;
+		margin-top: 0;
+	}
+	// From 770 to 0.
+	@media #{$banner-770} {
+		text-align: center;
+		font-size: 15px;
+		margin-top: 0;
+	}
+	// Label.
+	label {
+		display: inline-block;
+		border-radius: 20px;
+		padding: 4px 16px;
+		cursor: pointer;
+		background-image: linear-gradient(
+			-90deg,
+			$banner-label-bg-start-color,
+			$banner-label-bg-end-color
+		);
+		// Hover effect.
+		&:hover {
+			background-image: linear-gradient(
+				-90deg,
+				lighten($banner-label-bg-start-color, 1.5%),
+				lighten($banner-label-bg-end-color, 1.5%)
+			);
+		}
+	}
+}
+
+// Carousel.
+%banner-caroussel {
+	@extend %banner-inline-center-flexbox;
+	column-gap: 28px;
+	margin-top: 35%;
+	width: 82%;
+	// From 1080 to 770.
+	@media #{$banner-1080} {
+		margin-top: 8%;
+		width: 100%;
+	}
+	// From 770 to 0.
+	@media #{$banner-770} {
+		display: none;
+	}
+	// Progress container.
+	& > span {
+		border-radius: 10px;
+		width: 33.33%;
+		height: 2px;
+		background-color: darken(
+			$color: $banner-label-bg-start-color,
+			$amount: 5%
+		);
+		// Progress bar thumb animation.
+		div.banner-progress-thumb {
+			animation: (
+				bannerProgressBar 4s linear 0s 1 normal backwards
+			);
+		}
+	}
+	// Progress.
+	& > span > div {
+		background-color: $banner-primary-color;
+		border-radius: 10px;
+		height: 2px;
+		width: 0;
+	}
+}

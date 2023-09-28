@@ -1,0 +1,93 @@
+<!--
+	@project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+	@author: Obrymec - obrymecsprinces@gmail.com
+	@fileoverview: The main html structure.
+	@supported: DESKTOP, MOBILE
+	@created: 2023-06-16
+	@updated: 2023-09-28
+	@file: index.html
+	@version: 0.0.3
+-->
+
+<!--General structure-->
+<!DOCTYPE html>
+	<!--Global structure-->
+	<html lang = "en">
+		<!--Head-->
+		<head>
+			<!--Meta configurations-->
+			<meta
+				content = "width=device-width, initial-scale=1"
+				charset = "utf-8"
+				name = "viewport"
+			/>
+			<!--Loads stylesheet-->
+			<link
+				href = "./style.css"
+				rel = "stylesheet"
+			/>
+			<!--Global title-->
+			<title>Console Art Cybernetic</title>
+			<!--App favicon-->
+			<link
+				ref = "./favicon.ico"
+				rel = "shortcut icon"
+				type = "image/ico"
+			/>
+			<link
+				href = "./favicon.ico"
+				type = "image/ico"
+				rel = "icon"
+			/>
+			<!--PWA-->
+			<meta
+				name = "apple-mobile-web-status-bar"
+				content = "black"
+			/>
+			<link
+				href = "./assets/logos/icon-96.png"
+				rel = "apple-touch-icon"
+			/>
+			<meta
+				http-equiv = "X-UA-Compatible"
+				content = "id=edge"
+			/>
+			<meta
+				name = "theme-color"
+				content = "black"
+			/>
+		</head>
+		<!--Global root-->
+		<body>
+			<!--Header-->
+			<header></header>
+			<!--Main-->
+			<main></main>
+			<!--Footer-->
+			<footer></footer>
+			<!--Aside-->
+			<aside></aside>
+			<!--External libraries-->
+			<script
+				src = "./vendors/typewriter/typewriter.min.js"
+				type = "text/javascript"
+			></script>
+			<script
+				src = "./vendors/toastify/toastify.min.js"
+				type = "text/javascript"
+			></script>
+			<script
+				src = "./vendors/animator/anime.min.js"
+				type = "text/javascript"
+			></script>
+			<script
+				src = "./vendors/redux/redux.min.js"
+				type = "text/javascript"
+			></script>
+			<!--Controller-->
+			<script
+				src = "./src/home_page/main.js"
+				type = "module"
+			></script>
+		</body>
+	</html>

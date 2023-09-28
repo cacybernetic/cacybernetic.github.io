@@ -1,0 +1,57 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic resources placeholders stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @file: placeholders.scss
+* @created: 2023-07-14
+* @updated: 2023-09-27
+* @version: 0.0.2
+*/
+
+// Custom dependencies.
+@import "./_variables.scss";
+
+// View all and read more buttons.
+%view-or-read {
+  // Hover effect.
+  &:hover > img {
+    transform: translate(8px, 0.5px);
+  }
+  // Right arrow.
+  img {
+    transform: translate(0, 0.5px);
+    filter: brightness(25%);
+  }
+}
+
+// Left and right arrows.
+%res-arrows {
+  border: 1px ridge $mhds-scoll-thumb-bg-color;
+  background-color: $mhds-arrows-bg-color;
+  transform: translateY(-50%);
+  backdrop-filter: blur(10px);
+  transition-duration: 150ms;
+  border-radius: 50px;
+  position: fixed;
+  display: none;
+  padding: 8px;
+  opacity: 0;
+  z-index: 1;
+  top: 50%;
+  // Hover effect.
+  &:hover {
+    filter: contrast(1.6);
+  }
+  // From 760 to 0.
+  @media #{$mhds-760} {
+    display: block;
+  }
+  // Icon.
+  img {
+    filter: brightness(50%);
+    display: block;
+    height: 30px;
+    width: 30px;
+  }
+}

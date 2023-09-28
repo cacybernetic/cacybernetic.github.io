@@ -1,0 +1,22 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic collaborators placeholders stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @file: placeholders.scss
+* @created: 2023-06-24
+* @updated: 2023-09-27
+* @version: 0.0.1
+*/
+
+// Column flexbox.
+%collaborators-column-flexbox {
+	flex-direction: column;
+  display: flex;
+}
+
+// Inline flexbox.
+%collaborators-row-flexbox {
+	flex-direction: row;
+	display: flex;
+}

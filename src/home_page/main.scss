@@ -1,0 +1,85 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic global stylesheets.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @created: 2023-06-16
+* @updated: 2023-09-28
+* @file: main.scss
+* @version: 0.0.6
+*/
+
+// Custom dependencies.
+@import "../common/utilities/reset/_reset.scss";
+@import "../common/themes/_light.scss";
+@import "./components/collaborators/stylesheets/_collaborators.scss";
+@import "./components/methodologies/stylesheets/_methodologies.scss";
+@import "../common/components/button/stylesheets/_button.scss";
+@import "./components/customers/stylesheets/_customers.scss";
+@import "./components/resources/stylesheets/_resources.scss";
+@import "./components/services/stylesheets/_services.scss";
+@import "./components/pricing/stylesheets/_pricing.scss";
+@import "./components/navbar/stylesheets/_navbar.scss";
+@import "./components/banner/stylesheets/_banner.scss";
+@import "./components/badges/stylesheets/_badges.scss";
+@import "./components/footer/stylesheets/_footer.scss";
+@import "./components/arrows/stylesheets/_arrows.scss";
+@import "../../public/vendors/toastify/_toastify.scss";
+@import "./components/faq/stylesheets/_faq.scss";
+
+// Inter regular font definition.
+@font-face {
+	font-family: $inter-regular-font;
+	src: url($inter-regular);
+}
+
+// Shine animation for skeleton
+// loading process.
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+// All tags.
+* {
+	transition: all .2s ease-in-out;
+}
+
+// Hide skeleton loader.
+div.hide-skeleton {
+	opacity: 0;
+}
+
+// Root.
+body {
+	font-family: $inter-regular-sans-serif;
+	color: $primary-color;
+	line-height: 24px;
+	user-select: none;
+	font-weight: 400;
+	font-size: 16px;
+	// Shows menu popup.
+	aside > menu.display-popup-menu {
+		transform: translateX(0);
+	}
+}
+
+// Any template will be affected
+// by the skeleton loading effect.
+div.skeleton-loading {
+  box-shadow: 0 0 10px $skeleton-shadow-color;
+  animation: 1.5s shine linear infinite;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+  background: linear-gradient(
+    110deg,
+    $skeleton-line-color-1 8%,
+    $skeleton-line-color-2 18%,
+    $skeleton-line-color-3 33%
+  );
+  background-size: 200% 100%;
+}

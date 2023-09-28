@@ -1,0 +1,72 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic customers stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @file: customers.scss
+* @created: 2023-06-21
+* @updated: 2023-09-27
+* @version: 0.0.1
+*/
+
+// Custom dependencies.
+@import "./_placeholders.scss";
+@import "./_animations.scss";
+@import "./_variables.scss";
+
+// Right customers.
+div.right-customers {
+	@extend %customers-inline-flexbox;
+	align-items: center;
+	column-gap: 5%;
+}
+
+// Left customers.
+div.left-customers {
+	@extend %customers-inline-flexbox;
+	align-items: center;
+	column-gap: 5%;
+}
+
+// Customers logos.
+section.customers {
+	@extend %customers-inline-flexbox;
+	transform: translate3d(0, 0, 0);
+	justify-content: center;
+	padding: 5% 6% 4% 5%;
+	align-items: center;
+	column-gap: 2.5%;
+	width: 100%;
+	// From 766 to 500.
+	@media #{$customers-766} {
+		flex-direction: column;
+	}
+	// From 500 to 0.
+	@media #{$customers-500} {
+		padding: 10% 16px 12% 16px;
+	}
+	// Trusted text.
+	& > span {
+		color: $customers-text-color;
+		display: inline-block;
+		white-space: nowrap;
+		font-size: 20px;
+	}
+	// For all logos.
+	img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+	// Customers container.
+	& > div {
+		@extend %customers-inline-flexbox;
+		gap: 3%;
+		// From 766 to 0.
+		@media #{$customers-766} {
+			flex-direction: column;
+			margin-top: 34px;
+			gap: 10px;
+		}
+	}
+}

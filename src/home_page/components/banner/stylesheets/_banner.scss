@@ -1,0 +1,168 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic banner stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @created: 2023-06-17
+* @updated: 2023-09-27
+* @file: banner.scss
+* @version: 0.0.2
+*/
+
+// Custom dependencies.
+@import "./_placeholders.scss";
+@import "./_animations.scss";
+@import "./_variables.scss";
+
+// Banner section.
+section.banner {
+  background-image: url($banner-bg-image-path);
+	@extend %banner-inline-center-flexbox;
+	background-repeat: no-repeat;
+	background-position: 80%;
+	background-size: cover;
+	width: 100%;
+}
+
+// Banner template section.
+section.banner-template {
+	transform: translate3d(0, 0, 0);
+	overflow-x: hidden;
+	margin-top: 78px;
+	width: 100%;
+}
+
+// Right banner part.
+div.banner-right {
+	transform: translate3d(0, 0, 0);
+	@extend %banner-column-flexbox;
+	align-items: center;
+	height: 100%;
+	width: 75%;
+	// From 770 to 0.
+	@media #{$banner-770} {
+		display: none;
+	}
+	// Any screenshot.
+	img {
+		transition: opacity .6s linear;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+	// First screenshot.
+	& > img:first-child {
+		opacity: 0;
+	}
+	// Second screenshot.
+	& > img:nth-child(2) {
+		position: fixed;
+		opacity: 0;
+		top: 0;
+	}
+	// Third screenshot.
+	& > img:last-child {
+		position: fixed;
+		opacity: 0;
+		top: 0;
+	}
+	// Fade in transition.
+	img.banner-fade-in {
+		opacity: 1;
+	}
+}
+
+// Left banner part.
+div.banner-left {
+	@extend %banner-column-flexbox;
+	padding-right: 2vw;
+	row-gap: 18px;
+	width: 50%;
+	// From 770 to 0.
+	@media #{$banner-770} {
+		justify-content: center;
+		align-items: center;
+		padding-right: 0;
+		width: 100%;
+	}
+	// First label.
+	& > span:first-child {
+		@extend %banner-first-label;
+	}
+	// Big title.
+	h1:nth-child(2) {
+		color: $banner-primary-color;
+    letter-spacing: -1.4px;
+    line-height: 60px;
+    font-weight: 600;
+		font-size: 50px;
+		// From 1080 to 770.
+		@media #{$banner-1080} {
+			line-height: 44px;
+			font-size: 35px;
+		}
+		// From 770 to 0.
+		@media #{$banner-770} {
+			text-align: center;
+		}
+	}
+	// Little description.
+	& > span:nth-child(3) {	
+		color: $banner-primary-color;
+		font-size: 20px;
+		// From 1080 to 770.
+		@media #{$banner-1080} {
+			font-size: 15px;
+		}
+		// From 770 to 0.
+		@media #{$banner-770} {
+			text-align: center;
+		}
+	}
+	// Free trial and about container.
+	div:nth-child(4) {
+		// From 770 to 420.
+		@media #{$banner-770} {
+			padding-bottom: 65px;
+		}
+		// From 420 to 0.	
+		@media #{$banner-420} {
+			flex-direction: column;
+			display: flex;
+			width: 100%;
+		}
+	}
+	// Free trial button.
+	div:nth-child(4) > button:first-child {
+		@extend %banner-free-trial-button;
+	}
+	// About gitlab.
+	div:nth-child(4) > button:last-child {
+    color: $banner-primary-color;
+    text-underline-offset: 2px;
+		font-weight: 600;
+		font-size: 18px;
+		// Hover effect.
+		&:hover {
+			text-decoration: underline;
+		}
+		// Rounded play img.
+		img {
+			transform: translate(0, -1.5px);
+			display: inline-block;
+			margin-left: 5px;
+		}
+		// Move img hover.
+		&:hover > img {
+			transform: translate(6px, -1.5px);
+		}
+		// From 1080 to 0.
+		@media #{$banner-1080} {
+			font-size: 15px;
+		}
+	}
+	// Caroussel container.
+	div:nth-child(5) {
+		@extend %banner-caroussel;
+	}
+}

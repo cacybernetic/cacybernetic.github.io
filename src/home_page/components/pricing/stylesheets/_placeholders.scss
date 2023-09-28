@@ -1,0 +1,31 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic pricing placeholders stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @file: placeholders.scss
+* @created: 2023-07-27
+* @updated: 2023-09-27
+* @version: 0.0.2
+*/
+
+// Custom dependencies.
+@import "./_variables.scss";
+
+// Subscription button.
+%pricing-sub-btn {
+  border: 1px solid $pricing-btn-bg-color;
+  border-radius: 4px;
+	// Hover effect.
+	&:hover {
+		background-color: $pricing-sub-btn-txt-color;
+	}
+  // Text.
+  span {
+    transition: font-size 0.2s linear;
+    // From 900 to 0.
+    @media #{$pricing-900} {
+      font-size: 14px;
+    }
+  }
+}

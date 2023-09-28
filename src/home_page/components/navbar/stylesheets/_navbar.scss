@@ -1,0 +1,253 @@
+/**
+* @project: Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @fileoverview: Console Art Cybernetic navbar stylesheet.
+* @author: Obrymec - obrymecsprinces@gmail.com
+* @supported: DESKTOP, MOBILE
+* @created: 2023-06-16
+* @updated: 2023-09-27
+* @file: navbar.scss
+* @version: 0.0.8
+*/
+
+// Custom dependencies.
+@import "./_placeholders.scss";
+@import "./_animations.scss";
+@import "./_variables.scss";
+
+// General header.
+header {
+	background-color: $navbar-bg-color;
+	@extend %navbar-top-fixed;
+	z-index: 4;
+}
+
+// NavBar data section container.
+section.nav-data {
+	justify-content: space-between;
+	@extend %navbar-inline-flexbox;
+	padding: 20px 32px 20px 32px;
+	// From 1050 to 0.
+	@media #{$navbar-1050} {
+		padding: 16px;
+	}
+}
+
+// NavBar global container.
+nav.navbar {
+	@extend %navbar-column-flexbox;
+	// Free trial button with no radius.
+	& > button:first-child {
+		@extend %navbar-free-trial-no-radius;
+	}
+}
+
+// Menu popup.
+menu.nav-menu-popup {
+	background-color: $navbar-bg-color;
+	@extend %navbar-column-flexbox;
+	transform: translateX(100%);
+	@extend %navbar-top-fixed;
+	padding: 8px 16px 0 16px;
+	row-gap: 8px;
+	z-index: 5;
+	bottom: 0;
+	// Header.
+	section:first-child {
+		justify-content: space-between;
+		@extend %navbar-inline-flexbox;
+		// GitLab and close icons.
+		img:first-child,
+		img:last-child {
+			cursor: pointer;
+		}
+	}
+	// Animate option selection.
+	div.nav-menu-selection {
+		animation: navOptionBlink 100ms linear 0ms 3 normal backwards;
+	}
+	// Options.
+	section:nth-child(2) > div {
+		border-bottom: 1px solid $navbar-menu-items-border-color;
+		justify-content: space-between;
+		@extend %navbar-inline-flexbox;
+		color: $navbar-btn-bg-color;
+		padding: 12px 0 12px 0;
+		align-items: center;
+		font-size: 19px;
+		cursor: pointer;
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			font-size: 16px;
+		}
+		// Right arrow.
+		img {
+			filter: brightness(1%);
+		}
+	}
+	// Last option.
+	section:nth-child(2) div:last-child {
+		justify-content: flex-start;
+		margin-top: 15px;
+		column-gap: 8px;
+	}
+	// Free trial button.
+	button:last-child {
+		@extend %navbar-free-trial-radius;
+		margin-top: 23px;
+		width: 100%;
+		// From 1170 to 0.
+		@media #{$navbar-1170} {
+			font-size: 16px;
+		}
+	}
+}
+
+// Left data.
+div.nav-left {
+	@extend %navbar-inline-flexbox;
+	column-gap: 25px;
+	// From 1170 to 575.
+	@media #{$navbar-1170} {
+		column-gap: 15px;
+	}
+	// From 575 to 0.
+	@media #{$navbar-575} {
+		column-gap: 0;
+		width: 100%;
+	}
+	// Third search icon.
+	img:first-child {
+		@extend %navbar-icon-option;
+		display: none;
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			display: inline-block;
+			position: absolute;
+		}
+	}
+	// All icons unless gitlab logo.
+	img:nth-child(2) ~ img {
+		@extend %navbar-icon-option;
+	}
+	// Gitlab icon.
+	img:nth-child(2) {
+		cursor: pointer;
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			margin: auto;
+		}
+	}
+	// Active option.
+	& > span.nav-active-option {
+		color: $navbar-btn-bg-color;
+		pointer-events: none;
+	}
+	// Options.
+	& > span {
+		color: $navbar-option-color;
+		cursor: pointer;
+		// Hover effect.
+		&:hover {
+			color: $navbar-btn-bg-color;
+		}
+		// From 1170 to 1050.
+		@media #{$navbar-1170} {
+			font-size: 15px;
+		}
+		// From 1050 to 0.
+		@media #{$navbar-1050} {
+			display: none;
+		}
+	}
+}
+
+// Right data.
+div.nav-right {
+	@extend %navbar-inline-flexbox;
+	column-gap: 25px;
+	// From 575 to 0.
+	@media #{$navbar-575} {
+		position: absolute;
+		column-gap: 0;
+	}
+	// First search icon.
+	img:first-child {
+		// From 1050 to 0.
+		@media #{$navbar-1050} {
+			display: none;
+		}
+	}
+	// Icons option.
+	img {
+		@extend %navbar-icon-option;
+	}
+	// Free trial button.
+	button:nth-child(2) {
+		@extend %navbar-free-trial-radius;
+		// From 1170 to 575.
+		@media #{$navbar-1170} {
+			font-size: 16px;
+		}
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			display: none;
+		}
+	}
+	// Sign in button.
+	button:nth-child(3) {
+		color: $navbar-option-color;
+		font-size: 18px;
+		border: none;
+		padding: 8px;
+		// Hover effect.
+		&:hover {
+			color: $navbar-btn-bg-color;
+		}
+		// From 1170 to 1050.
+		@media #{$navbar-1170} {
+			font-size: 15px;
+		}
+		// From 1050 to 0.
+		@media #{$navbar-1050} {
+			display: none;
+		}
+	}
+	// Sign in icon.
+	img:nth-child(4) {
+		display: none;
+		// From 1050 to 575.
+		@media #{$navbar-1050} {
+			display: inline-block;
+		}
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			display: none;
+		}
+	}
+	// Second search icon.
+	img:nth-child(5) {
+		display: none;
+		// From 1050 to 575.
+		@media #{$navbar-1050} {
+			display: inline-block;
+		}
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			display: none;
+		}
+	}
+	// Emburger menu.
+	img:nth-child(6) {
+		display: none;
+		// From 1050 to 575.
+		@media #{$navbar-1050} {
+			display: inline-block;
+		}
+		// From 575 to 0.
+		@media #{$navbar-575} {
+			transform: translate(-17px, -16px);
+			height: 32px;
+			width: 32px;
+		}
+	}
+}
