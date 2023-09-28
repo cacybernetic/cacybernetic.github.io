@@ -1,6 +1,7 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
-* @fileoverview Imports and manages available components to build home page.
+* @project Console Art Cybernetic - https://cacybernetic.github.io
+* @fileoverview Imports and manages available components to build
+*  home page.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2023-06-16

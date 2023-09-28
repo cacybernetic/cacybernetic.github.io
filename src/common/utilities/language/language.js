@@ -1,11 +1,11 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines a function as class to
 *   manage application global languages.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2021-07-28
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file language.js
 * @type {Language}
 * @version 0.0.2

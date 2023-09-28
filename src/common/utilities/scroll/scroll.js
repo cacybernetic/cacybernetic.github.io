@@ -1,11 +1,11 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines a class to detect scroll.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @type {ScrollManager}
 * @created 2023-08-17
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file scroll.js
 * @version 0.0.4
 */

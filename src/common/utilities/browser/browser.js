@@ -1,11 +1,11 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines a multitude of methods
 *   to manage common navigator treatments.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2023-07-28
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file browser.js
 * @type {Browser}
 * @version 0.0.4

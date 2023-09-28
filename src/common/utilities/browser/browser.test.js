@@ -1,11 +1,11 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines tests process for browser module.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @file browser.test.js
 * @created 2023-09-21
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @type {Browser}
 * @version 0.0.1
 */

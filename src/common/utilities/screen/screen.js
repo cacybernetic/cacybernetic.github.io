@@ -1,12 +1,12 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines a class to detect screen
 *  formats: Large, Medium and Small.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @type {ScreenManager}
 * @created 2023-08-17
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file screen.js
 * @version 0.0.1
 */

@@ -51,7 +51,7 @@ yarn --version
 
 ### <u>Sources code cloning</u>:
 ```sh
-git clone git@github.com:cacybernetic/cacybernetic.git ca_cybernetic/
+git clone git@github.com:cacybernetic/cacybernetic.github.io.git ca_cybernetic/
 ```
 
 ### <u>Install dependencies</u>:

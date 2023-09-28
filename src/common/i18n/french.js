@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines language textuals data.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2023-08-26
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file french.js
 * @version 0.0.2
 * @type {French}

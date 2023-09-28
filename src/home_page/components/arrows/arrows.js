@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview Arrows UI component.
 * @supported DESKTOP, MOBILE
 * @created 2023-09-12
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file arrows.js
 * @type {Arrows}
 * @version 0.0.1

@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines common methods for string treatment.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2021-07-28
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file string.js
 * @type {String}
 * @version 0.0.4

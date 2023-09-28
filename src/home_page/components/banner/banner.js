@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview Banner UI component.
 * @supported DESKTOP, MOBILE
 * @created 2023-06-17
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file banner.js
 * @type {Banner}
 * @version 0.0.2

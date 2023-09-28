@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview Badges UI component.
 * @supported DESKTOP, MOBILE
 * @created 2023-07-13
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file badges.js
 * @type {Badges}
 * @version 0.0.2

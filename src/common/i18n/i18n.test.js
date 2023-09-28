@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines tests process for i18n module.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2023-09-21
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file i18n.test.js
 * @version 0.0.1
 * @type {I18n}

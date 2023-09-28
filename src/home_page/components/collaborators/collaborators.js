@@ -1,12 +1,12 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview Collaborators UI component.
 * @supported DESKTOP, MOBILE
 * @file collaborators.js
 * @type {Collaborators}
 * @created 2023-06-24
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @version 0.0.2
 */
 

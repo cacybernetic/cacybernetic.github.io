@@ -1,12 +1,12 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview Methodologies UI component.
 * @supported DESKTOP, MOBILE
 * @file methodologies.js
 * @type {Methodologies}
 * @created 2023-07-06
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @version 0.0.2
 */
 

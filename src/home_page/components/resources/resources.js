@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview Resources UI component.
 * @supported DESKTOP, MOBILE
 * @created 2023-07-14
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file resources.js
 * @type {Resources}
 * @version 0.0.2

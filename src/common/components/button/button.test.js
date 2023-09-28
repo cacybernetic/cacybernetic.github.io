@@ -1,11 +1,11 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines tests process for button.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @file button.test.js
 * @created 2023-09-21
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @version 0.0.1
 * @type {Button}
 */

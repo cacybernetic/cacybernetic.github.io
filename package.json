@@ -1,6 +1,6 @@
 {
+  "repository": "git@github.com:cacybernetic/cacybernetic.github.io.git",
   "description": "The official website of Console Art Cybernetic.",
-  "repository": "git@github.com:cacybernetic/cacybernetic.git",
   "author": "Obrymec - obrymecsprinces@gmail.com",
   "name": "console-art-cybernetic",
   "version": "0.0.1",
@@ -17,10 +17,10 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "expect.js": "^0.3.1",
-    "mocha": "^10.2.0",
-    "mock-browser": "^0.92.14",
     "vite-plugin-minify": "^1.5.2",
-    "vite-plugin-pwa": "^0.16.5"
+    "vite-plugin-pwa": "^0.16.5",
+    "mock-browser": "^0.92.14",
+    "expect.js": "^0.3.1",
+    "mocha": "^10.2.0"
   }
 }

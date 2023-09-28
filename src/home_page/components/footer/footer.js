@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @author Obrymec - obrymecsprinces@gmail.com
 * @fileoverview GitLab footer section.
 * @supported DESKTOP, MOBILE
 * @created 2023-07-21
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file footer.js
 * @version 0.0.3
 * @type {Footer}

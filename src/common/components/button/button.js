@@ -1,10 +1,10 @@
 /**
-* @project Console Art Cybernetic - https://cacybernetic.github.io/cacybernetic/
+* @project Console Art Cybernetic - https://cacybernetic.github.io
 * @fileoverview Defines a common button for focus.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @supported DESKTOP, MOBILE
 * @created 2023-08-03
-* @updated 2023-09-27
+* @updated 2023-09-28
 * @file button.js
 * @version 0.0.2
 * @type {Button}
