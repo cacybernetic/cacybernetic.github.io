@@ -12,9 +12,8 @@ project only. No any back-end API is called.
 
 ## Table of contents
 1. [Access links](#links)
-2. [Reference](#ref)
-3. [Final result](#result)
-5. [Project installation](#install)
+2. [Final result](#result)
+3. [Project installation](#install)
     1. [Nodejs installation](#node-install)
     2. [Sources code cloning](#cloning)
     3. [Dependencies installation](#dev-install)
