@@ -1,0 +1,21 @@
+{
+	"include": ["src"],
+  "compilerOptions": {
+		"lib": ["DOM.Iterable", "ES2020", "ESNext", "DOM"],
+    "allowImportingTsExtensions": true,
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": true,
+    "moduleResolution": "bundler",
+    "paths": {"@/*": ["./src/*"]},
+    "noUnusedParameters": true,
+    "moduleDetection": "force",
+    "isolatedModules": false,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "strict": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+	"networkOff": "It appears that your browser has just been set off the internet. Check your network accessories (WiFi, router, etc...) and make sure you are correctly connected to the internet.",
+	"requestLaunchError": "An error occurred while trying to contact the remote server. Check your internet connection and try again.",
+	"requestTimeoutDesc": "Unable to contact the remote server. Check your internet network then try again.",
+	"requestErrorDesc": "An error occurred during the procedure. Please try again.",
+	"successFulCopyToClipboard": "The content has been copy to clipboard.",
+	"browserNotOnline": "Your browser is not connected to the Internet🙁.",
+	"copyToClipboardFailed": "Failed to copy content to the clipboard.",
+	"networkOn": "Your browser has just connected to the internet.",
+	"requestFailedTitle": "Request failed",
+	"networkError": "Network error",
+	"moreDetails": "More details",
+	"greeting": "Welcome!",
+	"comma": ".",
+	"mib": "MB",
+	"kib": "KB",
+	"ok": "OK",
+	"bi": "B"
+}

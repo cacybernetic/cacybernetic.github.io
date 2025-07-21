@@ -1,15 +1,51 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,yarn,node,sass
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,yarn,node,sass
+# Created by https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode,yarn,nextjs
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,react,visualstudiocode,yarn,nextjs
+
+### NextJS ###
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+logs
+*.log
+
+# local env files
+.env*.local
+*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 ### Node ###
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 lerna-debug.log*
-.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -45,15 +81,12 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-dist
-dist-ssr
-*.local
+dev-dist/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
 # TypeScript cache
-*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -97,6 +130,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-ssr
 
 # Gatsby files
 .cache/
@@ -144,11 +178,18 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-### Sass ###
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+### react ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
 
 ### VisualStudioCode ###
 .vscode/*
@@ -158,7 +199,6 @@ dist
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
@@ -193,4 +233,4 @@ dist
 # and uncomment the following lines
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,yarn,node,sass
+# End of https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode,yarn,nextjs

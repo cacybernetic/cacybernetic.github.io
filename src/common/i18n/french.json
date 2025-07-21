@@ -1,0 +1,19 @@
+{
+	"networkOff": "Il semble que votre navigateur vient d'être mis hors internet. Vérifiez vos accessoires réseau (Wifi, router, etc...) et assurez-vous d'être correctement connecté à internet.",
+	"requestLaunchError": "Une erreur s'est produite lorsqu'on tante de contacter le serveur distance. Vérifiez votre connexion Internet puis reéssayer à nouveau.",
+	"requestTimeoutDesc": "Impossible de contacter le serveur distant. Vérifiez votre réseau internet puis réessayez.",
+	"requestErrorDesc": "Une erreur s'est produite au cours de la procédure. Veuillez réessayer à nouveau.",
+	"copyToClipboardFailed": "Échec de la copie du contenu dans le presse-papier.",
+	"successFulCopyToClipboard": "Le contenu a été copié dans le presse-papier.",
+	"browserNotOnline": "Votre navigateur n'est pas connecté à Internet🙁.",
+	"networkOn": "Votre navigateur vient de se connecter à internet.",
+	"requestFailedTitle": "Requête échouée",
+	"networkError": "Erreur de connexion",
+	"moreDetails": "Plus de détails",
+	"greeting": "Bonjour!",
+	"comma": ",",
+	"mib": "MO",
+	"kib": "KO",
+	"ok": "OK",
+	"bi": "O"
+}

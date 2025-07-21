@@ -1,26 +1,64 @@
 {
-  "repository": "git@github.com:cacybernetic/cacybernetic.github.io.git",
-  "description": "The official website of Console Art Cybernetic.",
-  "author": "Obrymec - obrymecsprinces@gmail.com",
-  "name": "console-art-cybernetic",
-  "version": "0.0.1",
+  "description": "The official website of Console Art Cybernetic organization.",
+  "homepage": "https://github.com/cacybernetic/cacybernetic.github.io",
+  "author": "Obrymec - https://obrymec.vercel.app",
+  "name": "@cacybernetic/landing-page",
+  "license": "CC0-1.0",
+  "version": "1.0.0",
   "type": "module",
-  "license": "MIT",
   "private": true,
+  "bugs": {
+    "url": "https://github.com/cacybernetic/cacybernetic.github.io/-/boards"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "repository": {
+    "url": "https://github.com/cacybernetic/cacybernetic.github.io.git",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react": "^17.0.0 || ^18.0.0"
+  },
   "scripts": {
-    "test": "mocha ./**/*.test.js --recursive",
+    "build": "tsc -b && vite build",
+    "debug": "DEBUG=vite:* vite",
     "preview": "vite preview",
-    "build": "vite build",
+    "lint": "eslint .",
     "dev": "vite"
   },
   "devDependencies": {
-    "vite": "^4.4.5"
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite-plugin-minify": "^2.0.0",
+    "typescript-eslint": "^8.0.1",
+    "@types/react-dom": "^18.3.0",
+    "@types/react": "^18.3.3",
+    "@eslint/js": "^9.9.0",
+    "typescript": "^5.5.3",
+    "globals": "^15.9.0",
+    "eslint": "^9.9.0",
+    "vite": "^5.4.1"
   },
   "dependencies": {
-    "vite-plugin-minify": "^1.5.2",
-    "vite-plugin-pwa": "^0.16.5",
-    "mock-browser": "^0.92.14",
-    "expect.js": "^0.3.1",
-    "mocha": "^10.2.0"
+    "vite-tsconfig-paths": "^5.1.4",
+    "html-react-parser": "^5.1.18",
+    "@chakra-ui/react": "^3.21.0",
+    "react-router-dom": "^6.26.2",
+    "@emotion/styled": "^11.13.0",
+    "@chakra-ui/icons": "^2.2.4",
+    "@reduxjs/toolkit": "^2.2.7",
+    "vite-plugin-pwa": "^0.20.5",
+    "@emotion/react": "^11.14.0",
+    "framer-motion": "^11.9.0",
+    "react-i18next": "^15.0.2",
+    "next-themes": "^0.4.6",
+    "react-icons": "^5.5.0",
+    "react-redux": "^9.1.2",
+    "react-dom": "^18.3.1",
+    "i18next": "^23.15.1",
+    "react": "^18.3.1"
   }
 }
