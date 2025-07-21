@@ -3,7 +3,7 @@
  * @fileoverview Provides an API to call and fetch a remote server.
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
- * @created 2024-07-21
+ * @created 2025-07-21
  * @updated 2025-07-21
  * @version 0.0.1
  * @file fetch.ts
