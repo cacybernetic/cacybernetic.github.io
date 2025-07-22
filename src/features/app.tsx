@@ -4,7 +4,7 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
+ * @updated 2025-07-22
  * @version 0.0.1
  * @file app.tsx
  */
@@ -16,15 +16,14 @@ import {RefObject, useEffect, useRef} from "react";
 import {Flex} from "@chakra-ui/react";
 
 // Plugin dependencies.
-import {useTranslation} from "react-i18next";
 import {useSelector} from "react-redux";
 
 // Custom dependencies.
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
-import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import Toaster from "@/common/components/toaster.tsx";
 import {MessageType} from "@/common/states/alert.ts";
+import Header from "@/common/components/header.tsx";
 import {RootState} from "@/common/states/store.ts";
 import {
 	listenWindowResizeToExtractHisSize
@@ -37,7 +36,6 @@ import MessageBox, {
 // The entry point of application.
 export default function App () {
 	// Attributes.
-	const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
 	const onDialogClosed: (() => void) = useSelector(
 		(state: RootState): (() => void) => state.alert.onDialogClosed
 	);
@@ -89,14 +87,10 @@ export default function App () {
 		userSelect = "none"
 		color = "neutral.9"
 		overflowY = "auto"
-		position = "fixed"
 		as = "section"
-		bottom = {0}
-		right = {0}
-		left = {0}
-		top = {0}
 	>
-		<>{t("greeting")}</>
+		{/** Header */}
+		<Header/>
 		{/** Global toaster */}
 		<Toaster/>
 		{/** Global message box */}

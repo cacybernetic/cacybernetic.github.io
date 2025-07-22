@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "vite-tsconfig-paths": "^5.1.4",
+    "@szhsin/react-menu": "^4.4.1",
+    "react-flags-select": "^2.5.0",
     "html-react-parser": "^5.1.18",
     "@chakra-ui/react": "^3.21.0",
     "react-router-dom": "^6.26.2",

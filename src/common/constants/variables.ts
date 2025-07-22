@@ -4,10 +4,13 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
+ * @updated 2025-07-22
  * @file variables.ts
- * @version 0.0.1
+ * @version 0.0.2
  */
+
+// Responsive breakpoints.
+const BREAKPOINT_316: number = 316;
 
 // Font families.
 const POPPINS_SEMI_BOLD: string = "PoppinsSemiBold";
@@ -26,6 +29,9 @@ const SF_BOLD: string = "SFBold";
  * @exports *
  */
 export {
+  // Responsive breakpoints.
+  BREAKPOINT_316,
+
   // Font families.
   POPPINS_SEMI_BOLD,
   POPPINS_REGULAR,
