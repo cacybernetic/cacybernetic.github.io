@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-07-23
+ * @version 0.0.12
  * @file theme.ts
  */
 
@@ -36,18 +36,6 @@ export default createSystem(defaultConfig, {
 				}
 			},
       colors: {
-        primary: {
-					50: {value: "#E6F2F6"},
-					100: {value: "#B2D7E3"},
-					200: {value: "#8DC4D6"},
-					300: {value: "#59A9C3"},
-					400: {value: "#3999B8"},
-					500: {value: "#077FA6"},
-					600: {value: "#067497"},
-					700: {value: "#055A76"},
-					800: {value: "#04465B"},
-					900: {value: "#033546"}
-				},
 				error: {
 					50: {value: "#FFF1F2"},
 					100: {value: "#FFE4E6"},
@@ -99,6 +87,22 @@ export default createSystem(defaultConfig, {
 					11: {value: "#1F1F1F"},
 					12: {value: "#141414"},
 					13: {value: "#000000"}
+				},
+				primary: {
+					50: {value: "#EBEBFE"},
+					100: {value: "#BFC1FB"},
+					200: {value: "#A1A3F9"},
+					300: {value: "#767AF6"},
+					400: {value: "#5B60F5"},
+					500: {value: "#3238F2"},
+					600: {value: "#2E33DC"},
+					700: {value: "#2428AC"},
+					800: {value: "#1C1F85"},
+					900: {value: "#151866"},
+					"A100": {value: "#82B1FF"},
+					"A200": {value: "#448AFF"},
+					"A400": {value: "#2979FF"},
+					"A700": {value: "#2962FF"}
 				}
       }
     }

@@ -4,7 +4,7 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-07-22
+ * @updated 2025-07-23
  * @file header.tsx
  * @version 0.0.1
  */
@@ -31,8 +31,8 @@ import {useSelector} from "react-redux";
 
 // Custom dependencies.
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
+import {RootState} from "@/common/states/store.ts";
 import ImageRenderer from "./image_renderer.tsx";
-import {RootState} from "../states/store.ts";
 import appLogo from "/assets/logos/app.webp";
 import {
   ACTIVE_LANGUAGE_SAVE_KEY
@@ -191,6 +191,7 @@ export default function Header () {
   // Builds tsx code.
   return <Flex
     boxShadow = "0 4px 6px var(--chakra-colors-neutral-5)"
+    backgroundColor = "neutral.1"
     fontFamily = {SF_SEMI_BOLD}
     direction = "column"
     color = "neutral.10"

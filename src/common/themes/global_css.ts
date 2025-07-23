@@ -4,13 +4,19 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-22
+ * @updated 2025-07-23
  * @file global_css.ts
  * @version 0.0.2
  */
 
 // Exports the general css.
 export default `
+  /** Custom css root variables */
+  :root {
+    --banner-background-color: linear-gradient(
+      to bottom, #FAF5FF, #FFF7ED, rgb(255 247 237 / 0)
+    );
+  }
   /** Change flag dropdown icon container style */
   button.ReactFlagsSelect-module_selectBtn__19wW7 > span {
     padding: 0;

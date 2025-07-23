@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-22
- * @version 0.0.1
+ * @updated 2025-07-23
+ * @version 0.0.2
  * @file app.tsx
  */
 
@@ -25,6 +25,7 @@ import Toaster from "@/common/components/toaster.tsx";
 import {MessageType} from "@/common/states/alert.ts";
 import Header from "@/common/components/header.tsx";
 import {RootState} from "@/common/states/store.ts";
+import Home from "./home.tsx";
 import {
 	listenWindowResizeToExtractHisSize
 } from "@/common/libraries/browser.ts";
@@ -80,17 +81,19 @@ export default function App () {
   // Builds tsx code.
 	return <Flex
 		fontSize = {{base: 12, sm: 13, md: 14}}
-		transition = "all .2s linear"
 		fontFamily = {SF_REGULAR}
+		transition = "all .2s"
 		direction = "column"
 		overflowX = "hidden"
+		color = "neutral.10"
 		userSelect = "none"
-		color = "neutral.9"
 		overflowY = "auto"
 		as = "section"
 	>
 		{/** Header */}
 		<Header/>
+		{/** Home screen */}
+		<Home/>
 		{/** Global toaster */}
 		<Toaster/>
 		{/** Global message box */}
