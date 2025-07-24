@@ -93,7 +93,7 @@ export default function Banner () {
 
   // Builds tsx code.
   return <Flex
-    paddingBottom = {{base: 24, sm: 28, md: 32, lg: 36, xl: 48}}
+    paddingBottom = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
     paddingInline = {{base: 4, sm: 8, md: 32, lg: 48, xl: 60}}
     backgroundImage = "var(--banner-background-color)"
     paddingTop = {{base: 20, sm: 24, md: 28, lg: 32}}

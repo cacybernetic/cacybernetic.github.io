@@ -4,7 +4,7 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-07-23
+ * @updated 2025-07-24
  * @file header.tsx
  * @version 0.0.1
  */
@@ -198,6 +198,7 @@ export default function Header () {
     userSelect = "none"
     position = "fixed"
     fontSize = {16}
+    zIndex = {1}
     right = {0}
     left = {0}
     top = {0}

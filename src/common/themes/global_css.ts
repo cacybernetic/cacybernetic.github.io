@@ -4,15 +4,18 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-23
+ * @updated 2025-07-24
  * @file global_css.ts
- * @version 0.0.2
+ * @version 0.0.3
  */
 
-// Exports the general css.
+// Exports general CSS style.
 export default `
   /** Custom css root variables */
   :root {
+    --box-worth-hover-bg-color: linear-gradient(
+      to bottom right, #FECACA46, #E9D5FF41, #FEF08A44
+    );
     --banner-background-color: linear-gradient(
       to bottom, #FAF5FF, #FFF7ED, rgb(255 247 237 / 0)
     );
