@@ -5,7 +5,7 @@
  * @supported DESKTOP, MOBILE
  * @file services_quality.tsx
  * @created 2025-07-24
- * @updated 2025-07-24
+ * @updated 2025-07-25
  * @version 0.0.1
  */
 
@@ -99,7 +99,7 @@ export default function ServicesQuality () {
       </Flex>
       {/** Title */}
       <Text
-        fontSize = {{base: 16, sm: 20, md: 24, lg: 28}}
+        fontSize = {{base: 16, sm: 18, md: 20, lg: 22}}
         fontFamily = {SF_BOLD}
         transition = "all .2s"
         as = "h3"
@@ -107,17 +107,17 @@ export default function ServicesQuality () {
     </Flex>
     {/** Description */}
     <Text
-      fontSize = {{base: 14, sm: 16, md: 18, lg: 20}}
+      fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
       transition = "all .2s"
+      color = "neutral.8"
     >{description}</Text>
   </Flex>, []);
 
   // Builds tsx code.
   return <Flex
     paddingInline = {{base: 4, sm: 8, md: 32, lg: 48, xl: 60}}
-    marginBottom = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
+    paddingBlock = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
     gap = {{base: 6, sm: 7, md: 8, lg: 9, xl: 10, "2xl": 12}}
-    marginTop = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
     fontFamily = {SF_REGULAR}
     transition = "all .2s"
     color = "neutral.10"
@@ -130,22 +130,23 @@ export default function ServicesQuality () {
   >
     {/** Left part */}
     <Stack
-      gap = {{base: 4, sm: 5, md: 6, lg: 7, xl: 8}}
+      gap = {{base: 4, sm: 5, md: 6}}
       transition = "all .2s"
       minWidth = "32%"
     >
       {/** Big title */}
       <Text
         lineHeight = {{base: "26px", sm: "32px", md: "38px", lg: "48px"}}
-        fontSize = {{base: 20, sm: 24, md: 28, lg: 32, xl: 40}}
+        fontSize = {{base: 18, sm: 22, md: 26, lg: 30, xl: 34}}
         fontFamily = {SF_BOLD}
         transition = "all .2s"
         as = "h2"
       >{t("servicesQualityTitle")}</Text>
       {/** Description */}
       <Text
-        fontSize = {{base: 14, sm: 16, md: 18, lg: 20}}
+        fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
         transition = "all .2s"
+        color = "neutral.8"
       >{t("servicesQualityDescription")}</Text>
       {/** Company main worth */}
       <CustomButton
@@ -158,7 +159,7 @@ export default function ServicesQuality () {
           color: "primary.500",
           borderRadius: 8,
           borderWidth: 2,
-          width: "256px",
+          width: "264px",
           _hover: {
             textShadow: "0 0 4px var(--chakra-colors-neutral-1)",
             backgroundColor: "primary.500",
@@ -171,13 +172,13 @@ export default function ServicesQuality () {
     </Stack>
     {/** Right part */}
     <Flex
-      gap = {{base: 4, sm: 5, md: 6, lg: 7, xl: 8}}
+      gap = {{base: 4, sm: 5, md: 6}}
       transition = "all .2s"
       direction = "column"
     >
       {/** Dual boxes */}
       <Flex
-        gap = {{base: 4, sm: 5, md: 6, lg: 7, xl: 8}}
+        gap = {{base: 4, sm: 5, md: 6}}
         transition = "all .2s"
         direction = {{
           base: "column", sm: "column", md: "column",
@@ -199,7 +200,7 @@ export default function ServicesQuality () {
       </Flex>
       {/** Dual boxes */}
       <Flex
-        gap = {{base: 4, sm: 5, md: 6, lg: 7, xl: 8}}
+        gap = {{base: 4, sm: 5, md: 6}}
         transition = "all .2s"
         direction = {{
           base: "column", sm: "column", md: "column",

@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-07-24
- * @version 0.0.2
+ * @updated 2025-07-25
+ * @version 0.0.3
  * @file home.tsx
  */
 
@@ -13,6 +13,7 @@
 import {Box} from "@chakra-ui/react";
 
 // Custom dependencies.
+import ProjectsBuildingSteps from "@/common/components/build_steps.tsx";
 import ServicesQuality from "@/common/components/services_quality.tsx";
 import Banner from "@/common/components/banner.tsx";
 
@@ -20,9 +21,11 @@ import Banner from "@/common/components/banner.tsx";
 export default function Home () {
   // Builds tsx code.
   return <Box width = "full">
-    {/** Banner section */}
+    {/** Banner */}
     <Banner/>
-    {/** Company services quality */}
+    {/** Services quality */}
     <ServicesQuality/>
+    {/** Projects building steps */}
+    <ProjectsBuildingSteps/>
   </Box>;
 }

@@ -4,7 +4,7 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-07-23
+ * @updated 2025-07-25
  * @file banner.tsx
  * @version 0.0.1
  */
@@ -119,6 +119,7 @@ export default function Banner () {
       marginTop = {{base: 2, sm: 2, md: 2, lg: 3, xl: 4}}
       transition = "all .2s"
       textAlign = "center"
+      color = "neutral.8"
     >{t("bannerDescription")}</Text>
     {/** Contact us button */}
     <CustomButton
