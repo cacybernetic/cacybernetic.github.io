@@ -20,6 +20,7 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import solidExpertiseImage from "/assets/images/solid_expertise.webp";
+import trustRelationImage from "/assets/images/trust_relation.webp";
 import ListenNeedImage from "/assets/images/listen_need.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import ImageRenderer from "./image_renderer.tsx";
@@ -72,7 +73,6 @@ export default function ProjectsBuildingSteps () {
         }}
         skeletonStyle = {{
           _groupHover: {transform: "scale(1.08)"},
-          backgroundColor: "neutral.12",
           transition: "all .2s",
           height: "auto",
           width: "100%",
@@ -86,6 +86,7 @@ export default function ProjectsBuildingSteps () {
     <Flex
       transition = "all .2s"
       direction = "column"
+      
       padding = {{
         base: ".6rem", sm: ".7rem", md: ".8rem", lg: ".9rem", xl: "1rem"
       }}
@@ -154,6 +155,7 @@ export default function ProjectsBuildingSteps () {
       <Flex
         gap = {{base: 4, sm: 5, md: 6}}
         transition = "all .2s"
+        width = "100%"
         direction = {{
           base: "column", sm: "column", md: "column",
           lg: "row", xl: "row"
@@ -176,6 +178,7 @@ export default function ProjectsBuildingSteps () {
       <Flex
         gap = {{base: 4, sm: 5, md: 6}}
         transition = "all .2s"
+        width = "100%"
         direction = {{
           base: "column", sm: "column", md: "column",
           lg: "row", xl: "row"
@@ -185,7 +188,7 @@ export default function ProjectsBuildingSteps () {
         {buildStepCard({
           description: t("trustRelationDescription"),
           title: t("trustRelationTitle"),
-          imageUrl: ListenNeedImage
+          imageUrl: trustRelationImage
         })}
         {/** Short exploitable results */}
         {buildStepCard({

@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file image_renderer.tsx
  * @created 2025-07-22
- * @updated 2025-07-22
- * @version 0.0.1
+ * @updated 2025-07-25
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -57,9 +57,9 @@ export default function ImageRenderer ({
     {/** Sub container */}
     <Box
       padding = {hasError ? {base: 2, sm: 2, md: 3} : undefined}
-      transition = {hasError ? "all .2s linear" : undefined}
       backgroundColor = {hasError ? "error.50" : undefined}
       borderColor = {hasError ? "error.500" : undefined}
+      transition = {hasError ? "all .2s" : undefined}
       borderRadius = {hasError ? 6 : undefined}
       borderWidth = {hasError ? 1 : undefined}
       height = {hasError ? "auto" : "100%"}
@@ -71,8 +71,8 @@ export default function ImageRenderer ({
         hasError ?
         <Text
           fontSize = {{base: 12, sm: 13, md: 14}}
-          transition = "all .2s linear"
           fontFamily = {SF_REGULAR}
+          transition = "all .2s"
           userSelect = "none"
         >{t("imageLoadError")}</Text> :
         <Image
