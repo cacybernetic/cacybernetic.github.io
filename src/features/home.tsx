@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-07-25
- * @version 0.0.3
+ * @updated 2025-07-28
+ * @version 0.0.4
  * @file home.tsx
  */
 
@@ -13,6 +13,7 @@
 import {Box} from "@chakra-ui/react";
 
 // Custom dependencies.
+import ExperienceQuality from "@/common/components/experience_quality.tsx";
 import ProjectsBuildingSteps from "@/common/components/build_steps.tsx";
 import ServicesQuality from "@/common/components/services_quality.tsx";
 import Banner from "@/common/components/banner.tsx";
@@ -27,5 +28,7 @@ export default function Home () {
     <ServicesQuality/>
     {/** Projects building steps */}
     <ProjectsBuildingSteps/>
+    {/** Experience quality */}
+    <ExperienceQuality/>
   </Box>;
 }

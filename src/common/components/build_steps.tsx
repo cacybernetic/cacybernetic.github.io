@@ -5,7 +5,7 @@
  * @supported DESKTOP, MOBILE
  * @file build_steps.tsx
  * @created 2025-07-25
- * @updated 2025-07-25
+ * @updated 2025-07-28
  * @version 0.0.1
  */
 
@@ -21,7 +21,8 @@ import {useTranslation} from "react-i18next";
 // Custom dependencies.
 import solidExpertiseImage from "/assets/images/solid_expertise.webp";
 import trustRelationImage from "/assets/images/trust_relation.webp";
-import ListenNeedImage from "/assets/images/listen_need.webp";
+import shortResultsImage from "/assets/images/short_results.webp";
+import listenNeedImage from "/assets/images/listen_need.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import ImageRenderer from "./image_renderer.tsx";
 import {
@@ -86,7 +87,6 @@ export default function ProjectsBuildingSteps () {
     <Flex
       transition = "all .2s"
       direction = "column"
-      
       padding = {{
         base: ".6rem", sm: ".7rem", md: ".8rem", lg: ".9rem", xl: "1rem"
       }}
@@ -157,8 +157,7 @@ export default function ProjectsBuildingSteps () {
         transition = "all .2s"
         width = "100%"
         direction = {{
-          base: "column", sm: "column", md: "column",
-          lg: "row", xl: "row"
+          base: "column", sm: "column", md: "column", lg: "row"
         }}
       >
         {/** Solid expertise */}
@@ -171,7 +170,7 @@ export default function ProjectsBuildingSteps () {
         {buildStepCard({
           description: t("listenNeedDescription"),
           title: t("listenNeedTitle"),
-          imageUrl: ListenNeedImage
+          imageUrl: listenNeedImage
         })}
       </Flex>
       {/** Dual boxes */}
@@ -180,8 +179,7 @@ export default function ProjectsBuildingSteps () {
         transition = "all .2s"
         width = "100%"
         direction = {{
-          base: "column", sm: "column", md: "column",
-          lg: "row", xl: "row"
+          base: "column", sm: "column", md: "column", lg: "row"
         }}
       >
         {/** Trust relation */}
@@ -194,7 +192,7 @@ export default function ProjectsBuildingSteps () {
         {buildStepCard({
           description: t("shortResultsDescription"),
           title: t("shortResultsTitle"),
-          imageUrl: ListenNeedImage
+          imageUrl: shortResultsImage
         })}
       </Flex>
     </Flex>

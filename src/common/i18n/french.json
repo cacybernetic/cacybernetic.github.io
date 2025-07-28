@@ -51,5 +51,12 @@
 	"mib": "MO",
 	"kib": "KO",
 	"ok": "OK",
-	"bi": "O"
+	"bi": "O",
+
+	"operationalFlowTitle": "La maîtrise des flux opérationnels",
+	"operationalFlowDescription": "Depuis plusieurs années, nous créons des solutions innovantes conçues pour optimiser la performance de vos équipes et renforcer la durabilité de vos projets. Notre expertise s'inscrit au cœur de processus métiers complexes, que nous étudions en profondeur afin d'y apporter une véritable valeur ajoutée. Inutile pour vous de rédiger des cahiers des charges détaillés : nous comprenons vos enjeux et prenons en charge cette étape pour vous faire gagner un temps précieux.",
+	"technologicalExcellenceTitle": "La technologie de pointe, moteur essentiel de notre engagement",
+	"technologicalExcellenceDescription": "Nous transformons vos défis en solutions concrètes grâce à des logiciels conçus avec une exigence absolue. Chaque ligne de code est pensée pour répondre à vos besoins critiques, sans aucun compromis sur la qualité. Forts de notre expérience dans le déploiement de systèmes complexes, nous vous accompagnons jusqu'à la mise en production. Notre veille technologique et l'expertise de nos équipes garantissent des choix sûrs, performants et durables.",
+	"trustedPartnerTitle": "Un allié fiable pour bâtir un avenir durable",
+	"trustedPartnerDescription": "En collaborant avec Console Art, vous bénéficiez d'un partenariat solide et durable, pensé pour accompagner la réussite de tous vos projets. Qu'il s'agisse de conception ou de réalisation, Console Art met à votre disposition son expertise afin de libérer tout le potentiel du numérique et donner un nouvel élan à vos initiatives. Votre satisfaction est notre priorité; nous nous engageons pleinement pour vous aider à atteindre vos ambitions."
 }

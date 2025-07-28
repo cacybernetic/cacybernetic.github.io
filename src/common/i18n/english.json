@@ -51,5 +51,12 @@
 	"mib": "MB",
 	"kib": "KB",
 	"ok": "OK",
-	"bi": "B"
+	"bi": "B",
+
+	"operationalFlowTitle": "Mastering operational flows",
+	"operationalFlowDescription": "For several years, we've been creating innovative solutions designed to optimize your teams performance and strengthen the sustainability of your projects. Our expertise lies at the heart of complex business processes, which we study in depth to deliver true added value. There's no need for you to draft detailed specifications : we understand your challenges and take care of this step, saving you valuable time.",
+	"technologicalExcellenceTitle": "Cutting-edge technology, the essential driving force behind our commitment",
+	"technologicalExcellenceDescription": "We transform your challenges into concrete solutions using software designed with the utmost precision. Every line of code is designed to meet your critical needs, without compromising on quality. Drawing on our experience in deploying complex systems, we support you all the way to production. Our technology monitoring and the expertise of our teams guarantee safe, efficient, and sustainable choices.",
+	"trustedPartnerTitle": "A reliable ally for building a sustainable future",
+	"trustedPartnerDescription": "By collaborating with Console Art, you benefit from a solid and lasting partnership, designed to support the success of all your projects. Whether it's design or production, Console Art offers its expertise to unlock the full potential of digital technology and give new impetus to your initiatives. Your satisfaction is our priority; we are fully committed to helping you achieve your ambitions."
 }
