@@ -1,4 +1,7 @@
 {
+	"operationalFlowDescription": "Depuis plusieurs années, nous créons des solutions innovantes conçues pour optimiser la performance de vos équipes et renforcer la durabilité de vos projets. Notre expertise s'inscrit au cœur de processus métiers complexes, que nous étudions en profondeur afin d'y apporter une véritable valeur ajoutée. Inutile pour vous de rédiger des cahiers des charges détaillés : nous comprenons vos enjeux et prenons en charge cette étape pour vous faire gagner un temps précieux.",
+	"technologicalExcellenceDescription": "Nous transformons vos défis en solutions concrètes grâce à des logiciels conçus avec une exigence absolue. Chaque ligne de code est pensée pour répondre à vos besoins critiques, sans aucun compromis sur la qualité. Forts de notre expérience dans le déploiement de systèmes complexes, nous vous accompagnons jusqu'à la mise en production. Notre veille technologique et l'expertise de nos équipes garantissent des choix sûrs, performants et durables.",
+	"trustedPartnerDescription": "En collaborant avec Console Art, vous bénéficiez d'un partenariat solide et durable, pensé pour accompagner la réussite de tous vos projets. Qu'il s'agisse de conception ou de réalisation, Console Art met à votre disposition son expertise afin de libérer tout le potentiel du numérique et donner un nouvel élan à vos initiatives. Votre satisfaction est notre priorité; nous nous engageons pleinement pour vous aider à atteindre vos ambitions.",
 	"bannerDescription": "Notre groupe de spécialistes en intelligence artificielle conçoit des solutions personnalisées, adaptées à vos besoins stratégiques et visant à dynamiser votre développement. Avec l'appui de nos experts métier, nous avons mis en place une méthode tout-en-un qui vous aide à tirer pleinement parti des atouts de l'IA, sans détourner vos ressources internes, tout en assurant performance et qualité optimale.",
 	"trustDescription": "Chez Console Art, nous nous positionnons comme un véritable allié plutôt qu'un simple prestataire. Chaque projet est géré avec la même rigueur et la même attention que s'il s'agissait du nôtre, dans le respect strict des délais et avec une transparence totale afin de vous offrir la sérénité nécessaire pour anticiper et rester focalisé sur votre activité.",
 	"trustRelationDescription": "À Console Art, nous croyons qu'un projet réussi naît d'une collaboration fondée sur la confiance et la transparence. Pas de discours flou ni de promesses irréalistes : nous avançons à vos côtés avec une communication claire et un engagement total, en respectant chaque échéance comme s'il s'agissait de notre propre projet.",
@@ -15,6 +18,7 @@
 	"requestTimeoutDesc": "Impossible de contacter le serveur distant. Vérifiez votre réseau internet puis réessayez.",
 	"projectsBuildingStepsTitle": "Transformez vos visions en réalité grâce à une équipe passionnée par l'innovation",
 	"requestErrorDesc": "Une erreur s'est produite au cours de la procédure. Veuillez réessayer à nouveau.",
+	"technologicalExcellenceTitle": "La technologie de pointe, moteur essentiel de notre engagement",
 	"listenNeedTitle": "À votre écoute pour comprendre et répondre pleinement à vos attentes",
 	"solidExpertiseTitle": "Un savoir-faire éprouvé, dédié à la réussite de vos projets",
 	"servicesQualityTitle": "Laissez des spécialistes prendre en charge vos exigences",
@@ -22,7 +26,9 @@
 	"trustRelationTitle": "Un lien fondé sur la fiabilité et l'engagement absolu",
 	"successFulCopyToClipboard": "Le contenu a été copié dans le presse-papier.",
 	"browserNotOnline": "Votre navigateur n'est pas connecté à Internet🙁.",
+	"trustedPartnerTitle": "Un allié fiable pour bâtir un avenir durable",
 	"networkOn": "Votre navigateur vient de se connecter à internet.",
+	"operationalFlowTitle": "La maîtrise des flux opérationnels",
 	"shortResultsTitle": "Des performances fiables et pérennes",
 	"imageLoadError": "Impossible de charger cette image.",
 	"servicesQualityWorth": "Quelles sont nos valeurs ?",
@@ -34,7 +40,7 @@
 	"ai": "Intelligence Artificielle",
 	"moreDetails": "Plus de détails",
 	"companyName": "CA Cybernetic",
-	"getInTouch": "Nous Contacter",
+	"getInTouch": "Nous contacter",
 	"gameDev": "Média Interactif",
 	"ourStory": "Notre Histoire",
 	"oursValues": "Nos Valeurs",
@@ -51,12 +57,5 @@
 	"mib": "MO",
 	"kib": "KO",
 	"ok": "OK",
-	"bi": "O",
-
-	"operationalFlowTitle": "La maîtrise des flux opérationnels",
-	"operationalFlowDescription": "Depuis plusieurs années, nous créons des solutions innovantes conçues pour optimiser la performance de vos équipes et renforcer la durabilité de vos projets. Notre expertise s'inscrit au cœur de processus métiers complexes, que nous étudions en profondeur afin d'y apporter une véritable valeur ajoutée. Inutile pour vous de rédiger des cahiers des charges détaillés : nous comprenons vos enjeux et prenons en charge cette étape pour vous faire gagner un temps précieux.",
-	"technologicalExcellenceTitle": "La technologie de pointe, moteur essentiel de notre engagement",
-	"technologicalExcellenceDescription": "Nous transformons vos défis en solutions concrètes grâce à des logiciels conçus avec une exigence absolue. Chaque ligne de code est pensée pour répondre à vos besoins critiques, sans aucun compromis sur la qualité. Forts de notre expérience dans le déploiement de systèmes complexes, nous vous accompagnons jusqu'à la mise en production. Notre veille technologique et l'expertise de nos équipes garantissent des choix sûrs, performants et durables.",
-	"trustedPartnerTitle": "Un allié fiable pour bâtir un avenir durable",
-	"trustedPartnerDescription": "En collaborant avec Console Art, vous bénéficiez d'un partenariat solide et durable, pensé pour accompagner la réussite de tous vos projets. Qu'il s'agisse de conception ou de réalisation, Console Art met à votre disposition son expertise afin de libérer tout le potentiel du numérique et donner un nouvel élan à vos initiatives. Votre satisfaction est notre priorité; nous nous engageons pleinement pour vous aider à atteindre vos ambitions."
+	"bi": "O"
 }
