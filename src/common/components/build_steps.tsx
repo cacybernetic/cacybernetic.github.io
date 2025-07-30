@@ -5,15 +5,15 @@
  * @supported DESKTOP, MOBILE
  * @file build_steps.tsx
  * @created 2025-07-25
- * @updated 2025-07-28
- * @version 0.0.1
+ * @updated 2025-07-30
+ * @version 0.0.2
  */
 
 // React dependencies.
-import {ReactElement, useCallback} from "react";
+import {ReactElement, useCallback, Fragment} from "react";
 
 // Chakra dependencies.
-import {Stack, Text, Flex, Box} from "@chakra-ui/react";
+import {Text, Flex, Box} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {useTranslation} from "react-i18next";
@@ -23,13 +23,10 @@ import solidExpertiseImage from "/assets/images/solid_expertise.webp";
 import trustRelationImage from "/assets/images/trust_relation.webp";
 import shortResultsImage from "/assets/images/short_results.webp";
 import listenNeedImage from "/assets/images/listen_need.webp";
+import {SF_SEMI_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import ImageRenderer from "./image_renderer.tsx";
-import {
-  SF_SEMI_BOLD,
-  SF_REGULAR,
-  SF_BOLD
-} from "@/common/constants/variables.ts";
+import Section from "./section.tsx";
 
 // Component properties.
 type BuildStepCardProps = {
@@ -111,90 +108,75 @@ export default function ProjectsBuildingSteps () {
   </Flex>, []);
 
   // Builds tsx code.
-  return <Stack
-    paddingInline = {{base: 4, sm: 8, md: 32, lg: 48, xl: 60}}
-    paddingBlock = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
-    gap = {{base: 4, sm: 5, md: 6}}
-    backgroundColor = "primary.50"
-    fontFamily = {SF_REGULAR}
-    transition = "all .2s"
-    alignItems = "center"
-    color = "neutral.10"
-    userSelect = "none"
-    width = "full"
-  >
-    {/** Big title */}
-    <Text
-      lineHeight = {{base: "26px", sm: "32px", md: "38px", lg: "48px"}}
-      width = {{base: "auto", sm: "auto", md: "auto", lg: "620px"}}
-      fontSize = {{base: 18, sm: 22, md: 26, lg: 30, xl: 34}}
-      fontFamily = {SF_BOLD}
-      transition = "all .2s"
-      textAlign = "center"
-      as = "h2"
-    >{t("projectsBuildingStepsTitle")}</Text>
-    {/** Description */}
-    <Text
-      width = {{base: "auto", sm: "auto", md: "auto", lg: "620px"}}
-      fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
-      transition = "all .2s"
-      textAlign = "center"
-      color = "neutral.8"
-    >{t("projectsBuildingStepsDescription")}</Text>
-    {/** Projects building steps */}
-    <Flex
-      gap = {{base: 4, sm: 5, md: 6}}
-      transition = "all .2s"
-      marginTop = {4}
-      direction = {{
-        base: "column", sm: "column", md: "column",
-        lg: "column", xl: "column", "2xl": "row"
-      }}
-    >
-      {/** Dual boxes */}
+  return <Section
+    description = {t("projectsBuildingStepsDescription")}
+    containerStyle = {{backgroundColor: "primary.50"}}
+    title = {t("projectsBuildingStepsTitle")}
+    titleStyle = {{
+      width: {base: "auto", sm: "auto", md: "auto", lg: "620px"},
+      textAlign: "center"
+    }}
+    descriptionStyle = {{
+      width: {base: "auto", sm: "auto", md: "auto", lg: "620px"},
+      textAlign: "center",
+      color: "neutral.8"
+    }}
+    children = {<Fragment>
+      {/** Projects building steps */}
       <Flex
         gap = {{base: 4, sm: 5, md: 6}}
         transition = "all .2s"
-        width = "100%"
+        marginTop = {4}
         direction = {{
-          base: "column", sm: "column", md: "column", lg: "row"
+          base: "column", sm: "column", md: "column",
+          lg: "column", xl: "column", "2xl": "row"
         }}
       >
-        {/** Solid expertise */}
-        {buildStepCard({
-          description: t("solidExpertiseDescription"),
-          title: t("solidExpertiseTitle"),
-          imageUrl: solidExpertiseImage
-        })}
-        {/** Listen your needs */}
-        {buildStepCard({
-          description: t("listenNeedDescription"),
-          title: t("listenNeedTitle"),
-          imageUrl: listenNeedImage
-        })}
+        {/** Dual boxes */}
+        <Flex
+          gap = {{base: 4, sm: 5, md: 6}}
+          transition = "all .2s"
+          width = "100%"
+          direction = {{
+            base: "column", sm: "column", md: "column", lg: "row"
+          }}
+        >
+          {/** Solid expertise */}
+          {buildStepCard({
+            description: t("solidExpertiseDescription"),
+            title: t("solidExpertiseTitle"),
+            imageUrl: solidExpertiseImage
+          })}
+          {/** Listen your needs */}
+          {buildStepCard({
+            description: t("listenNeedDescription"),
+            title: t("listenNeedTitle"),
+            imageUrl: listenNeedImage
+          })}
+        </Flex>
+        {/** Dual boxes */}
+        <Flex
+          gap = {{base: 4, sm: 5, md: 6}}
+          transition = "all .2s"
+          width = "100%"
+          direction = {{
+            base: "column", sm: "column", md: "column", lg: "row"
+          }}
+        >
+          {/** Trust relation */}
+          {buildStepCard({
+            description: t("trustRelationDescription"),
+            title: t("trustRelationTitle"),
+            imageUrl: trustRelationImage
+          })}
+          {/** Short exploitable results */}
+          {buildStepCard({
+            description: t("shortResultsDescription"),
+            title: t("shortResultsTitle"),
+            imageUrl: shortResultsImage
+          })}
+        </Flex>
       </Flex>
-      {/** Dual boxes */}
-      <Flex
-        gap = {{base: 4, sm: 5, md: 6}}
-        transition = "all .2s"
-        width = "100%"
-        direction = {{
-          base: "column", sm: "column", md: "column", lg: "row"
-        }}
-      >
-        {/** Trust relation */}
-        {buildStepCard({
-          description: t("trustRelationDescription"),
-          title: t("trustRelationTitle"),
-          imageUrl: trustRelationImage
-        })}
-        {/** Short exploitable results */}
-        {buildStepCard({
-          description: t("shortResultsDescription"),
-          title: t("shortResultsTitle"),
-          imageUrl: shortResultsImage
-        })}
-      </Flex>
-    </Flex>
-  </Stack>;
+    </Fragment>}
+  />;
 }

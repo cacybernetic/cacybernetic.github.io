@@ -5,26 +5,27 @@
  * @file experience_quality.tsx
  * @supported DESKTOP, MOBILE
  * @created 2025-07-28
- * @updated 2025-07-29
- * @version 0.0.1
+ * @updated 2025-07-30
+ * @version 0.0.2
  */
 
 // React dependencies.
-import {ReactElement, useCallback} from "react";
+import {Fragment, ReactElement, useCallback} from "react";
 
 // Chakra dependencies.
-import {Stack, Text, Flex} from "@chakra-ui/react";
+import {Text, Flex} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import technicalImage from "/assets/images/technological_excellence.webp";
-import {SF_SEMI_BOLD, SF_REGULAR} from "@/common/constants/variables.ts";
 import operationalFlowImage from "/assets/images/operational_flow.webp";
 import trustPartnerImage from "/assets/images/trusted_partner.webp";
+import {SF_SEMI_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import ImageRenderer from "./image_renderer.tsx";
+import Section from "./section.tsx";
 
 // Component types.
 type BuildExperienceQualityProps = {
@@ -102,17 +103,7 @@ export default function ExperienceQuality () {
   </Flex>, []);
 
   // Builds tsx code.
-  return <Stack
-    paddingInline = {{base: 4, sm: 8, md: 32, lg: 48, xl: 60}}
-    paddingBlock = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
-    gap = {{base: 4, sm: 5, md: 6}}
-    fontFamily = {SF_REGULAR}
-    transition = "all .2s"
-    alignItems = "center"
-    color = "neutral.10"
-    userSelect = "none"
-    width = "full"
-  >
+  return <Section children = {<Fragment>
     {/** Operation flow */}
     {buildExperienceQuality({
       description: t("operationalFlowDescription"),
@@ -132,5 +123,5 @@ export default function ExperienceQuality () {
       title: t("trustedPartnerTitle"),
       imageUrl: trustPartnerImage
     })}
-  </Stack>;
+  </Fragment>}/>;
 }

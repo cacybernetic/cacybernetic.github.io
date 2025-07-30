@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-07-28
- * @version 0.0.4
+ * @updated 2025-07-30
+ * @version 0.0.5
  * @file home.tsx
  */
 
@@ -16,7 +16,9 @@ import {Box} from "@chakra-ui/react";
 import ExperienceQuality from "@/common/components/experience_quality.tsx";
 import ProjectsBuildingSteps from "@/common/components/build_steps.tsx";
 import ServicesQuality from "@/common/components/services_quality.tsx";
+import ProjectQuery from "@/common/components/project_query.tsx";
 import Banner from "@/common/components/banner.tsx";
+import Footer from "@/common/components/footer.tsx";
 
 // Shows importante information for the first time.
 export default function Home () {
@@ -30,5 +32,9 @@ export default function Home () {
     <ProjectsBuildingSteps/>
     {/** Experience quality */}
     <ExperienceQuality/>
+    {/** Project guest invitation */}
+    <ProjectQuery/>
+    {/** Footer */}
+    <Footer/>
   </Box>;
 }

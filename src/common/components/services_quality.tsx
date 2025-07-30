@@ -5,14 +5,14 @@
  * @supported DESKTOP, MOBILE
  * @file services_quality.tsx
  * @created 2025-07-24
- * @updated 2025-07-25
- * @version 0.0.1
+ * @updated 2025-07-30
+ * @version 0.0.2
  */
 
 // React dependencies.
 import {FaGraduationCap, FaRegComments} from "react-icons/fa6";
+import {ReactElement, useCallback, Fragment} from "react";
 import {FaRegThumbsUp, FaRegGem} from "react-icons/fa";
-import {ReactElement, useCallback} from "react";
 import {IconType} from "react-icons/lib";
 
 // Chakra dependencies.
@@ -22,13 +22,10 @@ import {ButtonProps, Stack, Text, Flex, Icon} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
+import {SF_SEMI_BOLD, SF_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import CustomButton from "./button.tsx";
-import {
-  SF_SEMI_BOLD,
-  SF_REGULAR,
-  SF_BOLD
-} from "@/common/constants/variables.ts";
+import Section from "./section.tsx";
 
 // Component types.
 type BuildBoxWorthProps = {
@@ -81,12 +78,10 @@ export default function ServicesQuality () {
         alignItems = "center"
         color = "primary.500"
         height = {{
-          base: "2rem", sm: "2rem", md: "2.5rem",
-          lg: "2.5rem", xl: "3rem"
+          base: "2rem", sm: "2rem", md: "2.5rem", lg: "2.5rem", xl: "3rem"
         }}
         width = {{
-          base: "2rem", sm: "2rem", md: "2.5rem",
-          lg: "2.5rem", xl: "3rem"
+          base: "2rem", sm: "2rem", md: "2.5rem", lg: "2.5rem", xl: "3rem"
         }}
       >
         {/** Vector */}
@@ -114,112 +109,105 @@ export default function ServicesQuality () {
   </Flex>, []);
 
   // Builds tsx code.
-  return <Flex
-    paddingInline = {{base: 4, sm: 8, md: 32, lg: 48, xl: 60}}
-    paddingBlock = {{base: 8, sm: 12, md: 16, lg: 20, xl: 24}}
-    gap = {{base: 6, sm: 7, md: 8, lg: 9, xl: 10, "2xl": 12}}
-    fontFamily = {SF_REGULAR}
-    transition = "all .2s"
-    color = "neutral.10"
-    userSelect = "none"
-    width = "full"
-    direction = {{
-      base: "column", sm: "column", md: "column",
-      lg: "column", xl: "column", "2xl": "row"
+  return <Section
+    containerStyle = {{
+      gap: {base: 6, sm: 7, md: 8, lg: 9, xl: 10, "2xl": 12},
+      alignItems: "flex-start",
+      direction: {
+        base: "column", sm: "column", md: "column",
+        lg: "column", xl: "column", "2xl": "row"
+      }
     }}
-  >
-    {/** Left part */}
-    <Stack
-      gap = {{base: 4, sm: 5, md: 6}}
-      transition = "all .2s"
-      minWidth = "32%"
-    >
-      {/** Big title */}
-      <Text
-        lineHeight = {{base: "26px", sm: "32px", md: "38px", lg: "48px"}}
-        fontSize = {{base: 18, sm: 22, md: 26, lg: 30, xl: 34}}
-        fontFamily = {SF_BOLD}
-        transition = "all .2s"
-        as = "h2"
-      >{t("servicesQualityTitle")}</Text>
-      {/** Description */}
-      <Text
-        fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
-        transition = "all .2s"
-        color = "neutral.8"
-      >{t("servicesQualityDescription")}</Text>
-      {/** Company main worth */}
-      <CustomButton
-        text = {t("servicesQualityWorth")}
-        buttonStyle = {(): ButtonProps => ({
-          fontSize: {base: 13, sm: 14, md: 15, lg: 16, xl: 18},
-          backgroundColor: "neutral.1",
-          borderColor: "primary.500",
-          fontFamily: SF_SEMI_BOLD,
-          color: "primary.500",
-          borderRadius: 8,
-          borderWidth: 2,
-          width: "264px",
-          _hover: {
-            textShadow: "0 0 4px var(--chakra-colors-neutral-1)",
-            backgroundColor: "primary.500",
-            borderColor: "transparent",
-            transform: "scale(1.08)",
-            color: "neutral.1"
-          }
-        })}
-      />
-    </Stack>
-    {/** Right part */}
-    <Flex
-      gap = {{base: 4, sm: 5, md: 6}}
-      transition = "all .2s"
-      direction = "column"
-    >
-      {/** Dual boxes */}
-      <Flex
+    children = {<Fragment>
+      {/** Left part */}
+      <Stack
         gap = {{base: 4, sm: 5, md: 6}}
         transition = "all .2s"
-        direction = {{
-          base: "column", sm: "column", md: "column",
-          lg: "column", xl: "row"
-        }}
+        minWidth = "32%"
       >
-        {/** Expertise */}
-        {buildBoxWorth({
-          description: t("expertiseDescription"),
-          title: t("expertise"),
-          icon: FaGraduationCap
-        })}
-        {/** Listen */}
-        {buildBoxWorth({
-          description: t("listenDescription"),
-          icon: FaRegComments,
-          title: t("listen")
-        })}
-      </Flex>
-      {/** Dual boxes */}
-      <Flex
-        gap = {{base: 4, sm: 5, md: 6}}
-        transition = "all .2s"
-        direction = {{
-          base: "column", sm: "column", md: "column",
-          lg: "column", xl: "row"
-        }}
-      >
-        {/** Trust */}
-        {buildBoxWorth({
-          description: t("trustDescription"),
-          icon: FaRegThumbsUp,
-          title: t("trust")
-        })}
-        {/** Quality */}
-        {buildBoxWorth({
-          description: t("qualityDescription"),
-          title: t("quality"),
-          icon: FaRegGem
-        })}
-      </Flex>
-    </Flex>
-  </Flex>;
+        {/** Big title */}
+        <Text
+          lineHeight = {{base: "26px", sm: "32px", md: "38px", lg: "48px"}}
+          fontSize = {{base: 18, sm: 22, md: 26, lg: 30, xl: 34}}
+          fontFamily = {SF_BOLD}
+          transition = "all .2s"
+          as = "h2"
+        >{t("servicesQualityTitle")}</Text>
+        {/** Description */}
+        <Text
+          fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
+          transition = "all .2s"
+          color = "neutral.8"
+        >{t("servicesQualityDescription")}</Text>
+        {/** Company main worth */}
+        <CustomButton
+          text = {t("servicesQualityWorth")}
+          buttonStyle = {(): ButtonProps => ({
+            fontSize: {base: 13, sm: 14, md: 15, lg: 16, xl: 18},
+            backgroundColor: "neutral.1",
+            borderColor: "primary.500",
+            fontFamily: SF_SEMI_BOLD,
+            color: "primary.500",
+            borderRadius: 8,
+            borderWidth: 2,
+            width: "264px",
+            _hover: {
+              textShadow: "0 0 4px var(--chakra-colors-neutral-1)",
+              backgroundColor: "primary.500",
+              borderColor: "transparent",
+              transform: "scale(1.08)",
+              color: "neutral.1"
+            }
+          })}
+        />
+      </Stack>
+      {/** Right part */}
+      <Stack gap = {{base: 4, sm: 5, md: 6}} transition = "all .2s">
+        {/** Dual boxes */}
+        <Flex
+          gap = {{base: 4, sm: 5, md: 6}}
+          transition = "all .2s"
+          direction = {{
+            base: "column", sm: "column", md: "column",
+            lg: "column", xl: "row"
+          }}
+        >
+          {/** Expertise */}
+          {buildBoxWorth({
+            description: t("expertiseDescription"),
+            title: t("expertise"),
+            icon: FaGraduationCap
+          })}
+          {/** Listen */}
+          {buildBoxWorth({
+            description: t("listenDescription"),
+            icon: FaRegComments,
+            title: t("listen")
+          })}
+        </Flex>
+        {/** Dual boxes */}
+        <Flex
+          gap = {{base: 4, sm: 5, md: 6}}
+          transition = "all .2s"
+          direction = {{
+            base: "column", sm: "column", md: "column",
+            lg: "column", xl: "row"
+          }}
+        >
+          {/** Trust */}
+          {buildBoxWorth({
+            description: t("trustDescription"),
+            icon: FaRegThumbsUp,
+            title: t("trust")
+          })}
+          {/** Quality */}
+          {buildBoxWorth({
+            description: t("qualityDescription"),
+            title: t("quality"),
+            icon: FaRegGem
+          })}
+        </Flex>
+      </Stack>
+    </Fragment>}
+  />;
 }
