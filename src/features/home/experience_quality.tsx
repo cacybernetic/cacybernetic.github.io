@@ -17,11 +17,11 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import technicalImage from "/assets/images/technological_excellence.webp";
+import InfoPresentation from "@/common/components/info_presentation.tsx";
 import operationalFlowImage from "/assets/images/operational_flow.webp";
 import trustPartnerImage from "/assets/images/trusted_partner.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import InfoPresentation from "./info_presentation.tsx";
-import Section from "./section.tsx";
+import Section from "@/common/components/section.tsx";
 
 // Displays and sell company experience quality.
 export default function ExperienceQuality () {

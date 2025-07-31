@@ -4,12 +4,13 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-23
+ * @updated 2025-07-31
  * @version 0.0.2
  * @file app.tsx
  */
 
 // React dependencies.
+import {HashRouter as Router, Routes, Route} from "react-router-dom";
 import {RefObject, useEffect, useRef} from "react";
 
 // Chakra dependencies.
@@ -21,11 +22,12 @@ import {useSelector} from "react-redux";
 // Custom dependencies.
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
+import {HOME_LINK} from "@/common/constants/end_points.ts";
 import Toaster from "@/common/components/toaster.tsx";
 import {MessageType} from "@/common/states/alert.ts";
 import Header from "@/common/components/header.tsx";
 import {RootState} from "@/common/states/store.ts";
-import Home from "./home.tsx";
+import Home from "@/features/home/home.tsx";
 import {
 	listenWindowResizeToExtractHisSize
 } from "@/common/libraries/browser.ts";
@@ -92,8 +94,14 @@ export default function App () {
 	>
 		{/** Header */}
 		<Header/>
-		{/** Home screen */}
-		<Home/>
+		{/** Mutable section */}
+		<Router future = {{v7_startTransition: true}}>
+			{/** Availables routes */}
+			<Routes>
+				{/** Home screen */}
+				<Route element = {<Home/>} path = {HOME_LINK}/>
+			</Routes>
+		</Router>
 		{/** Global toaster */}
 		<Toaster/>
 		{/** Global message box */}

@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file project_query.tsx
  * @created 2025-07-30
- * @updated 2025-07-30
- * @version 0.0.1
+ * @updated 2025-07-31
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -20,9 +20,9 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
+import CustomButton from "@/common/components/button.tsx";
 import {SF_MEDIUM} from "@/common/constants/variables.ts";
-import CustomButton from "./button.tsx";
-import Section from "./section.tsx";
+import Section from "@/common/components/section.tsx";
 
 // Displays a view to invite client who have a project for request.
 export default function ProjectQuery () {

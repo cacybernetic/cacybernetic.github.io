@@ -6,7 +6,7 @@
  * @file services_quality.tsx
  * @created 2025-07-24
  * @updated 2025-07-31
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -23,9 +23,9 @@ import {useTranslation} from "react-i18next";
 // Custom dependencies.
 import {SF_SEMI_BOLD, SF_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import CustomButton from "./button.tsx";
-import InfoCard from "./info_card.tsx";
-import Section from "./section.tsx";
+import CustomButton from "@/common/components/button.tsx";
+import InfoCard from "@/common/components/info_card.tsx";
+import Section from "@/common/components/section.tsx";
 
 // Displays company services quality.
 export default function ServicesQuality () {

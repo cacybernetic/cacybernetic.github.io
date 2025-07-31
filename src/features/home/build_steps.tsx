@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file build_steps.tsx
  * @created 2025-07-25
- * @updated 2025-07-30
- * @version 0.0.2
+ * @updated 2025-07-31
+ * @version 0.0.3
  */
 
 // React dependencies.
@@ -21,12 +21,12 @@ import {useTranslation} from "react-i18next";
 // Custom dependencies.
 import solidExpertiseImage from "/assets/images/solid_expertise.webp";
 import trustRelationImage from "/assets/images/trust_relation.webp";
+import ImageRenderer from "@/common/components/image_renderer.tsx";
 import shortResultsImage from "/assets/images/short_results.webp";
 import listenNeedImage from "/assets/images/listen_need.webp";
 import {SF_SEMI_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import ImageRenderer from "./image_renderer.tsx";
-import Section from "./section.tsx";
+import Section from "@/common/components/section.tsx";
 
 // Component properties.
 type BuildStepCardProps = {

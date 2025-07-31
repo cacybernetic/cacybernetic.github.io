@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-07-25
+ * @updated 2025-07-31
  * @file banner.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -19,17 +19,17 @@ import {SkeletonProps, ButtonProps, Text, Flex} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
+import ImageRenderer from "@/common/components/image_renderer.tsx";
 import rightDownArrow from "/assets/icons/right_down_arrow.svg";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
+import CustomButton from "@/common/components/button.tsx";
 import {SF_MEDIUM} from "@/common/constants/variables.ts";
 import {correctString} from "@/common/libraries/std.ts";
 import ubisoftLogo from "/assets/images/ubisoft.webp";
+import Section from "@/common/components/section.tsx";
 import openAILogo from "/assets/images/open_ai.webp";
 import huaweiLogo from "/assets/images/huawei.webp";
 import amazonLogo from "/assets/images/amazon.webp";
-import ImageRenderer from "./image_renderer.tsx";
-import CustomButton from "./button.tsx";
-import Section from "./section.tsx";
 
 // Component types.
 type BuildPartnerLogoProps = {
