@@ -5,15 +5,12 @@
  * @file experience_quality.tsx
  * @supported DESKTOP, MOBILE
  * @created 2025-07-28
- * @updated 2025-07-30
- * @version 0.0.2
+ * @updated 2025-07-31
+ * @version 0.0.3
  */
 
 // React dependencies.
-import {Fragment, ReactElement, useCallback} from "react";
-
-// Chakra dependencies.
-import {Text, Flex} from "@chakra-ui/react";
+import {Fragment} from "react";
 
 // Plugin dependencies.
 import {useTranslation} from "react-i18next";
@@ -22,106 +19,37 @@ import {useTranslation} from "react-i18next";
 import technicalImage from "/assets/images/technological_excellence.webp";
 import operationalFlowImage from "/assets/images/operational_flow.webp";
 import trustPartnerImage from "/assets/images/trusted_partner.webp";
-import {SF_SEMI_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import ImageRenderer from "./image_renderer.tsx";
+import InfoPresentation from "./info_presentation.tsx";
 import Section from "./section.tsx";
-
-// Component types.
-type BuildExperienceQualityProps = {
-  description: string,
-  imageUrl: string,
-  invert?: boolean,
-  title: string
-};
 
 // Displays and sell company experience quality.
 export default function ExperienceQuality () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
 
-  // Build an experience quality section.
-  const buildExperienceQuality = useCallback((
-    {description, imageUrl, invert, title}: BuildExperienceQualityProps
-  ): ReactElement => <Flex
-    borderRadius = {{base: ".4rem", sm: ".6rem", md: ".8rem", lg: "1rem"}}
-    gap = {{base: 4, sm: 5, md: 6}}
-    borderColor = "neutral.5"
-    transition = "all .2s"
-    borderWidth = {1}
-    direction = {{
-      lg: "column", xl: (invert ? "row-reverse" : "row"),
-      base: "column", sm: "column", md: "column"
-    }}
-    padding = {{
-      lg: "1.6rem", xl: "1.8rem", "2xl": "2rem",
-      base: ".6rem", sm: ".8rem", md: "1rem"
-    }}
-    _hover = {{
-      boxShadow: "0 0 16px var(--chakra-colors-neutral-6)",
-      backgroundImage: "var(--box-worth-hover-bg-color)",
-      transform: "scale(1.02)"
-    }}
-  >
-    {/** Information */}
-    <Flex
-      transition = "all .2s"
-      direction = "column"
-      rowGap = {{
-        base: ".6rem", sm: ".7rem", md: ".8rem", lg: ".9rem", xl: "1rem"
-      }}
-    >
-      {/** Title */}
-      <Text
-        fontSize = {{base: 20, sm: 22, md: 24, lg: 26, xl: 28, "2xl": 30}}
-        fontFamily = {SF_SEMI_BOLD}
-        transition = "all .2s"
-        as = "h3"
-      >{title}</Text>
-      {/** Description */}
-      <Text
-        fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
-        transition = "all .2s"
-        color = "neutral.8"
-      >{description}</Text>
-    </Flex>
-    {/** Image */}
-    <ImageRenderer
-      url = {imageUrl}
-      imageStyle = {{
-        borderRadius: {base: ".4rem", sm: ".6rem", md: ".8rem", lg: "1rem"},
-        transition: "all .2s",
-        objectFit: "cover"
-      }}
-      containerStyle = {{
-        minWidth: {
-          lg: "256px", xl: "364px", "2xl": "480px",
-          base: "100%", sm: "100%", md: "100%"
-        }
-      }}
-    />
-  </Flex>, []);
-
   // Builds tsx code.
-  return <Section children = {<Fragment>
+  return <Section drawLines children = {<Fragment>
     {/** Operation flow */}
-    {buildExperienceQuality({
-      description: t("operationalFlowDescription"),
-      title: t("operationalFlowTitle"),
-      imageUrl: operationalFlowImage
-    })}
+    <InfoPresentation
+      description = {t("operationalFlowDescription")}
+      title = {t("operationalFlowTitle")}
+      imageUrl = {operationalFlowImage}
+    />
     {/** Technological excellence  */}
-    {buildExperienceQuality({
-      description: t("technologicalExcellenceDescription"),
-      title: t("technologicalExcellenceTitle"),
-      imageUrl: technicalImage,
-      invert: true
-    })}
+    <InfoPresentation
+      containerStyle = {{marginTop: {base: 4, sm: 5, md: 6}}}
+      description = {t("technologicalExcellenceDescription")}
+      title = {t("technologicalExcellenceTitle")}
+      imageUrl = {technicalImage}
+      invert
+    />
     {/** Trust partner  */}
-    {buildExperienceQuality({
-      description: t("trustedPartnerDescription"),
-      title: t("trustedPartnerTitle"),
-      imageUrl: trustPartnerImage
-    })}
+    <InfoPresentation
+      containerStyle = {{marginTop: {base: 4, sm: 5, md: 6}}}
+      description = {t("trustedPartnerDescription")}
+      title = {t("trustedPartnerTitle")}
+      imageUrl = {trustPartnerImage}
+    />
   </Fragment>}/>;
 }

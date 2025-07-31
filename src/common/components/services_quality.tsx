@@ -5,18 +5,17 @@
  * @supported DESKTOP, MOBILE
  * @file services_quality.tsx
  * @created 2025-07-24
- * @updated 2025-07-30
- * @version 0.0.2
+ * @updated 2025-07-31
+ * @version 0.0.3
  */
 
 // React dependencies.
 import {FaGraduationCap, FaRegComments} from "react-icons/fa6";
-import {ReactElement, useCallback, Fragment} from "react";
 import {FaRegThumbsUp, FaRegGem} from "react-icons/fa";
-import {IconType} from "react-icons/lib";
+import {Fragment} from "react";
 
 // Chakra dependencies.
-import {ButtonProps, Stack, Text, Flex, Icon} from "@chakra-ui/react";
+import {ButtonProps, Stack, Text, Flex} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {useTranslation} from "react-i18next";
@@ -25,88 +24,13 @@ import {useTranslation} from "react-i18next";
 import {SF_SEMI_BOLD, SF_BOLD} from "@/common/constants/variables.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import CustomButton from "./button.tsx";
+import InfoCard from "./info_card.tsx";
 import Section from "./section.tsx";
-
-// Component types.
-type BuildBoxWorthProps = {
-  description: string,
-  icon: IconType,
-  title: string
-};
 
 // Displays company services quality.
 export default function ServicesQuality () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
-
-  // Builds box to display each company worth domain.
-  const buildBoxWorth = useCallback((
-    {description, title, icon}: BuildBoxWorthProps
-  ): ReactElement => <Flex
-    borderRadius = {{base: ".4rem", sm: ".6rem", md: ".8rem", lg: "1rem"}}
-    backgroundColor = "neutral.2"
-    borderColor = "neutral.5"
-    transition = "all .2s"
-    direction = "column"
-    borderWidth = {1}
-    width = "100%"
-    _hover = {{
-      boxShadow: "8px 8px 16px var(--chakra-colors-neutral-5)",
-      backgroundImage: "var(--box-worth-hover-bg-color)"
-    }}
-    padding = {{
-      base: "1rem", sm: "1rem", md: "1.1rem",
-      lg: "1.3rem", xl: "1.5rem"
-    }}
-    rowGap = {{
-      base: ".5rem", sm: ".5rem", md: "1rem",
-      lg: "1rem", xl: "1.5rem"
-    }}
-  >
-    {/** Header */}
-    <Flex
-      columnGap = {{base: 2, sm: 2, md: 3, lg: 3, xl: 4}}
-      transition = "all .2s"
-      alignItems = "center"
-    >
-      {/** Icon */}
-      <Flex
-        backgroundColor = "primary.100"
-        justifyContent = "center"
-        transition = "all .2s"
-        borderRadius = "96px"
-        alignItems = "center"
-        color = "primary.500"
-        height = {{
-          base: "2rem", sm: "2rem", md: "2.5rem", lg: "2.5rem", xl: "3rem"
-        }}
-        width = {{
-          base: "2rem", sm: "2rem", md: "2.5rem", lg: "2.5rem", xl: "3rem"
-        }}
-      >
-        {/** Vector */}
-        <Icon
-          height = {{base: 4, sm: 4, md: 5, lg: 5, xl: 6}}
-          width = {{base: 4, sm: 4, md: 5, lg: 5, xl: 6}}
-          transition = "all .2s"
-          as = {icon}
-        />
-      </Flex>
-      {/** Title */}
-      <Text
-        fontSize = {{base: 16, sm: 18, md: 20, lg: 22}}
-        fontFamily = {SF_BOLD}
-        transition = "all .2s"
-        as = "h3"
-      >{title}</Text>
-    </Flex>
-    {/** Description */}
-    <Text
-      fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
-      transition = "all .2s"
-      color = "neutral.8"
-    >{description}</Text>
-  </Flex>, []);
 
   // Builds tsx code.
   return <Section
@@ -173,17 +97,17 @@ export default function ServicesQuality () {
           }}
         >
           {/** Expertise */}
-          {buildBoxWorth({
-            description: t("expertiseDescription"),
-            title: t("expertise"),
-            icon: FaGraduationCap
-          })}
+          <InfoCard
+            description = {t("expertiseDescription")}
+            title = {t("expertise")}
+            icon = {FaGraduationCap}
+          />
           {/** Listen */}
-          {buildBoxWorth({
-            description: t("listenDescription"),
-            icon: FaRegComments,
-            title: t("listen")
-          })}
+          <InfoCard
+            description = {t("listenDescription")}
+            icon = {FaRegComments}
+            title = {t("listen")}
+          />
         </Flex>
         {/** Dual boxes */}
         <Flex
@@ -195,17 +119,17 @@ export default function ServicesQuality () {
           }}
         >
           {/** Trust */}
-          {buildBoxWorth({
-            description: t("trustDescription"),
-            icon: FaRegThumbsUp,
-            title: t("trust")
-          })}
+          <InfoCard
+            description = {t("trustDescription")}
+            icon = {FaRegThumbsUp}
+            title = {t("trust")}
+          />
           {/** Quality */}
-          {buildBoxWorth({
-            description: t("qualityDescription"),
-            title: t("quality"),
-            icon: FaRegGem
-          })}
+          <InfoCard
+            description = {t("qualityDescription")}
+            title = {t("quality")}
+            icon = {FaRegGem}
+          />
         </Flex>
       </Stack>
     </Fragment>}

@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-30
- * @updated 2025-07-30
+ * @updated 2025-07-31
  * @file section.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -68,7 +68,7 @@ export default function Section ({
   // Builds tsx code.
   return <Stack
     paddingInline = {{base: 4, sm: 8, md: 32, lg: 48, xl: 60}}
-    gap = {{base: 4, sm: 5, md: 6}}
+    gap = {drawLines ? 0 : {base: 4, sm: 5, md: 6}}
     fontFamily = {SF_REGULAR}
     transition = "all .2s"
     alignItems = "center"
