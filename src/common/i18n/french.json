@@ -62,5 +62,17 @@
 	"mib": "MO",
 	"kib": "KO",
 	"ok": "OK",
-	"bi": "O"
+	"bi": "O",
+
+	"whoAreUsTitle": "Un collectif de visionnaires et de spécialistes aguerris",
+	"whoAreUsDescription": "Depuis 2022, Console Art conçoit des solutions innovantes en s'appuyant sur des technologies modernes et fiables. Nous créons divers outils personnalisés pour nos clients, en alliant maîtrise technique et connaissance métier. Cette approche nous permet de développer des solutions complètes, pensées pour répondre efficacement à vos besoins tout en ouvrant la voie à de nouveaux usages.",
+	
+	"moreInfoAboutUsDescription": "Nous aspirons à donner une véritable valeur à la transition numérique en guidant nos clients dans le développement de pratiques innovantes, favorisant à la fois leur performance et leur responsabilité sociale et environnementale.",
+	"whatIsCompanyTitle": "Qui nous sommes ?",
+	"whatIsCompanyDescription": "Diplômés d'école scientifique, nous avons décidé de combiner nos expertises pour accompagner concrètement les entreprises dans leur transformation numérique. Grâce à une double compétence technique de haut niveau et expérience terrain, nous offrons une valeur ajoutée distinctive.",
+	"ourHeartOfOurFacultyTitle": "Ce qui nous définit avant tout",
+	"ourHeartOfOurFacultyDescription": "Nous vous aidons à concevoir des systèmes complexes pour répondre à vos besoins métiers. Avec des expériences dans la science de l'ordinateur, nous sommes les partenaires idéaux pour vous aider à améliorer vos outils et vos produits. Notre force : comprendre votre entreprise et vos besoins pour vous proposer des solutions digitales sur mesure.",
+
+	"ourHistoryTitle": "Nous construisons notre aventure depuis 2022",
+	"ourHistoryDescription": "Depuis nos débuts, nous nous engageons à concevoir des solutions porteuses de sens et à forte valeur ajoutée, afin d'aider nos clients à mieux piloter leur transformation numérique. Initialement centrés sur des projets ciblés, nous avons peu à peu rassemblé une équipe d'experts aux compétences variées, capable de répondre à une large gamme de besoins. Cette équipe s'est développée au fil du temps, en phase avec notre croissance soutenue et le succès croissant de nos produits digitaux."
 }

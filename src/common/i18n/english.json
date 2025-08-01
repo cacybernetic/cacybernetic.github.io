@@ -62,5 +62,17 @@
 	"mib": "MB",
 	"kib": "KB",
 	"ok": "OK",
-	"bi": "B"
+	"bi": "B",
+
+	"whoAreUsTitle": "A collective of visionaries and seasoned specialists",
+	"whoAreUsDescription": "Since 2022, Console Art has been designing innovative solutions using modern and reliable technologies. We create a variety of customized tools for our clients, combining technical expertise and business knowledge. This approach allows us to develop comprehensive solutions, designed to effectively meet your needs while paving the way for new uses.",
+	
+	"moreInfoAboutUsDescription": "We aspire to bring real value to the digital transition by guiding our clients in the development of innovative practices, promoting both their performance and their social and environmental responsibility.",
+	"whatIsCompanyTitle": "Who are us ?",
+	"whatIsCompanyDescription": "As graduates of scientific schools, we decided to combine our expertise to provide concrete support to companies in their digital transformation. Thanks to our high-level technical expertise and field experience, we offer distinctive added value.",
+	"ourHeartOfOurFacultyTitle": "What defines us above all",
+	"ourHeartOfOurFacultyDescription": "We help you design complex systems to meet your business needs. With experience in computer science, we are the ideal partners to help you improve your tools and products. Our strength: understanding your business and your needs to offer you tailor-made digital solutions.",
+
+	"ourHistoryTitle": "We have been building our adventure since 2022",
+	"ourHistoryDescription": "Since our inception, we have been committed to designing meaningful, high-value solutions to help our clients better manage their digital transformation. Initially focused on targeted projects, we have gradually assembled a team of experts with diverse skills, capable of meeting a wide range of needs. This team has grown over time, in line with our sustained growth and the growing success of our digital products."
 }
