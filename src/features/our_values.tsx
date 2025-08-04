@@ -20,7 +20,9 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import technicalImage from "/assets/images/technological_excellence.webp";
-import ourHistoryImage from "/assets/images/our_history.webp";
+import technologyImage from "/assets/images/company_technology.webp";
+import excellenceImage from "/assets/images/company_excellence.webp";
+import efficienceImage from "/assets/images/company_efficience.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -34,10 +36,11 @@ export default function OurValues () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {
-    imageContainerStyle: {
+    leftContainerStyle: {
       width: {base: "100%", xl: "480px", "2xl": "100%"}
     },
-    leftContainerStyle: {
+    imageContainerStyle: {
+      height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
       width: {base: "100%", xl: "480px", "2xl": "100%"}
     },
     titleStyle: {
@@ -95,7 +98,7 @@ export default function OurValues () {
         description = {t("useTechnologieInCompanyDescription")}
         title = {t("useTechnologieInCompanyTitle")}
         buttonText = {t("talkAboutYourProject")}
-        imageUrl = {technicalImage}
+        imageUrl = {technologyImage}
     />}/>
     {/** Company excellence */}
     <Section
@@ -103,7 +106,7 @@ export default function OurValues () {
         {...commonInfoPresentationStyle}
         description = {t("companyExcellenceDescription")}
         title = {t("companyExcellenceTitle")}
-        imageUrl = {technicalImage}
+        imageUrl = {excellenceImage}
         {...buildLayoutStyle(true)}
       />}
     />
@@ -114,7 +117,7 @@ export default function OurValues () {
         {...commonInfoPresentationStyle}
         description = {t("companyEfficienceDescription")}
         title = {t("companyEfficienceTitle")}
-        imageUrl = {ourHistoryImage}
+        imageUrl = {efficienceImage}
         {...buildLayoutStyle(false)}
       />}
     />
