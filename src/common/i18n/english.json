@@ -1,8 +1,12 @@
 {
+	"companyCreativityDescription": "The infinite opportunities drive us to relentlessly explore new horizons, reinvent practices, and transform our relationship with technology. We refuse to settle for what already exists : our mission is to design bold solutions that give you a head start and stimulate your growth. By closely observing your teams' working methods, we create tailor-made tools, designed to simplify and accelerate their processes. Our value lies as much in the innovations we develop as in the unique uses we create to help your teams push their own limits.",
+	"companyDiversityDescription": "Console Art is a company on a human scale, open to all cultures and driven by inclusion. We strive to provide our employees with a supportive work environment where everyone can grow and flourish. The richness of our differences is a true source of innovation, allowing us to design original, creative, and effective solutions. Convinced of the power of collective effort and collaboration, we support our teams in their personal initiatives while actively engaging them in company projects.",
 	"operationalFlowDescription": "For several years, we've been creating innovative solutions designed to optimize your teams performance and strengthen the sustainability of your projects. Our expertise lies at the heart of complex business processes, which we study in depth to deliver true added value. There's no need for you to draft detailed specifications : we understand your challenges and take care of this step, saving you valuable time.",
 	"technologicalExcellenceDescription": "We transform your challenges into concrete solutions using software designed with the utmost precision. Every line of code is designed to meet your critical needs, without compromising on quality. Drawing on our experience in deploying complex systems, we support you all the way to production. Our technology monitoring and the expertise of our teams guarantee safe, efficient, and sustainable choices.",
 	"ourHistoryDescription": "Since our inception, we have been committed to designing meaningful, high-value solutions to help our clients better manage their digital transformation. Initially focused on targeted projects, we have gradually assembled a team of experts with diverse skills, capable of meeting a wide range of needs. This team has grown over time, in line with our sustained growth and the growing success of our digital products.",
+	"companyExcellenceDescription": "We place quality and rigor at the heart of our approach to designing robust, scalable, and sustainable systems. Through a rigorous selection of expert profiles and constant attention to architecture and code, we support you in creating reliable and sustainable solutions. Each product we deliver is carefully designed, thoroughly tested, and designed to integrate harmoniously over the long term.",
 	"trustedPartnerDescription": "By collaborating with Console Art, you benefit from a solid and lasting partnership, designed to support the success of all your projects. Whether it's design or production, Console Art offers its expertise to unlock the full potential of digital technology and give new impetus to your initiatives. Your satisfaction is our priority; we are fully committed to helping you achieve your ambitions.",
+	"companyEfficienceDescription": "Drawing on our expertise, we develop tailor-made solutions to boost your business. Our priority is to quickly deliver concrete results to generate immediate benefits, while remaining aligned with your long-term ambitions. Thanks to our experience, we support you in organizing your project by helping you make the strategic choices necessary for its success.",
 	"bannerDescription": "Our team of artificial intelligence specialists designs customized solutions tailored to your strategic needs and designed to boost your growth. With the support of our business experts, we've developed an all-in-one approach that helps you leverage the benefits of AI without diverting your internal resources, while ensuring optimal performance and quality.",
 	"whoAreUsDescription": "Since 2022, Console Art has been designing innovative solutions using modern and reliable technologies. We create a variety of customized tools for our clients, combining technical expertise and business knowledge. This approach allows us to develop comprehensive solutions, designed to effectively meet your needs while paving the way for new uses.",
 	"useTechnologieInCompanyDescription": "At Console Art, we design digital tools as levers to strengthen both professional efficiency and the quality of our interaction with the world. True to our ethical vision, we integrate social and environmental responsibility into our approach, offering sustainable, reliable solutions designed to evolve over the long term.",
@@ -49,9 +53,13 @@
 	"imageLoadError": "Unable to load this image.",
 	"aiSolutionExpert": "AI Solution Experts",
 	"youHaveAProject": "Have you a project ?",
+	"companyDiversityTitle": "Heterogeneity",
+	"companyEfficienceTitle": "Performance",
+	"companyCreativityTitle": "Originality",
 	"requestFailedTitle": "Request failed",
 	"itSolutions": "Software Development",
 	"whatIsCompanyTitle": "Who are us ?",
+	"companyExcellenceTitle": "Mastery",
 	"legalNotices": "Legal Notices",
 	"networkError": "Network error",
 	"companyName": "CA Cybernetic",
@@ -74,10 +82,5 @@
 	"mib": "MB",
 	"kib": "KB",
 	"ok": "OK",
-	"bi": "B",
-
-	"companyExcellenceTitle": "Mastery",
-	"companyExcellenceDescription": "We place quality and rigor at the heart of our approach to designing robust, scalable, and sustainable systems. Through a rigorous selection of expert profiles and constant attention to architecture and code, we support you in creating reliable and sustainable solutions. Each product we deliver is carefully designed, thoroughly tested, and designed to integrate harmoniously over the long term.",
-	"comapanyEfficienceTitle": "Performance",
-	"companyEfficienceDescription": "Drawing on our expertise, we develop tailor-made solutions to boost your business. Our priority is to quickly deliver concrete results to generate immediate benefits, while remaining aligned with your long-term ambitions. Thanks to our experience, we support you in organizing your project by helping you make the strategic choices necessary for its success."
+	"bi": "B"
 }

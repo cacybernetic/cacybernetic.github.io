@@ -53,6 +53,7 @@ export default function OurValues () {
       gap: {base: 4, sm: 4, md: 5, lg: 6, xl: 8, "2xl": 24},
       borderColor: "transparent",
       justifyContent: "center",
+      alignItems: "center",
       _hover: undefined,
       borderRadius: 0,
       borderWidth: 0,
@@ -64,38 +65,17 @@ export default function OurValues () {
   const buildLayoutStyle = useCallback((
     invert: boolean
   ): PresentationProps => ({
-    drawLines: true,
     invert,
     descriptionStyle: {
       ...commonInfoPresentationStyle.descriptionStyle,
-      textAlign: (invert ? "left" : "right")
+      textAlign: (invert ? "left" : {base: "left", xl: "right"})
     },
     titleStyle: {
       ...commonInfoPresentationStyle.titleStyle,
-      textAlign: (invert ? "left" : "right")
-    },
-    leftContainerStyle: {
-      ...commonInfoPresentationStyle.leftContainerStyle,
-      paddingBlock: {base: 8, sm: 12, md: 16, lg: 20, xl: 24},
-      paddingRight: (
-        invert ? {base: 4, sm: 8, md: 32, lg: 48, xl: 60} : undefined
-      ),
-      paddingLeft: (
-        invert ? undefined : {base: 4, sm: 8, md: 32, lg: 48, xl: 60}
-      )
-    },
-    imageSkeletonStyle: {
-      marginBlock: {base: 8, sm: 12, md: 16, lg: 20, xl: 24},
-      marginRight: (
-        invert ? undefined : {base: 4, sm: 8, md: 32, lg: 48, xl: 60}
-      ),
-      marginLeft: (
-        invert ? {base: 4, sm: 8, md: 32, lg: 48, xl: 60} : undefined
-      )
+      textAlign: (invert ? "left" : {base: "left", xl: "right"})
     }
   // Dependencies.
   }), [
-    commonInfoPresentationStyle.leftContainerStyle,
     commonInfoPresentationStyle.descriptionStyle,
     commonInfoPresentationStyle.titleStyle
   ]);
@@ -119,7 +99,6 @@ export default function OurValues () {
     />}/>
     {/** Company excellence */}
     <Section
-      containerStyle = {{paddingInline: 0, paddingBlock: 0}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
         description = {t("companyExcellenceDescription")}
@@ -130,20 +109,37 @@ export default function OurValues () {
     />
     {/** Company performance */}
     <Section
-      containerStyle = {{
-        backgroundColor: "primary.50",
-        paddingInline: 0,
-        paddingBlock: 0
-      }}
+      containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
         description = {t("companyEfficienceDescription")}
-        title = {t("comapanyEfficienceTitle")}
+        title = {t("companyEfficienceTitle")}
         imageUrl = {ourHistoryImage}
         {...buildLayoutStyle(false)}
       />}
     />
+    {/** Company creativity */}
+    <Section
+      children = {<InfoPresentation
+        {...commonInfoPresentationStyle}
+        description = {t("companyCreativityDescription")}
+        title = {t("companyCreativityTitle")}
+        imageUrl = {technicalImage}
+        {...buildLayoutStyle(true)}
+      />}
+    />
+    {/** Company diversity */}
+    <Section
+      containerStyle = {{backgroundColor: "primary.50"}}
+      children = {<InfoPresentation
+        {...commonInfoPresentationStyle}
+        description = {t("companyDiversityDescription")}
+        title = {t("companyDiversityTitle")}
+        imageUrl = {technicalImage}
+        {...buildLayoutStyle(false)}
+      />}
+    />
     {/** Footer */}
-    <Box backgroundColor = "primary.50" width = "full"><Footer/></Box>
+    <Footer/>
   </Box>;
 }

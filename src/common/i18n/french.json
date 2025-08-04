@@ -1,8 +1,12 @@
 {
+	"companyCreativityDescription": "L'infinité des opportunités nous pousse à explorer sans relâche de nouveaux horizons, à réinventer les usages et à transformer notre rapport à la technologie. Nous refusons de nous contenter seulement de l'existant : notre mission est de concevoir des solutions audacieuses qui vous donnent une longueur d'avance et stimulent votre croissance. En observant en profondeur les méthodes de travail de vos équipes, nous imaginons des outils sur mesure, pensés pour simplifier et accélérer leurs processus. Notre valeur réside autant dans les innovations que nous développons que dans les usages inédits que nous créons pour aider vos équipes à repousser leurs propres limites.",
+	"companyDiversityDescription": "Console Art est une société à dimension humaine, ouverte à toutes les cultures et portée par l'inclusion. Nous veillons à offrir à nos collaborateurs un cadre de travail bienveillant où chacun peut grandir et s'épanouir pleinement. La richesse de nos différences est une véritable source d'innovation, nous permettant de concevoir des solutions originales, créatives et performantes. Convaincus du pouvoir du collectif et de la collaboration, nous accompagnons nos équipes dans leurs initiatives personnelles tout en les engageant activement dans les projets de l'entreprise.",
 	"ourHistoryDescription": "Depuis nos débuts, nous nous engageons à concevoir des solutions porteuses de sens et à forte valeur ajoutée, afin d'aider nos clients à mieux piloter leur transformation numérique. Initialement centrés sur des projets ciblés, nous avons peu à peu rassemblé une équipe d'experts aux compétences variées, capable de répondre à une large gamme de besoins. Cette équipe s'est développée au fil du temps, en phase avec notre croissance soutenue et le succès croissant de nos produits digitaux.",
 	"operationalFlowDescription": "Depuis plusieurs années, nous créons des solutions innovantes conçues pour optimiser la performance de vos équipes et renforcer la durabilité de vos projets. Notre expertise s'inscrit au cœur de processus métiers complexes, que nous étudions en profondeur afin d'y apporter une véritable valeur ajoutée. Inutile pour vous de rédiger des cahiers des charges détaillés : nous comprenons vos enjeux et prenons en charge cette étape pour vous faire gagner un temps précieux.",
 	"technologicalExcellenceDescription": "Nous transformons vos défis en solutions concrètes grâce à des logiciels conçus avec une exigence absolue. Chaque ligne de code est pensée pour répondre à vos besoins critiques, sans aucun compromis sur la qualité. Forts de notre expérience dans le déploiement de systèmes complexes, nous vous accompagnons jusqu'à la mise en production. Notre veille technologique et l'expertise de nos équipes garantissent des choix sûrs, performants et durables.",
+	"companyExcellenceDescription": "Nous plaçons la qualité et la rigueur au cœur de notre démarche pour concevoir des systèmes robustes, évolutifs et durables. Grâce à une sélection rigoureuse de profils experts, et à une attention constante portée à l'architecture et au code, nous vous accompagnons dans la création de solutions fiables et pérennes. Chaque produit que nous livrons est pensé avec soin, testé en profondeur, et conçu pour s'intégrer harmonieusement sur le long terme.",
 	"trustedPartnerDescription": "En collaborant avec Console Art, vous bénéficiez d'un partenariat solide et durable, pensé pour accompagner la réussite de tous vos projets. Qu'il s'agisse de conception ou de réalisation, Console Art met à votre disposition son expertise afin de libérer tout le potentiel du numérique et donner un nouvel élan à vos initiatives. Votre satisfaction est notre priorité; nous nous engageons pleinement pour vous aider à atteindre vos ambitions.",
+	"companyEfficienceDescription": "Forts de notre expertise, nous développons des solutions sur mesure pour dynamiser votre activité. Notre priorité est de livrer rapidement des résultats concrets afin de générer des bénéfices immédiats, tout en restant alignés avec vos ambitions à long terme. Grâce à notre expérience, nous vous accompagnons dans l'organisation de votre projet en vous aidant à faire les choix stratégiques nécessaires à sa réussite.",
 	"bannerDescription": "Notre groupe de spécialistes en intelligence artificielle conçoit des solutions personnalisées, adaptées à vos besoins stratégiques et visant à dynamiser votre développement. Avec l'appui de nos experts métier, nous avons mis en place une méthode tout-en-un qui vous aide à tirer pleinement parti des atouts de l'IA, sans détourner vos ressources internes, tout en assurant performance et qualité optimale.",
 	"useTechnologieInCompanyDescription": "Chez Console Art, nous concevons les outils numériques comme des leviers pour renforcer à la fois l'efficacité professionnelle et la qualité de notre interaction avec le monde. Fidèles à une vision éthique, nous intégrons une responsabilité sociale et environnementale au cœur de notre démarche, en proposant des solutions durables, fiables et conçues pour évoluer sur le long terme.",
 	"whoAreUsDescription": "Depuis 2022, Console Art conçoit des solutions innovantes en s'appuyant sur des technologies modernes et fiables. Nous créons divers outils personnalisés pour nos clients, en alliant maîtrise technique et connaissance métier. Cette approche nous permet de développer des solutions complètes, pensées pour répondre efficacement à vos besoins tout en ouvrant la voie à de nouveaux usages.",
@@ -50,9 +54,13 @@
 	"aiSolutionExpert": "Experts en Solution IA",
 	"youHaveAProject": "Avez-vous un projet ?",
 	"whatIsCompanyTitle": "Qui nous sommes ?",
+	"companyDiversityTitle": "Hétérogénéité",
+	"companyEfficienceTitle": "Performance",
+	"companyCreativityTitle": "Originalité",
 	"requestFailedTitle": "Requête échouée",
 	"itSolutions": "Développement Logiciel",
 	"networkError": "Erreur de connexion",
+	"companyExcellenceTitle": "Maîtrise",
 	"legalNotices": "Mentions Légales",
 	"ai": "Intelligence Artificielle",
 	"moreDetails": "Plus de détails",
@@ -74,10 +82,5 @@
 	"mib": "MO",
 	"kib": "KO",
 	"ok": "OK",
-	"bi": "O",
-
-	"companyExcellenceTitle": "Maîtrise",
-	"companyExcellenceDescription": "Nous plaçons la qualité et la rigueur au cœur de notre démarche pour concevoir des systèmes robustes, évolutifs et durables. Grâce à une sélection rigoureuse de profils experts, et à une attention constante portée à l'architecture et au code, nous vous accompagnons dans la création de solutions fiables et pérennes. Chaque produit que nous livrons est pensé avec soin, testé en profondeur, et conçu pour s'intégrer harmonieusement sur le long terme.",
-	"comapanyEfficienceTitle": "Performance",
-	"companyEfficienceDescription": "Forts de notre expertise, nous développons des solutions sur mesure pour dynamiser votre activité. Notre priorité est de livrer rapidement des résultats concrets afin de générer des bénéfices immédiats, tout en restant alignés avec vos ambitions à long terme. Grâce à notre expérience, nous vous accompagnons dans l'organisation de votre projet en vous aidant à faire les choix stratégiques nécessaires à sa réussite."
+	"bi": "O"
 }
