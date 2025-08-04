@@ -4,13 +4,16 @@
  * @fileoverview Displays company main values.
  * @supported DESKTOP, MOBILE
  * @file our_values.tsx
- * @created 2025-08-01
- * @updated 2025-08-01
+ * @created 2025-08-04
+ * @updated 2025-08-04
  * @version 0.0.1
  */
 
+// React dependencies.
+import {useCallback} from "react";
+
 // Chakra dependencies.
-import {Flex, Box} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {useTranslation} from "react-i18next";
@@ -19,7 +22,6 @@ import {useTranslation} from "react-i18next";
 import technicalImage from "/assets/images/technological_excellence.webp";
 import ourHistoryImage from "/assets/images/our_history.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import InfoCard from "@/common/components/info_card.tsx";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
 import Footer from "@/common/components/footer.tsx";
@@ -32,9 +34,6 @@ export default function OurValues () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {
-    description: '',
-    imageUrl: '',
-    title: '',
     imageContainerStyle: {
       width: {base: "100%", xl: "480px", "2xl": "100%"}
     },
@@ -54,7 +53,6 @@ export default function OurValues () {
       gap: {base: 4, sm: 4, md: 5, lg: 6, xl: 8, "2xl": 24},
       borderColor: "transparent",
       justifyContent: "center",
-      alignItems: "center",
       _hover: undefined,
       borderRadius: 0,
       borderWidth: 0,
@@ -62,58 +60,89 @@ export default function OurValues () {
     }
   };
 
+  // Builds stylesheet for associated orientation.
+  const buildLayoutStyle = useCallback((
+    invert: boolean
+  ): PresentationProps => ({
+    drawLines: true,
+    invert,
+    descriptionStyle: {
+      ...commonInfoPresentationStyle.descriptionStyle,
+      textAlign: (invert ? "left" : "right")
+    },
+    titleStyle: {
+      ...commonInfoPresentationStyle.titleStyle,
+      textAlign: (invert ? "left" : "right")
+    },
+    leftContainerStyle: {
+      ...commonInfoPresentationStyle.leftContainerStyle,
+      paddingBlock: {base: 8, sm: 12, md: 16, lg: 20, xl: 24},
+      paddingRight: (
+        invert ? {base: 4, sm: 8, md: 32, lg: 48, xl: 60} : undefined
+      ),
+      paddingLeft: (
+        invert ? undefined : {base: 4, sm: 8, md: 32, lg: 48, xl: 60}
+      )
+    },
+    imageSkeletonStyle: {
+      marginBlock: {base: 8, sm: 12, md: 16, lg: 20, xl: 24},
+      marginRight: (
+        invert ? undefined : {base: 4, sm: 8, md: 32, lg: 48, xl: 60}
+      ),
+      marginLeft: (
+        invert ? {base: 4, sm: 8, md: 32, lg: 48, xl: 60} : undefined
+      )
+    }
+  // Dependencies.
+  }), [
+    commonInfoPresentationStyle.leftContainerStyle,
+    commonInfoPresentationStyle.descriptionStyle,
+    commonInfoPresentationStyle.titleStyle
+  ]);
+
   // Builds tsx code.
   return <Box
     paddingTop = {{base: 12, sm: 12, md: 14}}
     transition = "all .2s"
     width = "full"
   >
-    {/** Who are us? */}
-    <Section children = {<InfoPresentation
-      {...commonInfoPresentationStyle}
-      description = {t("whoAreUsDescription")}
-      title = {t("whoAreUsTitle")}
-      imageUrl = {technicalImage}
-    />}/>
-    {/** More info about us */}
+    {/** Put a technologie as a lever of societal impact */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
-      description = {t("moreInfoAboutUsDescription")}
-      descriptionStyle = {{
-        fontSize: {base: 14, sm: 16, md: 18, lg: 20, xl: 22},
-        textAlign: "center"
-      }}
-      children = {<Flex
-        direction = {{base: "column", sm: "column", md: "column", lg: "row"}}
-        marginTop = {{base: 4, sm: 5, md: 6, lg: 8, xl: 10}}
-        gap = {{base: 4, sm: 5, md: 6}}
-        transition = "all .2s"
-        width = "100%"
-      >
-        {/** What is company ? */}
-        <InfoCard
-          titleStyle = {{fontSize: {base: 20, sm: 24, md: 28, lg: 32}}}
-          description = {t("whatIsCompanyDescription")}
-          title = {t("whatIsCompanyTitle")}
-          containerStyle = {{rowGap: 2}}
-        />
-        {/** About company description */}
-        <InfoCard
-          titleStyle = {{fontSize: {base: 20, sm: 24, md: 28, lg: 32}}}
-          description = {t("ourHeartOfOurFacultyDescription")}
-          title = {t("ourHeartOfOurFacultyTitle")}
-          containerStyle = {{rowGap: 2}}
-        />
-      </Flex>}
-    />
-    {/** Our story */}
-    <Section children = {<InfoPresentation
-      {...commonInfoPresentationStyle}
-      description = {t("ourHistoryDescription")}
-      title = {t("ourHistoryTitle")}
-      imageUrl = {ourHistoryImage}
-      invert
+      children = {<InfoPresentation
+        {...commonInfoPresentationStyle}
+        buttonStyle = {{marginTop: {base: 1, sm: 1, md: 2, lg: 3}}}
+        description = {t("useTechnologieInCompanyDescription")}
+        title = {t("useTechnologieInCompanyTitle")}
+        buttonText = {t("talkAboutYourProject")}
+        imageUrl = {technicalImage}
     />}/>
+    {/** Company excellence */}
+    <Section
+      containerStyle = {{paddingInline: 0, paddingBlock: 0}}
+      children = {<InfoPresentation
+        {...commonInfoPresentationStyle}
+        description = {t("companyExcellenceDescription")}
+        title = {t("companyExcellenceTitle")}
+        imageUrl = {technicalImage}
+        {...buildLayoutStyle(true)}
+      />}
+    />
+    {/** Company performance */}
+    <Section
+      containerStyle = {{
+        backgroundColor: "primary.50",
+        paddingInline: 0,
+        paddingBlock: 0
+      }}
+      children = {<InfoPresentation
+        {...commonInfoPresentationStyle}
+        description = {t("companyEfficienceDescription")}
+        title = {t("comapanyEfficienceTitle")}
+        imageUrl = {ourHistoryImage}
+        {...buildLayoutStyle(false)}
+      />}
+    />
     {/** Footer */}
     <Box backgroundColor = "primary.50" width = "full"><Footer/></Box>
   </Box>;

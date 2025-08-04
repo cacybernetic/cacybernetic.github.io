@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-01
- * @version 0.0.3
+ * @updated 2025-08-04
+ * @version 0.0.4
  * @file app.tsx
  */
 
@@ -20,13 +20,13 @@ import {Flex} from "@chakra-ui/react";
 import {useSelector} from "react-redux";
 
 // Custom dependencies.
-import {OUR_VALUES_LINK, HOME_LINK} from "@/common/constants/end_points.ts";
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
 import Toaster from "@/common/components/toaster.tsx";
 import {MessageType} from "@/common/states/alert.ts";
 import Header from "@/common/components/header.tsx";
 import {RootState} from "@/common/states/store.ts";
+import OurHistory from "@/features/our_story.tsx";
 import OurValues from "@/features/our_values.tsx";
 import Home from "@/features/home/home.tsx";
 import {
@@ -36,6 +36,11 @@ import MessageBox, {
 	MessageBoxFeatures,
 	ButtonOption
 } from "@/common/components/message_box.tsx";
+import {
+	OUR_VALUES_LINK,
+	OUR_STORY_LINK,
+	HOME_LINK
+} from "@/common/constants/end_points.ts";
 
 // The entry point of application.
 export default function App () {
@@ -99,6 +104,8 @@ export default function App () {
 		<Router future = {{v7_startTransition: true}}>
 			{/** Availables routes */}
 			<Routes>
+				{/** Our history */}
+				<Route element = {<OurHistory/>} path = {OUR_STORY_LINK}/>
 				{/** Our values */}
 				<Route element = {<OurValues/>} path = {OUR_VALUES_LINK}/>
 				{/** Home screen */}

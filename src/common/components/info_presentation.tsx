@@ -5,8 +5,8 @@
  * @file info_presentation.tsx
  * @supported DESKTOP, MOBILE
  * @created 2025-07-31
- * @updated 2025-07-31
- * @version 0.0.1
+ * @updated 2025-08-04
+ * @version 0.0.2
  */
 
 // Chakra dependencies.
@@ -38,13 +38,13 @@ export interface PresentationProps {
   buttonStyle?: (ButtonProps | null),
   imageStyle?: (ImageProps | null),
   titleStyle?: (TextProps | null),
+  description?: (string | null),
   buttonText?: (string | null),
+  imageUrl?: (string | null),
   buttonClick?: () => void,
-  description: string,
+  title?: (string | null),
   drawLines?: boolean,
-  imageUrl: string,
-  invert?: boolean,
-  title: string
+  invert?: boolean
 }
 
 // Displays a title, description and image for common info presentation.
@@ -66,7 +66,10 @@ export default function InfoPresentation ({
   title
 }: PresentationProps) {
   // Attributes.
+  description = correctString<string>({input: description});
   buttonText = correctString<string>({input: buttonText});
+  imageUrl = correctString<string>({input: imageUrl});
+  title = correctString<string>({input: title});
   const commonNodeStyle: BoxProps = {
     transform: "translate(-50%, -50%)",
     position: "fixed",
@@ -105,20 +108,20 @@ export default function InfoPresentation ({
       {...leftContainerStyle}
     >
       {/** Title */}
-      <Text
+      {title.length > 0 && <Text
         fontSize = {{base: 20, sm: 22, md: 24, lg: 26, xl: 28, "2xl": 30}}
         fontFamily = {SF_SEMI_BOLD}
         transition = "all .2s"
         as = "h3"
         {...titleStyle}
-      >{title}</Text>
+      >{title}</Text>}
       {/** Description */}
-      <Text
+      {description.length > 0 && <Text
         fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
         transition = "all .2s"
         color = "neutral.8"
         {...descriptionStyle}
-      >{description}</Text>
+      >{description}</Text>}
       {/** Button for call to action */}
       {buttonText.length > 0 && <CustomButton
         onClick = {buttonClick}
@@ -128,6 +131,7 @@ export default function InfoPresentation ({
           backgroundColor: "neutral.1",
           borderColor: "primary.500",
           fontFamily: SF_SEMI_BOLD,
+          transition: "all .2s",
           color: "primary.500",
           borderRadius: 8,
           borderWidth: 2,
@@ -146,7 +150,7 @@ export default function InfoPresentation ({
     {/** Vertical line */}
     {drawLines && <Flex
       transform = "translate3d(0, 0, 0)"
-      backgroundColor = "primary.50"
+      backgroundColor = "primary.100"
       minWidth = "2px"
       display = {{
         lg: "none", xl: "none", "2xl": "flex",
@@ -158,13 +162,13 @@ export default function InfoPresentation ({
       {/** Wrapper */}
       <Box
         backgroundColor = "neutral.1"
-        borderColor = "primary.50"
+        borderColor = "primary.100"
         {...commonNodeStyle}
         borderWidth = {2}
       />
       {/** Node */}
       <Box
-        backgroundColor = "primary.50"
+        backgroundColor = "primary.100"
         {...commonNodeStyle}
         height = "32px"
         width = "32px"
