@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-04
- * @version 0.0.4
+ * @updated 2025-08-05
+ * @version 0.0.5
  * @file app.tsx
  */
 
@@ -20,6 +20,7 @@ import {Flex} from "@chakra-ui/react";
 import {useSelector} from "react-redux";
 
 // Custom dependencies.
+import SoftwareDevelopment from "@/features/software_development.tsx";
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
 import Toaster from "@/common/components/toaster.tsx";
@@ -37,6 +38,7 @@ import MessageBox, {
 	ButtonOption
 } from "@/common/components/message_box.tsx";
 import {
+	SERVICE_SOFTWARE_DEV_LINK,
 	OUR_VALUES_LINK,
 	OUR_STORY_LINK,
 	HOME_LINK
@@ -110,6 +112,11 @@ export default function App () {
 				<Route element = {<OurValues/>} path = {OUR_VALUES_LINK}/>
 				{/** Home screen */}
 				<Route element = {<Home/>} path = {HOME_LINK}/>
+				{/** Software development */}
+				<Route
+					element = {<SoftwareDevelopment/>}
+					path = {SERVICE_SOFTWARE_DEV_LINK}
+				/>
 			</Routes>
 		</Router>
 		{/** Global toaster */}

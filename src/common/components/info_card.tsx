@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-31
- * @updated 2025-07-31
+ * @updated 2025-08-05
  * @file info_card.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -111,6 +111,10 @@ export default function InfoCard ({
         fontFamily = {SF_BOLD}
         transition = "all .2s"
         as = "h3"
+        lineHeight = {{
+          lg: "42px", xl: "48px", "2xl": "56px",
+          base: "28px", sm: "32px", md: "34px"
+        }}
         {...titleStyle}
       >{title}</Text>
     </Flex>

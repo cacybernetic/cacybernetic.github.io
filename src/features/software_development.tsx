@@ -1,12 +1,12 @@
 /**
  * @project CAC - https://github.com/cacybernetic/cacybernetic.github.io
  * @author Obrymec - https://obrymec.vercel.app
- * @fileoverview Displays company main values.
+ * @fileoverview Software development service.
+ * @file software_development.tsx
  * @supported DESKTOP, MOBILE
- * @file our_values.tsx
- * @created 2025-08-04
+ * @created 2025-08-05
  * @updated 2025-08-05
- * @version 0.0.2
+ * @version 0.0.1
  */
 
 // React dependencies.
@@ -31,8 +31,8 @@ import InfoPresentation, {
   PresentationProps
 } from "@/common/components/info_presentation.tsx";
 
-// Displays company main values.
-export default function OurValues () {
+// Displays company software development service.
+export default function SoftwareDevelopment () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {
@@ -88,58 +88,54 @@ export default function OurValues () {
     transition = "all .2s"
     width = "full"
   >
-    {/** Put a technologie as a lever of societal impact */}
+    {/** Digital transition supports */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
-        description = {t("useTechnologieInCompanyDescription")}
-        title = {t("useTechnologieInCompanyTitle")}
-        buttonText = {t("talkAboutYourProject")}
+        description = {t("softDevSupportDescription")}
+        title = {t("softDevSupportTitle")}
+        buttonText = {t("contactUs")}
         imageUrl = {technologyImage}
         buttonStyle = {{
           marginBottom: {base: 1, sm: 1, md: 2, lg: 3},
           marginTop: {base: 1, sm: 1, md: 2, lg: 3}
         }}
     />}/>
-    {/** Company excellence */}
-    <Section
-      children = {<InfoPresentation
-        {...commonInfoPresentationStyle}
-        description = {t("companyExcellenceDescription")}
-        title = {t("companyExcellenceTitle")}
-        imageUrl = {excellenceImage}
-        {...buildLayoutStyle(true)}
-      />}
-    />
-    {/** Company performance */}
+    {/** Desgin and architecture of project */}
+    <Section children = {<InfoPresentation
+      {...commonInfoPresentationStyle}
+      description = {t("softDevDesignDescription")}
+      title = {t("softDevDesignTitle")}
+      imageUrl = {excellenceImage}
+      {...buildLayoutStyle(true)}
+    />}/>
+    {/** Software development */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
-        description = {t("companyEfficienceDescription")}
-        title = {t("companyEfficienceTitle")}
+        description = {t("softDevDescription")}
         imageUrl = {efficienceImage}
+        title = {t("softDevTitle")}
         {...buildLayoutStyle(false)}
       />}
     />
-    {/** Company creativity */}
-    <Section
-      children = {<InfoPresentation
-        {...commonInfoPresentationStyle}
-        description = {t("companyCreativityDescription")}
-        title = {t("companyCreativityTitle")}
-        imageUrl = {technicalImage}
-        {...buildLayoutStyle(true)}
-      />}
-    />
-    {/** Company diversity */}
+    {/** Team training */}
+    <Section children = {<InfoPresentation
+      {...commonInfoPresentationStyle}
+      description = {t("softDevTrainingDescription")}
+      title = {t("softDevTrainingTitle")}
+      imageUrl = {technicalImage}
+      {...buildLayoutStyle(true)}
+    />}/>
+    {/** Audit and review */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
-        description = {t("companyDiversityDescription")}
-        title = {t("companyDiversityTitle")}
+        description = {t("softDevReviewDescription")}
+        title = {t("softDevReviewTitle")}
         imageUrl = {technicalImage}
         {...buildLayoutStyle(false)}
       />}

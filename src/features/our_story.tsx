@@ -4,9 +4,9 @@
  * @fileoverview Displays company history.
  * @supported DESKTOP, MOBILE
  * @created 2025-08-01
- * @updated 2025-08-01
+ * @updated 2025-08-05
  * @file our_story.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // Chakra dependencies.
@@ -32,21 +32,17 @@ export default function OurHistory () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {
-    description: '',
-    imageUrl: '',
-    title: '',
-    imageContainerStyle: {
-      width: {base: "100%", xl: "480px", "2xl": "100%"}
-    },
-    leftContainerStyle: {
-      width: {base: "100%", xl: "480px", "2xl": "100%"}
+    leftContainerStyle: {width: "100%"},
+    imageSkeletonStyle: {
+      height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
+      width: "100%"
     },
     titleStyle: {
-      fontSize: {base: 20, sm: 22, md: 24, lg: 26, xl: 28, "2xl": 48},
+      fontSize: {base: 22, sm: 24, md: 28, lg: 32, xl: 38, "2xl": 48},
       fontFamily: SF_BOLD,
       as: "h2",
       lineHeight: {
-        lg: "36px", xl: "38px", "2xl": "56px",
+        lg: "42px", xl: "48px", "2xl": "56px",
         base: "28px", sm: "32px", md: "34px"
       }
     },
@@ -58,6 +54,7 @@ export default function OurHistory () {
       _hover: undefined,
       borderRadius: 0,
       borderWidth: 0,
+      width: "100%",
       padding: 0
     }
   };
