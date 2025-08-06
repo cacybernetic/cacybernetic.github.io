@@ -2,11 +2,11 @@
  * @project CAC - https://github.com/cacybernetic/cacybernetic.github.io
  * @author Obrymec - https://obrymec.vercel.app
  * @fileoverview Software development service.
- * @file software_development.tsx
  * @supported DESKTOP, MOBILE
+ * @file sd_services.tsx
  * @created 2025-08-05
- * @updated 2025-08-05
- * @version 0.0.1
+ * @updated 2025-08-06
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -32,7 +32,7 @@ import InfoPresentation, {
 } from "@/common/components/info_presentation.tsx";
 
 // Displays company software development service.
-export default function SoftwareDevelopment () {
+export default function SoftwareDevelopmentService () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {

@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-05
- * @version 0.0.5
+ * @updated 2025-08-06
+ * @version 0.0.6
  * @file app.tsx
  */
 
@@ -20,7 +20,8 @@ import {Flex} from "@chakra-ui/react";
 import {useSelector} from "react-redux";
 
 // Custom dependencies.
-import SoftwareDevelopment from "@/features/software_development.tsx";
+import ArtificialIntelligenceService from "@/features/ai_services.tsx";
+import SoftwareDevelopmentService from "@/features/sd_services.tsx";
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
 import Toaster from "@/common/components/toaster.tsx";
@@ -40,6 +41,7 @@ import MessageBox, {
 import {
 	SERVICE_SOFTWARE_DEV_LINK,
 	OUR_VALUES_LINK,
+	SERVICE_AI_LINK,
 	OUR_STORY_LINK,
 	HOME_LINK
 } from "@/common/constants/end_points.ts";
@@ -106,15 +108,20 @@ export default function App () {
 		<Router future = {{v7_startTransition: true}}>
 			{/** Availables routes */}
 			<Routes>
-				{/** Our history */}
+				{/** About our history */}
 				<Route element = {<OurHistory/>} path = {OUR_STORY_LINK}/>
-				{/** Our values */}
+				{/** About our values */}
 				<Route element = {<OurValues/>} path = {OUR_VALUES_LINK}/>
 				{/** Home screen */}
 				<Route element = {<Home/>} path = {HOME_LINK}/>
-				{/** Software development */}
+				{/** Artifical intelligence service */}
 				<Route
-					element = {<SoftwareDevelopment/>}
+					element = {<ArtificialIntelligenceService/>}
+					path = {SERVICE_AI_LINK}
+				/>
+				{/** Software development service */}
+				<Route
+					element = {<SoftwareDevelopmentService/>}
 					path = {SERVICE_SOFTWARE_DEV_LINK}
 				/>
 			</Routes>
