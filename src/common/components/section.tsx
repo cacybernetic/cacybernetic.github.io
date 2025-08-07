@@ -4,7 +4,7 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-30
- * @updated 2025-08-05
+ * @updated 2025-08-07
  * @file section.tsx
  * @version 0.0.3
  */
@@ -76,7 +76,7 @@ export default function Section ({
     userSelect = "none"
     width = "full"
     paddingBlock = {
-      drawLines ? undefined : {base: 8, sm: 12, md: 16, lg: 20, xl: 24}
+      drawLines ? undefined : {base: 8, sm: 12, md: 20, lg: 20, xl: 24}
     }
     {...containerStyle}
   >

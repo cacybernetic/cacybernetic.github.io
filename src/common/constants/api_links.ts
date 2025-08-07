@@ -1,10 +1,10 @@
 /**
  * @project CAC - https://github.com/cacybernetic/cacybernetic.github.io
- * @fileoverview Contains all endpoints for remote APIs call.
+ * @fileoverview Contains all end points for remote APIs call.
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
+ * @updated 2025-08-07
  * @file api_links.ts
  * @version 0.0.1
  */

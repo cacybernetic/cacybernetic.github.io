@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-06
- * @version 0.0.6
+ * @updated 2025-08-07
+ * @version 0.0.7
  * @file app.tsx
  */
 
@@ -30,6 +30,7 @@ import Header from "@/common/components/header.tsx";
 import {RootState} from "@/common/states/store.ts";
 import OurHistory from "@/features/our_story.tsx";
 import OurValues from "@/features/our_values.tsx";
+import ContactUs from "@/features/contact.tsx";
 import Home from "@/features/home/home.tsx";
 import {
 	listenWindowResizeToExtractHisSize
@@ -43,6 +44,7 @@ import {
 	OUR_VALUES_LINK,
 	SERVICE_AI_LINK,
 	OUR_STORY_LINK,
+	CONTACT_LINK,
 	HOME_LINK
 } from "@/common/constants/end_points.ts";
 
@@ -112,6 +114,8 @@ export default function App () {
 				<Route element = {<OurHistory/>} path = {OUR_STORY_LINK}/>
 				{/** About our values */}
 				<Route element = {<OurValues/>} path = {OUR_VALUES_LINK}/>
+				{/** Contact form */}
+				<Route element = {<ContactUs/>} path = {CONTACT_LINK}/>
 				{/** Home screen */}
 				<Route element = {<Home/>} path = {HOME_LINK}/>
 				{/** Artifical intelligence service */}

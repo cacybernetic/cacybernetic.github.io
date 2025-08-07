@@ -5,15 +5,16 @@
  * @supported DESKTOP, MOBILE
  * @file storage_keys.ts
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-08-07
+ * @version 0.0.2
  */
 
 // Local storage keys.
-const LOGGED_USER_ID_SAVE_KEY: string = "app_logged_userid_sk";
-const REFRESH_TOKEN_SAVE_KEY: string = "app_refresh_token_sk";
-const ACCESS_TOKEN_SAVE_KEY: string = "app_access_token_sk";
-const ACTIVE_LANGUAGE_SAVE_KEY: string = "app_act_lang_sk";
+const LOGGED_USER_ID_SAVE_KEY: string = "ca_logged_userid_sk";
+const REFRESH_TOKEN_SAVE_KEY: string = "ca_refresh_token_sk";
+const ACCESS_TOKEN_SAVE_KEY: string = "ca_access_token_sk";
+const ACTIVE_LANGUAGE_SAVE_KEY: string = "ca_act_lang_sk";
+const CONTACT_SAVE_KEY: string = "ca_ct_sk";
 
 /**
  * @description Exports only public features.
@@ -23,5 +24,6 @@ export {
   ACTIVE_LANGUAGE_SAVE_KEY,
   LOGGED_USER_ID_SAVE_KEY,
   REFRESH_TOKEN_SAVE_KEY,
-  ACCESS_TOKEN_SAVE_KEY
+  ACCESS_TOKEN_SAVE_KEY,
+  CONTACT_SAVE_KEY
 };

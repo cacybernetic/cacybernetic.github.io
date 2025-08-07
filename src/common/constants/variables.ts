@@ -4,13 +4,17 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-22
+ * @updated 2025-08-07
  * @file variables.ts
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // Responsive breakpoints.
 const BREAKPOINT_316: number = 316;
+
+// Contact information.
+const COMPANY_GMAIL: string = "ca.cybernetic@gmail.com";
+const COMPANY_PHONE: string = "(+229) 019 798 5109";
 
 // Font families.
 const POPPINS_SEMI_BOLD: string = "PoppinsSemiBold";
@@ -31,6 +35,10 @@ const SF_BOLD: string = "SFBold";
 export {
   // Responsive breakpoints.
   BREAKPOINT_316,
+
+  // Contact information.
+  COMPANY_GMAIL,
+  COMPANY_PHONE,
 
   // Font families.
   POPPINS_SEMI_BOLD,
