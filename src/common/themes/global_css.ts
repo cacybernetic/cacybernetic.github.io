@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-24
+ * @updated 2025-08-08
  * @file global_css.ts
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 // Exports general CSS style.
@@ -34,5 +34,15 @@ export default `
     padding-right: 2px !important;
     padding-left: 2px !important;
     color: #262626 !important;
+  }
+  /** Basic link design */
+  a.base-link {
+    text-underline-offset: 4px;
+    text-decoration: underline;
+    color: #3238F2;
+    cursor: pointer;
+  }
+  a.base-link:hover {
+    color: #1C1F85;
   }
 `;

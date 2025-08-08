@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-07
- * @version 0.0.7
+ * @updated 2025-08-08
+ * @version 0.0.8
  * @file app.tsx
  */
 
@@ -24,6 +24,7 @@ import ArtificialIntelligenceService from "@/features/ai_services.tsx";
 import SoftwareDevelopmentService from "@/features/sd_services.tsx";
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
+import LegalNotices from "@/features/legal_notices.tsx";
 import Toaster from "@/common/components/toaster.tsx";
 import {MessageType} from "@/common/states/alert.ts";
 import Header from "@/common/components/header.tsx";
@@ -41,6 +42,7 @@ import MessageBox, {
 } from "@/common/components/message_box.tsx";
 import {
 	SERVICE_SOFTWARE_DEV_LINK,
+	LEGAL_NOTICES_LINK,
 	OUR_VALUES_LINK,
 	SERVICE_AI_LINK,
 	OUR_STORY_LINK,
@@ -110,6 +112,8 @@ export default function App () {
 		<Router future = {{v7_startTransition: true}}>
 			{/** Availables routes */}
 			<Routes>
+				{/** Legal notices */}
+				<Route element = {<LegalNotices/>} path = {LEGAL_NOTICES_LINK}/>
 				{/** About our history */}
 				<Route element = {<OurHistory/>} path = {OUR_STORY_LINK}/>
 				{/** About our values */}

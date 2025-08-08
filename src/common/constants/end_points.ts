@@ -4,14 +4,15 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-31
+ * @updated 2025-08-08
  * @file end_poins.ts
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // Base links.
 const INTERACTIVE_MEDIA_BASE: string = "interactive-media/";
 const SOFTWARE_DEV_BASE: string = "software-development/";
+const LEGAL_NOTICES_BASE: string = "legal-notices/";
 const OUR_VALUES_BASE: string = "our-values/";
 const OUR_STORY_BASE: string = "our-story/";
 const PRODUCTS_BASE: string = "products/";
@@ -23,6 +24,7 @@ const AI_BASE: string = "ai/";
 // Full links.
 const HOME_LINK: string = '/';
 const OUR_STORY_LINK: string = `${HOME_LINK}${ABOUT_BASE}${OUR_STORY_BASE}`;
+const LEGAL_NOTICES_LINK: string = `${HOME_LINK}${LEGAL_NOTICES_BASE}`;
 const CONTACT_LINK: string = `${HOME_LINK}${CONTACT_BASE}`;
 const PRODUCTS_INTERACTIVE_MEDIA_LINK: string = (
   `${HOME_LINK}${PRODUCTS_BASE}${INTERACTIVE_MEDIA_BASE}`
@@ -55,6 +57,7 @@ export {
   SERVICE_INTERACTIVE_MEDIA_LINK,
   PRODUCTS_SOFTWARE_DEV_LINK,
   SERVICE_SOFTWARE_DEV_LINK,
+  LEGAL_NOTICES_LINK,
   PRODUCTS_AI_LINK,
   SERVICE_AI_LINK,
   OUR_VALUES_LINK,

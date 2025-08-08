@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-08-07
- * @updated 2025-08-07
+ * @updated 2025-08-08
  * @file contact.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -64,6 +64,13 @@ export type ContactData = {
 
 // Global attributes.
 const fetcher: FetchManager = new FetchManager();
+const infoSectionCommonStyle: FlexProps = {
+  transition: "all .2s",
+  direction: "column",
+  rowGap: {
+    base: ".4rem", sm: ".5rem", md: ".6rem", lg: ".7rem", xl: ".8rem"
+  }
+};
 
 // Console Art guest support contact formular.
 export default function ContactUs () {
@@ -77,13 +84,6 @@ export default function ContactUs () {
   const isOnGoing: boolean = useSelector(
 		(state: RootState): boolean => state.app.isOnGoing
 	);
-  const infoSectionCommonStyle: FlexProps = {
-    transition: "all .2s",
-    direction: "column",
-    rowGap: {
-      base: ".4rem", sm: ".5rem", md: ".6rem", lg: ".7rem", xl: ".8rem"
-    }
-  };
 
   // Checks whether all required fields are filled.
 	const isRequiredFieldsAreFilled = useCallback((): boolean => (
