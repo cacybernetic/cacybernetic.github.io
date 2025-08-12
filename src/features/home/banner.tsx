@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-07-31
+ * @updated 2025-08-12
  * @file banner.tsx
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // React dependencies.
@@ -94,8 +94,7 @@ export default function Banner () {
     title = {t("aiSolutionExpert")}
     titleStyle = {{
       lineHeight: {base: "32px", sm: "42px", md: "56px", lg: "72px"},
-      fontSize: {base: 24, sm: 32, md: 48, lg: 64},
-      textAlign: "center"
+      fontSize: {base: 24, sm: 32, md: 48, lg: 64}
     }}
     descriptionStyle = {{
       fontSize: {base: 14, sm: 16, md: 18, lg: 20, xl: 22},

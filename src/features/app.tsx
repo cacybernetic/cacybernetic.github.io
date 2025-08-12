@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-08
- * @version 0.0.8
+ * @updated 2025-08-12
+ * @version 0.0.9
  * @file app.tsx
  */
 
@@ -20,8 +20,11 @@ import {Flex} from "@chakra-ui/react";
 import {useSelector} from "react-redux";
 
 // Custom dependencies.
+import ArtificialIntelligenceProducts from "@/features/ai_products.tsx";
 import ArtificialIntelligenceService from "@/features/ai_services.tsx";
+import SoftwareDevelopmentProducts from "@/features/sd_products.tsx";
 import SoftwareDevelopmentService from "@/features/sd_services.tsx";
+import InteractiveMediaProducts from "@/features/im_products.tsx";
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
 import LegalNotices from "@/features/legal_notices.tsx";
@@ -41,8 +44,11 @@ import MessageBox, {
 	ButtonOption
 } from "@/common/components/message_box.tsx";
 import {
+	PRODUCTS_INTERACTIVE_MEDIA_LINK,
+	PRODUCTS_SOFTWARE_DEV_LINK,
 	SERVICE_SOFTWARE_DEV_LINK,
 	LEGAL_NOTICES_LINK,
+	PRODUCTS_AI_LINK,
 	OUR_VALUES_LINK,
 	SERVICE_AI_LINK,
 	OUR_STORY_LINK,
@@ -122,15 +128,30 @@ export default function App () {
 				<Route element = {<ContactUs/>} path = {CONTACT_LINK}/>
 				{/** Home screen */}
 				<Route element = {<Home/>} path = {HOME_LINK}/>
+				{/** Artifical intelligence products */}
+				<Route
+					element = {<ArtificialIntelligenceProducts/>}
+					path = {PRODUCTS_AI_LINK}
+				/>
 				{/** Artifical intelligence service */}
 				<Route
 					element = {<ArtificialIntelligenceService/>}
 					path = {SERVICE_AI_LINK}
 				/>
+				{/** Software development products */}
+				<Route
+					element = {<SoftwareDevelopmentProducts/>}
+					path = {PRODUCTS_SOFTWARE_DEV_LINK}
+				/>
 				{/** Software development service */}
 				<Route
 					element = {<SoftwareDevelopmentService/>}
 					path = {SERVICE_SOFTWARE_DEV_LINK}
+				/>
+				{/** Interactive media products */}
+				<Route
+					path = {PRODUCTS_INTERACTIVE_MEDIA_LINK}
+					element = {<InteractiveMediaProducts/>}
 				/>
 			</Routes>
 		</Router>

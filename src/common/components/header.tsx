@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-07-30
+ * @updated 2025-08-12
  * @file header.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -178,7 +178,7 @@ export default function Header () {
         // It solutions development.
         buildSubOption({text: t("itSolutions"), icon: MdOutlineApps}),
         // Artifical Inteligence (AI).
-        buildSubOption({text: t("ai"), icon: PiBrain}),
+        //buildSubOption({text: t("ai"), icon: PiBrain}),
         // Interactive media.
         buildSubOption({text: t("gameDev"), icon: PiGameController}),
       ]

@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file project_query.tsx
  * @created 2025-07-30
- * @updated 2025-07-31
- * @version 0.0.2
+ * @updated 2025-08-12
+ * @version 0.0.3
  */
 
 // React dependencies.
@@ -33,7 +33,6 @@ export default function ProjectQuery () {
   return <Section
     containerStyle = {{backgroundColor: "primary.50"}}
     description = {t("contactInvitationDescription")}
-    titleStyle = {{textAlign: "center"}}
     title = {t("youHaveAProject")}
     descriptionStyle = {{
       width: {base: "auto", sm: "auto", md: "auto", lg: "620px"},

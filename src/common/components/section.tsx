@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-30
- * @updated 2025-08-07
+ * @updated 2025-08-12
  * @file section.tsx
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -86,6 +86,7 @@ export default function Section ({
       fontSize = {{base: 18, sm: 22, md: 26, lg: 30, xl: 34}}
       fontFamily = {SF_BOLD}
       transition = "all .2s"
+      textAlign = "center"
       {...titleStyle}
       as = "h2"
     >{title}</Text>}
