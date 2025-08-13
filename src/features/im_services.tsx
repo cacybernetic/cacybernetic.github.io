@@ -1,12 +1,12 @@
 /**
  * @project CAC - https://github.com/cacybernetic/cacybernetic.github.io
  * @author Obrymec - https://obrymec.vercel.app
- * @fileoverview Software development service.
+ * @fileoverview Interactive media service.
  * @supported DESKTOP, MOBILE
- * @file sd_services.tsx
- * @created 2025-08-05
+ * @file im_services.tsx
+ * @created 2025-08-13
  * @updated 2025-08-13
- * @version 0.0.2
+ * @version 0.0.1
  */
 
 // React dependencies.
@@ -31,8 +31,8 @@ import InfoPresentation, {
   PresentationProps
 } from "@/common/components/info_presentation.tsx";
 
-// Displays company software development service.
-export default function SoftwareDevelopmentService () {
+// Displays company interactive media service.
+export default function InteractiveMediaService () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {
@@ -88,13 +88,13 @@ export default function SoftwareDevelopmentService () {
     transition = "all .2s"
     width = "full"
   >
-    {/** Digital transition supports */}
+    {/** Worlds that leave a lasting impression */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
-        description = {t("softDevSupportDescription")}
-        title = {t("softDevSupportTitle")}
+        description = {t("gameWorldsDescription")}
+        title = {t("gameWorldsTitle")}
         buttonText = {t("contactUs")}
         imageUrl = {technologyImage}
         buttonStyle = {{
@@ -102,40 +102,40 @@ export default function SoftwareDevelopmentService () {
           marginTop: {base: 1, sm: 1, md: 2, lg: 3}
         }}
     />}/>
-    {/** Design and architecture of project */}
+    {/** Cutting-edge technology, pure sensations */}
     <Section children = {<InfoPresentation
       {...commonInfoPresentationStyle}
-      description = {t("softDevDesignDescription")}
-      title = {t("softDevDesignTitle")}
+      description = {t("gameTechDescription")}
       imageUrl = {excellenceImage}
+      title = {t("gameTechTitle")}
       {...buildLayoutStyle(true)}
     />}/>
-    {/** Software development */}
+    {/** A visual style that stands out */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
-        description = {t("softDevDescription")}
+        description = {t("gameVisualStyleDescription")}
+        title = {t("gameVisualStyleTitle")}
         imageUrl = {efficienceImage}
-        title = {t("softDevTitle")}
         {...buildLayoutStyle(false)}
       />}
     />
-    {/** Team training */}
+    {/** Player first before all */}
     <Section children = {<InfoPresentation
       {...commonInfoPresentationStyle}
-      description = {t("softDevTrainingDescription")}
-      title = {t("softDevTrainingTitle")}
+      description = {t("gamePlayerFirstDescription")}
+      title = {t("gamePlayerFirstTitle")}
       imageUrl = {technicalImage}
       {...buildLayoutStyle(true)}
     />}/>
-    {/** Audit and review */}
+    {/** Passion as a driving force */}
     <Section
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
-        description = {t("softDevReviewDescription")}
-        title = {t("softDevReviewTitle")}
+        description = {t("gamePassionDescription")}
+        title = {t("gamePassionTitle")}
         imageUrl = {technicalImage}
         {...buildLayoutStyle(false)}
       />}

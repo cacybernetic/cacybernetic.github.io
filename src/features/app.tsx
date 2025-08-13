@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-12
- * @version 0.0.9
+ * @updated 2025-08-13
+ * @version 0.1.0
  * @file app.tsx
  */
 
@@ -25,6 +25,7 @@ import ArtificialIntelligenceService from "@/features/ai_services.tsx";
 import SoftwareDevelopmentProducts from "@/features/sd_products.tsx";
 import SoftwareDevelopmentService from "@/features/sd_services.tsx";
 import InteractiveMediaProducts from "@/features/im_products.tsx";
+import InteractiveMediaService from "@/features/im_services.tsx";
 import {listenNetworkState} from "@/common/libraries/network.ts";
 import {SF_REGULAR} from "@/common/constants/variables.ts";
 import LegalNotices from "@/features/legal_notices.tsx";
@@ -45,6 +46,7 @@ import MessageBox, {
 } from "@/common/components/message_box.tsx";
 import {
 	PRODUCTS_INTERACTIVE_MEDIA_LINK,
+	SERVICE_INTERACTIVE_MEDIA_LINK,
 	PRODUCTS_SOFTWARE_DEV_LINK,
 	SERVICE_SOFTWARE_DEV_LINK,
 	LEGAL_NOTICES_LINK,
@@ -152,6 +154,11 @@ export default function App () {
 				<Route
 					path = {PRODUCTS_INTERACTIVE_MEDIA_LINK}
 					element = {<InteractiveMediaProducts/>}
+				/>
+				{/** Interactive media service */}
+				<Route
+					path = {SERVICE_INTERACTIVE_MEDIA_LINK}
+					element = {<InteractiveMediaService/>}
 				/>
 			</Routes>
 		</Router>
