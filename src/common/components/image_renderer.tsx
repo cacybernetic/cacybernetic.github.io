@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file image_renderer.tsx
  * @created 2025-07-22
- * @updated 2025-08-12
- * @version 0.0.3
+ * @updated 2025-08-14
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -101,6 +101,7 @@ export default function ImageRenderer ({
             src = {createBlankImage({}).src}
             height = "100%"
             width = "100%"
+            {...imageStyle}
           />
           {/** Original image */}
           <Image

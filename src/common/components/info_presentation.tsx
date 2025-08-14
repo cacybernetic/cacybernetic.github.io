@@ -5,7 +5,7 @@
  * @file info_presentation.tsx
  * @supported DESKTOP, MOBILE
  * @created 2025-07-31
- * @updated 2025-08-04
+ * @updated 2025-08-14
  * @version 0.0.2
  */
 
@@ -23,10 +23,10 @@ import {
 } from "@chakra-ui/react";
 
 // Custom dependencies.
+import ImageRenderer from "@/common/components/image_renderer.tsx";
 import {SF_SEMI_BOLD} from "@/common/constants/variables.ts";
+import CustomButton from "@/common/components/button.tsx";
 import {correctString} from "@/common/libraries/std.ts";
-import ImageRenderer from "./image_renderer.tsx";
-import CustomButton from "./button.tsx";
 
 // Component properties.
 export interface PresentationProps {
@@ -105,6 +105,14 @@ export default function InfoPresentation ({
       rowGap = {{
         base: ".6rem", sm: ".7rem", md: ".8rem", lg: ".9rem", xl: "1rem"
       }}
+      minWidth = {{
+        lg: "100%", xl: "416px", "2xl": "640px",
+        base: "100%", sm: "100%", md: "100%"
+      }}
+      maxWidth = {{
+        lg: "100%", xl: "416px", "2xl": "640px",
+        base: "100%", sm: "100%", md: "100%"
+      }}
       {...leftContainerStyle}
     >
       {/** Title */}
@@ -176,7 +184,6 @@ export default function InfoPresentation ({
     </Flex>}
     {/** Image */}
     <ImageRenderer
-      skeletonStyle = {imageSkeletonStyle}
       url = {imageUrl}
       imageStyle = {{
         borderRadius: {base: ".4rem", sm: ".6rem", md: ".8rem", lg: "1rem"},
@@ -186,10 +193,17 @@ export default function InfoPresentation ({
       }}
       containerStyle = {{
         minWidth: {
-          lg: "256px", xl: "364px", "2xl": "480px",
+          lg: "100%", xl: "416px", "2xl": "640px",
           base: "100%", sm: "100%", md: "100%"
         },
         ...imageContainerStyle
+      }}
+      skeletonStyle = {{
+        maxWidth: {
+          lg: "100%", xl: "416px", "2xl": "640px",
+          base: "100%", sm: "100%", md: "100%"
+        },
+        ...imageSkeletonStyle
       }}
     />
   </Flex>;

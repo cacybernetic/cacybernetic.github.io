@@ -5,11 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file our_values.tsx
  * @created 2025-08-04
- * @updated 2025-08-05
- * @version 0.0.2
+ * @updated 2025-08-14
+ * @version 0.0.3
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {useCallback} from "react";
 
 // Chakra dependencies.
@@ -19,10 +20,12 @@ import {Box} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
-import technicalImage from "/assets/images/technological_excellence.webp";
+import creativityImage from "/assets/images/company_creativity.webp";
 import technologyImage from "/assets/images/company_technology.webp";
 import excellenceImage from "/assets/images/company_excellence.webp";
 import efficienceImage from "/assets/images/company_efficience.webp";
+import diversityImage from "/assets/images/company_diversity.webp";
+import {CONTACT_LINK} from "@/common/constants/end_points.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -35,8 +38,8 @@ import InfoPresentation, {
 export default function OurValues () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
   const commonInfoPresentationStyle: PresentationProps = {
-    leftContainerStyle: {width: "100%"},
     imageSkeletonStyle: {
       height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
       width: "100%"
@@ -94,6 +97,7 @@ export default function OurValues () {
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
         description = {t("useTechnologieInCompanyDescription")}
+        buttonClick = {(): void => navigate(CONTACT_LINK)}
         title = {t("useTechnologieInCompanyTitle")}
         buttonText = {t("talkAboutYourProject")}
         imageUrl = {technologyImage}
@@ -129,7 +133,7 @@ export default function OurValues () {
         {...commonInfoPresentationStyle}
         description = {t("companyCreativityDescription")}
         title = {t("companyCreativityTitle")}
-        imageUrl = {technicalImage}
+        imageUrl = {creativityImage}
         {...buildLayoutStyle(true)}
       />}
     />
@@ -140,7 +144,7 @@ export default function OurValues () {
         {...commonInfoPresentationStyle}
         description = {t("companyDiversityDescription")}
         title = {t("companyDiversityTitle")}
-        imageUrl = {technicalImage}
+        imageUrl = {diversityImage}
         {...buildLayoutStyle(false)}
       />}
     />

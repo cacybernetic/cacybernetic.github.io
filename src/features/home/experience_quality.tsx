@@ -5,7 +5,7 @@
  * @file experience_quality.tsx
  * @supported DESKTOP, MOBILE
  * @created 2025-07-28
- * @updated 2025-07-31
+ * @updated 2025-08-14
  * @version 0.0.3
  */
 
@@ -36,7 +36,7 @@ export default function ExperienceQuality () {
       title = {t("operationalFlowTitle")}
       imageUrl = {operationalFlowImage}
     />
-    {/** Technological excellence  */}
+    {/** Technological excellence */}
     <InfoPresentation
       containerStyle = {{marginTop: {base: 4, sm: 5, md: 6}}}
       description = {t("technologicalExcellenceDescription")}
@@ -44,7 +44,7 @@ export default function ExperienceQuality () {
       imageUrl = {technicalImage}
       invert
     />
-    {/** Trust partner  */}
+    {/** Trust partner */}
     <InfoPresentation
       containerStyle = {{marginTop: {base: 4, sm: 5, md: 6}}}
       description = {t("trustedPartnerDescription")}

@@ -32,7 +32,6 @@ export default function OurHistory () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const commonInfoPresentationStyle: PresentationProps = {
-    leftContainerStyle: {width: "100%"},
     imageSkeletonStyle: {
       height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
       width: "100%"

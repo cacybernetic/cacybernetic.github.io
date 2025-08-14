@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-13
- * @version 0.1.0
+ * @updated 2025-08-14
+ * @version 0.1.1
  * @file app.tsx
  */
 
@@ -114,10 +114,10 @@ export default function App () {
 		overflowY = "auto"
 		as = "section"
 	>
-		{/** Header */}
-		<Header/>
 		{/** Mutable section */}
 		<Router future = {{v7_startTransition: true}}>
+			{/** Header */}
+			<Header/>
 			{/** Availables routes */}
 			<Routes>
 				{/** Legal notices */}

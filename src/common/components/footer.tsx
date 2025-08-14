@@ -4,12 +4,13 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-30
- * @updated 2025-07-30
+ * @updated 2025-07-14
  * @file footer.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {ReactElement, useCallback, Fragment} from "react";
 import {MdOutlineFacebook} from "react-icons/md";
 import {IoLogoWhatsapp} from "react-icons/io";
@@ -18,31 +19,44 @@ import {DiGithubBadge} from "react-icons/di";
 import {IconType} from "react-icons/lib";
 
 // Chakra dependencies.
-import {Text, Flex, Icon} from "@chakra-ui/react";
+import {Text, Flex, Icon, Link} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
+import ImageRenderer from "@/common/components/image_renderer.tsx";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import ImageRenderer from "./image_renderer.tsx";
+import Section from "@/common/components/section.tsx";
 import appLogo from "/assets/logos/app.webp";
-import Section from "./section.tsx";
 import {
   POPPINS_SEMI_BOLD,
   SF_SEMI_BOLD
 } from "@/common/constants/variables.ts";
+import {
+  LEGAL_NOTICES_LINK,
+  CONTACT_LINK,
+  HOME_LINK
+} from "@/common/constants/end_points.ts";
+
+// Component types.
+type BuildSimpleSocialNetwork = {
+  click?: () => void,
+  icon: IconType,
+  link: string
+};
 
 // Displays global website footer.
 export default function Footer () {
   // Attributes.
   const newYear: number = new Date(Date.now()).getFullYear();
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
 
   // Builds simple social network link icon.
   const buildSimpleSocialNetwork = useCallback((
-    icon: IconType, click?: () => void
-  ): ReactElement => <Flex
+    {click, icon, link}: BuildSimpleSocialNetwork
+  ): ReactElement => <Link
     _hover = {{backgroundColor: "primary.500", color: "neutral.1"}}
     borderColor = "primary.500"
     justifyContent = "center"
@@ -53,6 +67,9 @@ export default function Footer () {
     cursor = "pointer"
     borderWidth = {1}
     onClick = {click}
+    target = "_blank"
+    outline = "none"
+    href = {link}
     height = {{
       base: "2rem", sm: "2rem", md: "2.5rem", lg: "2.5rem", xl: "3rem"
     }}
@@ -67,7 +84,7 @@ export default function Footer () {
       transition = "all .2s"
       as = {icon}
     />
-  </Flex>, []);
+  </Link>, []);
 
   // Builds tsx code.
   return <Section
@@ -100,6 +117,7 @@ export default function Footer () {
           {/** Contact us */}
           <Text
             fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
+            onClick = {(): void => navigate(CONTACT_LINK)}
             marginTop = {{base: 2, sm: 3, md: 4}}
             transition = "all .2s"
             cursor = "pointer"
@@ -111,6 +129,7 @@ export default function Footer () {
           >{t("contact")}</Text>
           {/** Legal notice */}
           <Text
+            onClick = {(): void => navigate(LEGAL_NOTICES_LINK)}
             fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
             transition = "all .2s"
             cursor = "pointer"
@@ -130,7 +149,7 @@ export default function Footer () {
         >
           {/** Company logo */}
           <Flex
-            onClick = {(): void => window.location.reload()}
+            onClick = {(): void => navigate(HOME_LINK)}
             columnGap = {{base: 2, sm: 2, md: 3}}
             transition = "all .2s"
             alignItems = "center"
@@ -140,8 +159,12 @@ export default function Footer () {
             <ImageRenderer
               url = {appLogo}
               skeletonStyle = {{
+                height: {
+                  lg: "36px", xl: "38px", "2xl": "40px",
+                  base: "24px", sm: "28px", md: "32px"
+                },
                 width: {
-                  lg: "36px", xl: "38px", "2xl": "auto",
+                  lg: "36px", xl: "38px", "2xl": "40px",
                   base: "24px", sm: "28px", md: "32px"
                 }
               }}
@@ -167,13 +190,25 @@ export default function Footer () {
           {/** Social network */}
           <Flex columnGap = {2}>
             {/** GitHub */}
-            {buildSimpleSocialNetwork(DiGithubBadge)}
+            {buildSimpleSocialNetwork({
+              link: "https://github.com/cacybernetic",
+              icon: DiGithubBadge
+            })}
             {/** Whatsapp */}
-            {buildSimpleSocialNetwork(IoLogoWhatsapp)}
+            {buildSimpleSocialNetwork({
+              link: "https://whatsapp.com/channel/0029VbAhTgnGehEDZ1ihez2k",
+              icon: IoLogoWhatsapp
+            })}
             {/** YouTube */}
-            {buildSimpleSocialNetwork(RiYoutubeFill)}
+            {buildSimpleSocialNetwork({icon: RiYoutubeFill, link: "#"})}
             {/** Facebook */}
-            {buildSimpleSocialNetwork(MdOutlineFacebook)}
+            {buildSimpleSocialNetwork({
+              icon: MdOutlineFacebook,
+              link: (
+                "https://www.facebook.com/profile.php" +
+                "?id=100093144799989"
+              )
+            })}
           </Flex>
         </Flex>
       </Flex>

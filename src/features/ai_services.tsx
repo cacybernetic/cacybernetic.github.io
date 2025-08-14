@@ -5,11 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file sd_services.tsx
  * @created 2025-08-06
- * @updated 2025-08-06
- * @version 0.0.1
+ * @updated 2025-08-14
+ * @version 0.0.2
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {useCallback} from "react";
 
 // Chakra dependencies.
@@ -23,6 +24,7 @@ import technicalImage from "/assets/images/technological_excellence.webp";
 import technologyImage from "/assets/images/company_technology.webp";
 import excellenceImage from "/assets/images/company_excellence.webp";
 import efficienceImage from "/assets/images/company_efficience.webp";
+import {CONTACT_LINK} from "@/common/constants/end_points.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -35,8 +37,8 @@ import InfoPresentation, {
 export default function ArtificialIntelligenceService () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
   const commonInfoPresentationStyle: PresentationProps = {
-    leftContainerStyle: {width: "100%"},
     imageSkeletonStyle: {
       height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
       width: "100%"
@@ -93,6 +95,7 @@ export default function ArtificialIntelligenceService () {
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
+        buttonClick = {(): void => navigate(CONTACT_LINK)}
         description = {t("aiPartnerDescription")}
         buttonText = {t("contactUs")}
         title = {t("aiPartnerTitle")}

@@ -5,11 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file project_query.tsx
  * @created 2025-07-30
- * @updated 2025-08-12
- * @version 0.0.3
+ * @updated 2025-08-14
+ * @version 0.0.4
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {Fragment} from "react";
 
 // Chakra dependencies.
@@ -19,6 +20,7 @@ import {ButtonProps} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
+import {CONTACT_LINK} from "@/common/constants/end_points.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import CustomButton from "@/common/components/button.tsx";
 import {SF_MEDIUM} from "@/common/constants/variables.ts";
@@ -28,6 +30,7 @@ import Section from "@/common/components/section.tsx";
 export default function ProjectQuery () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
 
   // Sends tsx code.
   return <Section
@@ -43,6 +46,7 @@ export default function ProjectQuery () {
       {/** Contact us button */}
       <CustomButton
         onMouseDown = {(): ButtonProps => ({boxShadow: "none"})}
+        onClick = {(): void => navigate(CONTACT_LINK)}
         text = {t("getInTouch")}
         buttonStyle = {(): ButtonProps => ({
           boxShadow: "1px 4px 6px var(--chakra-colors-neutral-7)",

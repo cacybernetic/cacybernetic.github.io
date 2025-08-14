@@ -4,12 +4,13 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-23
- * @updated 2025-08-12
+ * @updated 2025-08-14
  * @file banner.tsx
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {ReactElement, useCallback, Fragment} from "react";
 
 // Chakra dependencies.
@@ -21,6 +22,7 @@ import {useTranslation} from "react-i18next";
 // Custom dependencies.
 import ImageRenderer from "@/common/components/image_renderer.tsx";
 import rightDownArrow from "/assets/icons/right_down_arrow.svg";
+import {CONTACT_LINK} from "@/common/constants/end_points.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import CustomButton from "@/common/components/button.tsx";
 import {SF_MEDIUM} from "@/common/constants/variables.ts";
@@ -41,6 +43,7 @@ type BuildPartnerLogoProps = {
 export default function Banner () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
   const commonCompanyLogoStyle: SkeletonProps = {
     boxShadow: "1px 3px 4px var(--chakra-colors-neutral-6)",
     borderColor: "neutral.4",
@@ -111,6 +114,7 @@ export default function Banner () {
       {/** Contact us button */}
       <CustomButton
         onMouseDown = {(): ButtonProps => ({boxShadow: "none"})}
+        onClick = {(): void => navigate(CONTACT_LINK)}
         text = {t("getInTouch")}
         buttonStyle = {(): ButtonProps => ({
           boxShadow: "1px 4px 6px var(--chakra-colors-neutral-7)",
@@ -138,8 +142,12 @@ export default function Banner () {
       >
         {/** Left down arrow */}
         <ImageRenderer
-          containerStyle = {{transform: "translateY(8px)"}}
           url = {rightDownArrow}
+          containerStyle = {{
+            transform: "translateY(8px)",
+            height: "24px",
+            width: "24px"
+          }}
         />
         {/** Ours parners */}
         <Text
@@ -154,8 +162,12 @@ export default function Banner () {
         >{t("oursTrustedPartners")}</Text>
         {/** Right down arrow */}
         <ImageRenderer
-          containerStyle = {{transform: "translateY(8px) scale(-1, 1)"}}
           url = {rightDownArrow}
+          containerStyle = {{
+            transform: "translateY(8px) scale(-1, 1)",
+            height: "24px",
+            width: "24px"
+          }}
         />
       </Flex>
       {/** Partners */}

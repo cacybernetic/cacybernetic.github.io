@@ -5,11 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file im_services.tsx
  * @created 2025-08-13
- * @updated 2025-08-13
- * @version 0.0.1
+ * @updated 2025-08-14
+ * @version 0.0.2
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {useCallback} from "react";
 
 // Chakra dependencies.
@@ -30,13 +31,16 @@ import Footer from "@/common/components/footer.tsx";
 import InfoPresentation, {
   PresentationProps
 } from "@/common/components/info_presentation.tsx";
+import {
+  PRODUCTS_INTERACTIVE_MEDIA_LINK
+} from "@/common/constants/end_points.ts";
 
 // Displays company interactive media service.
 export default function InteractiveMediaService () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
   const commonInfoPresentationStyle: PresentationProps = {
-    leftContainerStyle: {width: "100%"},
     imageSkeletonStyle: {
       height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
       width: "100%"
@@ -93,9 +97,10 @@ export default function InteractiveMediaService () {
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
+        buttonClick = {(): void => navigate(PRODUCTS_INTERACTIVE_MEDIA_LINK)}
         description = {t("gameWorldsDescription")}
+        buttonText = {t("discoverProjects")}
         title = {t("gameWorldsTitle")}
-        buttonText = {t("contactUs")}
         imageUrl = {technologyImage}
         buttonStyle = {{
           marginBottom: {base: 1, sm: 1, md: 2, lg: 3},

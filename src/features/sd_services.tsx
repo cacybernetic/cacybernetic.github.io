@@ -5,11 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file sd_services.tsx
  * @created 2025-08-05
- * @updated 2025-08-13
- * @version 0.0.2
+ * @updated 2025-08-14
+ * @version 0.0.3
  */
 
 // React dependencies.
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {useCallback} from "react";
 
 // Chakra dependencies.
@@ -19,9 +20,10 @@ import {Box} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
+import {PRODUCTS_SOFTWARE_DEV_LINK} from "@/common/constants/end_points.ts";
 import technicalImage from "/assets/images/technological_excellence.webp";
-import technologyImage from "/assets/images/company_technology.webp";
-import excellenceImage from "/assets/images/company_excellence.webp";
+import architectureImage from "/assets/images/design_architecture.webp";
+import digitalTransition from "/assets/images/digital_transition.webp";
 import efficienceImage from "/assets/images/company_efficience.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
@@ -35,8 +37,8 @@ import InfoPresentation, {
 export default function SoftwareDevelopmentService () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
   const commonInfoPresentationStyle: PresentationProps = {
-    leftContainerStyle: {width: "100%"},
     imageSkeletonStyle: {
       height: {base: "256px", sm: "320px", md: "380px", lg: "420px"},
       width: "100%"
@@ -93,10 +95,11 @@ export default function SoftwareDevelopmentService () {
       containerStyle = {{backgroundColor: "primary.50"}}
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
+        buttonClick = {(): void => navigate(PRODUCTS_SOFTWARE_DEV_LINK)}
         description = {t("softDevSupportDescription")}
+        buttonText = {t("discoverProjects")}
         title = {t("softDevSupportTitle")}
-        buttonText = {t("contactUs")}
-        imageUrl = {technologyImage}
+        imageUrl = {digitalTransition}
         buttonStyle = {{
           marginBottom: {base: 1, sm: 1, md: 2, lg: 3},
           marginTop: {base: 1, sm: 1, md: 2, lg: 3}
@@ -107,7 +110,7 @@ export default function SoftwareDevelopmentService () {
       {...commonInfoPresentationStyle}
       description = {t("softDevDesignDescription")}
       title = {t("softDevDesignTitle")}
-      imageUrl = {excellenceImage}
+      imageUrl = {architectureImage}
       {...buildLayoutStyle(true)}
     />}/>
     {/** Software development */}

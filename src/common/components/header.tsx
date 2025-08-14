@@ -4,22 +4,37 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-08-12
+ * @updated 2025-08-14
  * @file header.tsx
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // React dependencies.
-import {ReactElement, useCallback, Fragment, useState, useMemo} from "react";
-import {MdKeyboardArrowDown, MdOutlineApps, MdHistory} from "react-icons/md";
+import {NavigateFunction, useNavigate} from "react-router-dom";
+import {IoCloseOutline, IoHomeOutline} from "react-icons/io5";
+import {IoIosInformationCircleOutline} from "react-icons/io";
 import {PiGameController, PiBrain} from "react-icons/pi";
-import {IoCloseOutline} from "react-icons/io5";
+import {AiOutlineProduct} from "react-icons/ai";
 import {RiMenu5Fill} from "react-icons/ri";
 import {IconType} from "react-icons/lib";
 import {RxValue} from "react-icons/rx";
+import {
+  MdOutlineDesignServices,
+  MdKeyboardArrowDown,
+  MdOutlinePhone,
+  MdOutlineApps,
+  MdHistory
+} from "react-icons/md";
+import {
+  ReactElement,
+  useCallback,
+  Fragment,
+  useState,
+  useMemo
+} from "react";
 
 // Chakra dependencies.
-import {Text, Flex, Icon, Box} from "@chakra-ui/react";
+import {Text, Flex, Icon} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {MenuButton, MenuItem, Menu} from "@szhsin/react-menu";
@@ -30,9 +45,9 @@ import "@szhsin/react-menu/dist/index.css";
 import {useSelector} from "react-redux";
 
 // Custom dependencies.
+import ImageRenderer from "@/common/components/image_renderer.tsx";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {RootState} from "@/common/states/store.ts";
-import ImageRenderer from "./image_renderer.tsx";
 import appLogo from "/assets/logos/app.webp";
 import {
   ACTIVE_LANGUAGE_SAVE_KEY
@@ -43,16 +58,29 @@ import {
   SF_SEMI_BOLD,
   SF_MEDIUM
 } from "@/common/constants/variables.ts";
+import {
+  PRODUCTS_INTERACTIVE_MEDIA_LINK,
+  SERVICE_INTERACTIVE_MEDIA_LINK,
+  PRODUCTS_SOFTWARE_DEV_LINK,
+  SERVICE_SOFTWARE_DEV_LINK,
+  //PRODUCTS_AI_LINK,
+  OUR_VALUES_LINK,
+  SERVICE_AI_LINK,
+  OUR_STORY_LINK,
+  CONTACT_LINK,
+  HOME_LINK
+} from "@/common/constants/end_points.ts";
 
 // Component types.
-type BuildOptionProps = {
-  subOptions?: (Array<ReactElement> | null),
-  onClick?: () => void,
-  text: string
-};
 type BuildSubOptionProps = {
   onClick?: () => void,
   icon: IconType,
+  text: string
+};
+type BuildOptionProps = {
+  subOptions?: (Array<ReactElement> | null),
+  icon?: (IconType | null),
+  onClick?: () => void,
   text: string
 };
 
@@ -61,6 +89,7 @@ export default function Header () {
   // Attributes.
   const {i18n, t} = useTranslation<string, undefined>(GLOBAL_LANG);
   const [isMenuDisplayed, displayMenu] = useState<boolean>(false);
+  const navigate: NavigateFunction = useNavigate();
   const windowWidth: number = useSelector(
 		(state: RootState): number => state.app.windowWidth
 	);
@@ -95,98 +124,160 @@ export default function Header () {
     <Text lineHeight = {0}>{text}</Text>
   </Flex>, []);
 
+  // Builds menu option artifacts.
+  const buildOptionArtifacts = useCallback((
+    {subOptions, onClick, icon, text}: BuildOptionProps
+  ): ReactElement => <Flex
+    _hover = {{color: "primary.600"}}
+    transition = "all .2s"
+    alignItems = "center"
+    onClick = {onClick}
+    cursor = "pointer"
+    columnGap = {0}
+  >
+    {/** Vector icon */}
+    {icon != null && <Icon
+      display = {{base: "inline-block", sm: "inline-block", md: "none"}}
+      marginRight = {2}
+      height = {6}
+      width = {6}
+      as = {icon}
+    />}
+    {/** Text */}
+    <Text>{text}</Text>
+    {/** Down arrow */}
+    {subOptions != null && <Icon
+      height = {{base: 4, sm: 4, md: 5}}
+      width = {{base: 4, sm: 4, md: 5}}
+      as = {MdKeyboardArrowDown}
+      transition = "all .2s"
+    />}
+  </Flex>, []);
+
   // Builds menu option.
   const buildOption = useCallback((
-    {subOptions, onClick, text}: BuildOptionProps
-  ): ReactElement => <Menu
-    position = "initial"
-    transition
-    arrow
-    menuButton = {
-      // Option button.
-      <MenuButton disabled = {subOptions == null} style = {{padding: 0}}>
-        {/** Container */}
-        <Flex
-          _hover = {{color: "primary.600"}}
-          transition = "all .2s"
-          alignItems = "center"
-          onClick = {onClick}
-          cursor = "pointer"
-          columnGap = {0}
-        >
-          {/** Text */}
-          <Text>{text}</Text>
-          {/** Down arrow */}
-          {subOptions != null && <Icon
-            height = {{base: 4, sm: 4, md: 5}}
-            width = {{base: 4, sm: 4, md: 5}}
-            as = {MdKeyboardArrowDown}
-            transition = "all .2s"
-          />}
-        </Flex>
-      </MenuButton>
-    }
-  >
-    {/** Options */}
-    {(subOptions ?? []).map((
-      menuItem: ReactElement, index: number
-    ): ReactElement => <MenuItem
-      style = {{color: "var(--chakra-colors-neutral-9)", padding: 0}}
-      key = {index}
+    {subOptions, onClick, icon, text}: BuildOptionProps
+  ): ReactElement => (
+    subOptions == null ?
+    buildOptionArtifacts({onClick, icon, text}) :
+    <Menu
+      position = "initial"
+      transition
+      arrow
+      menuButton = {
+        // Option button.
+        <MenuButton style = {{padding: 0}}>
+          {buildOptionArtifacts({subOptions, onClick, icon, text})}
+        </MenuButton>
+      }
     >
-      {/** Custom hover effect */}
-      {({hover}): ReactElement => <Flex
-        backgroundColor = {hover ? "primary.50" : "transparent"}
-        fontFamily = {hover ? "inherit" : SF_MEDIUM}
-        color = {hover ? "primary.600" : "inherit"}
-        transition = "all .2s"
-        width = "100%"
-      >{menuItem}</Flex>}
-    </MenuItem>)}
-  </Menu>, []);
+      {/** Options */}
+      {(subOptions ?? []).map((
+        menuItem: ReactElement, index: number
+      ): ReactElement => <MenuItem
+        style = {{color: "var(--chakra-colors-neutral-9)", padding: 0}}
+        key = {index}
+      >
+        {/** Custom hover effect */}
+        {({hover}): ReactElement => <Flex
+          backgroundColor = {hover ? "primary.50" : "transparent"}
+          fontFamily = {hover ? "inherit" : SF_MEDIUM}
+          color = {hover ? "primary.600" : "inherit"}
+          transition = "all .2s"
+          width = "100%"
+        >{menuItem}</Flex>}
+      </MenuItem>)}
+    </Menu>
+  // Dependencies.
+  ), [buildOptionArtifacts]);
 
   // Builds available options.
   const buildOptions = useMemo((): ReactElement => <Fragment>
     {/** Home */}
-    <Box marginRight = {1}>{buildOption({text: t("home")})}</Box>
+    <Flex marginRight = {1}>
+      {buildOption({
+        onClick: (): void => navigate(HOME_LINK),
+        icon: IoHomeOutline,
+        text: t("home")
+      })}
+    </Flex>
     {/** About us */}
     {buildOption({
+      icon: IoIosInformationCircleOutline,
       text: t("about"),
       subOptions: [
         // Our history.
-        buildSubOption({text: t("ourStory"), icon: MdHistory}),
+        buildSubOption({
+          onClick: (): void => navigate(OUR_STORY_LINK),
+          text: t("ourStory"),
+          icon: MdHistory
+        }),
         // Ours values.
-        buildSubOption({text: t("oursValues"), icon: RxValue})
+        buildSubOption({
+          onClick: (): void => navigate(OUR_VALUES_LINK),
+          text: t("oursValues"),
+          icon: RxValue
+        })
       ]
     })}
     {/** Ours services */}
     {buildOption({
+      icon: MdOutlineDesignServices,
       text: t("services"),
       subOptions: [
         // It solutions development.
-        buildSubOption({text: t("itSolutions"), icon: MdOutlineApps}),
+        buildSubOption({
+          onClick: (): void => navigate(SERVICE_SOFTWARE_DEV_LINK),
+          text: t("itSolutions"),
+          icon: MdOutlineApps
+        }),
         // Artifical Inteligence (AI).
-        buildSubOption({text: t("ai"), icon: PiBrain}),
+        buildSubOption({
+          onClick: (): void => navigate(SERVICE_AI_LINK),
+          icon: PiBrain,
+          text: t("ai")
+        }),
         // Interactive media.
-        buildSubOption({text: t("gameDev"), icon: PiGameController}),
+        buildSubOption({
+          onClick: (): void => navigate(SERVICE_INTERACTIVE_MEDIA_LINK),
+          icon: PiGameController,
+          text: t("gameDev")
+        })
       ]
     })}
     {/** Ours products */}
     {buildOption({
+      icon: AiOutlineProduct,
       text: t("products"),
       subOptions: [
         // It solutions development.
-        buildSubOption({text: t("itSolutions"), icon: MdOutlineApps}),
+        buildSubOption({
+          onClick: (): void => navigate(PRODUCTS_SOFTWARE_DEV_LINK),
+          text: t("itSolutions"),
+          icon: MdOutlineApps
+        }),
         // Artifical Inteligence (AI).
-        //buildSubOption({text: t("ai"), icon: PiBrain}),
+        // buildSubOption({
+        //   onClick: (): void => navigate(PRODUCTS_AI_LINK),
+        //   icon: PiBrain,
+        //   text: t("ai")
+        // }),
         // Interactive media.
-        buildSubOption({text: t("gameDev"), icon: PiGameController}),
+        buildSubOption({
+          onClick: (): void => navigate(PRODUCTS_INTERACTIVE_MEDIA_LINK),
+          icon: PiGameController,
+          text: t("gameDev")
+        })
       ]
     })}
     {/** Contact us */}
-    {buildOption({text: t("contact")})}
+    {buildOption({
+      onClick: (): void => navigate(CONTACT_LINK),
+      icon: MdOutlinePhone,
+      text: t("contact")
+    })}
   {/** Dependencies */}
-  </Fragment>, [buildSubOption, buildOption, t]);
+  </Fragment>, [buildSubOption, buildOption, navigate, t]);
 
   // Builds tsx code.
   return <Flex
@@ -213,14 +304,17 @@ export default function Header () {
     >
       {/** Left part */}
       <Flex
-        onClick = {(): void => window.location.reload()}
+        onClick = {(): void => navigate(HOME_LINK)}
         columnGap = {{base: 2, sm: 2, md: 3}}
         transition = "all .2s"
         alignItems = "center"
         cursor = "pointer"
       >
         {/** Company logo */}
-        <ImageRenderer url = {appLogo}/>
+        <ImageRenderer
+          containerStyle = {{height: "40px", width: "40px"}}
+          url = {appLogo}
+        />
         {/** Company name */}
         {windowWidth > BREAKPOINT_316 && <Text
           fontFamily = {POPPINS_SEMI_BOLD}
@@ -272,7 +366,8 @@ export default function Header () {
       alignItems = "flex-start"
       direction = "column"
       paddingInline = {8}
-      paddingBlock = {4}
+      paddingBottom = {6}
+      paddingTop = {4}
       rowGap = {6}
       display = {{
         base: (isMenuDisplayed ? "flex" : "none"),

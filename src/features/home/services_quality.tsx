@@ -5,12 +5,13 @@
  * @supported DESKTOP, MOBILE
  * @file services_quality.tsx
  * @created 2025-07-24
- * @updated 2025-07-31
- * @version 0.0.4
+ * @updated 2025-08-14
+ * @version 0.0.5
  */
 
 // React dependencies.
 import {FaGraduationCap, FaRegComments} from "react-icons/fa6";
+import {NavigateFunction, useNavigate} from "react-router-dom";
 import {FaRegThumbsUp, FaRegGem} from "react-icons/fa";
 import {Fragment} from "react";
 
@@ -22,6 +23,7 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import {SF_SEMI_BOLD, SF_BOLD} from "@/common/constants/variables.ts";
+import {OUR_VALUES_LINK} from "@/common/constants/end_points.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import CustomButton from "@/common/components/button.tsx";
 import InfoCard from "@/common/components/info_card.tsx";
@@ -31,6 +33,7 @@ import Section from "@/common/components/section.tsx";
 export default function ServicesQuality () {
   // Attributes.
   const {t} = useTranslation<string, undefined>(GLOBAL_LANG);
+  const navigate: NavigateFunction = useNavigate();
 
   // Builds tsx code.
   return <Section
@@ -65,6 +68,7 @@ export default function ServicesQuality () {
         >{t("servicesQualityDescription")}</Text>
         {/** Company main worth */}
         <CustomButton
+          onClick = {(): void => navigate(OUR_VALUES_LINK)}
           text = {t("servicesQualityWorth")}
           buttonStyle = {(): ButtonProps => ({
             fontSize: {base: 13, sm: 14, md: 15, lg: 16, xl: 18},
