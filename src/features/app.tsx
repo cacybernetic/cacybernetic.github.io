@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-14
- * @version 0.1.1
+ * @updated 2025-08-15
+ * @version 0.1.2
  * @file app.tsx
  */
 
@@ -14,7 +14,7 @@ import {HashRouter as Router, Routes, Route} from "react-router-dom";
 import {RefObject, useEffect, useRef} from "react";
 
 // Chakra dependencies.
-import {Flex} from "@chakra-ui/react";
+import {Flex, Box} from "@chakra-ui/react";
 
 // Plugin dependencies.
 import {useSelector} from "react-redux";
@@ -27,7 +27,7 @@ import SoftwareDevelopmentService from "@/features/sd_services.tsx";
 import InteractiveMediaProducts from "@/features/im_products.tsx";
 import InteractiveMediaService from "@/features/im_services.tsx";
 import {listenNetworkState} from "@/common/libraries/network.ts";
-import {SF_REGULAR} from "@/common/constants/variables.ts";
+import ScrollHelperArrows from "@/common/components/arrows.tsx";
 import LegalNotices from "@/features/legal_notices.tsx";
 import Toaster from "@/common/components/toaster.tsx";
 import {MessageType} from "@/common/states/alert.ts";
@@ -44,6 +44,12 @@ import MessageBox, {
 	MessageBoxFeatures,
 	ButtonOption
 } from "@/common/components/message_box.tsx";
+import {
+	SCROLL_BOTTOM_ID,
+	SCROLL_ORIGIN_ID,
+	SCROLL_TOP_ID,
+	SF_REGULAR
+} from "@/common/constants/variables.ts";
 import {
 	PRODUCTS_INTERACTIVE_MEDIA_LINK,
 	SERVICE_INTERACTIVE_MEDIA_LINK,
@@ -105,6 +111,8 @@ export default function App () {
   // Builds tsx code.
 	return <Flex
 		fontSize = {{base: 12, sm: 13, md: 14}}
+		id = {SCROLL_ORIGIN_ID.split('#')[1]}
+		scrollBehavior = "smooth"
 		fontFamily = {SF_REGULAR}
 		transition = "all .2s"
 		direction = "column"
@@ -112,8 +120,17 @@ export default function App () {
 		color = "neutral.10"
 		userSelect = "none"
 		overflowY = "auto"
+		position = "fixed"
 		as = "section"
+		bottom = {0}
+		right = {0}
+		left = {0}
+		top = {0}
 	>
+		{/** Scroll helper top target */}
+		<Box id = {SCROLL_TOP_ID.split('#')[1]}/>
+		{/** Global scroll helper arrows */}
+		<ScrollHelperArrows/>
 		{/** Mutable section */}
 		<Router future = {{v7_startTransition: true}}>
 			{/** Header */}
@@ -162,6 +179,8 @@ export default function App () {
 				/>
 			</Routes>
 		</Router>
+		{/** Scroll helper bottom target */}
+		<Box id = {SCROLL_BOTTOM_ID.split('#')[1]}/>
 		{/** Global toaster */}
 		<Toaster/>
 		{/** Global message box */}

@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-08-14
+ * @updated 2025-08-15
  * @file header.tsx
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -46,6 +46,7 @@ import {useSelector} from "react-redux";
 
 // Custom dependencies.
 import ImageRenderer from "@/common/components/image_renderer.tsx";
+import ProgressBar from "@/common/components/progress_bar.tsx";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {RootState} from "@/common/states/store.ts";
 import appLogo from "/assets/logos/app.webp";
@@ -54,6 +55,7 @@ import {
 } from "@/common/constants/storage_keys.ts";
 import {
   POPPINS_SEMI_BOLD,
+  SCROLL_ORIGIN_ID,
   BREAKPOINT_316,
   SF_SEMI_BOLD,
   SF_MEDIUM
@@ -282,6 +284,7 @@ export default function Header () {
   // Builds tsx code.
   return <Flex
     boxShadow = "0 4px 6px var(--chakra-colors-neutral-5)"
+    transform = "translate3d(0, 0, 0)"
     backgroundColor = "neutral.1"
     fontFamily = {SF_SEMI_BOLD}
     direction = "column"
@@ -295,6 +298,11 @@ export default function Header () {
     left = {0}
     top = {0}
   >
+    {/** Progress bar for scroll */}
+    <ProgressBar
+      containerId = {SCROLL_ORIGIN_ID}
+      thumbColor = "primary.800"
+    />
     {/** Top */}
     <Flex
       justifyContent = "space-between"

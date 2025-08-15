@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file sd_services.tsx
  * @created 2025-08-05
- * @updated 2025-08-14
- * @version 0.0.3
+ * @updated 2025-08-15
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -21,10 +21,10 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import {PRODUCTS_SOFTWARE_DEV_LINK} from "@/common/constants/end_points.ts";
-import technicalImage from "/assets/images/technological_excellence.webp";
 import architectureImage from "/assets/images/design_architecture.webp";
 import digitalTransition from "/assets/images/digital_transition.webp";
-import efficienceImage from "/assets/images/company_efficience.webp";
+import programmingImage from "/assets/images/project_programming.webp";
+import teamTrainingImage from "/assets/images/team_training.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -119,7 +119,7 @@ export default function SoftwareDevelopmentService () {
       children = {<InfoPresentation
         {...commonInfoPresentationStyle}
         description = {t("softDevDescription")}
-        imageUrl = {efficienceImage}
+        imageUrl = {programmingImage}
         title = {t("softDevTitle")}
         {...buildLayoutStyle(false)}
       />}
@@ -129,7 +129,7 @@ export default function SoftwareDevelopmentService () {
       {...commonInfoPresentationStyle}
       description = {t("softDevTrainingDescription")}
       title = {t("softDevTrainingTitle")}
-      imageUrl = {technicalImage}
+      imageUrl = {teamTrainingImage}
       {...buildLayoutStyle(true)}
     />}/>
     {/** Audit and review */}
@@ -139,7 +139,7 @@ export default function SoftwareDevelopmentService () {
         {...commonInfoPresentationStyle}
         description = {t("softDevReviewDescription")}
         title = {t("softDevReviewTitle")}
-        imageUrl = {technicalImage}
+        imageUrl = {teamTrainingImage}
         {...buildLayoutStyle(false)}
       />}
     />
