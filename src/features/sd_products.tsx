@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file sd_products.tsx
  * @created 2025-08-12
- * @updated 2025-08-12
- * @version 0.0.1
+ * @updated 2025-08-15
+ * @version 0.0.2
  */
 
 // Plugin dependencies.
@@ -35,10 +35,13 @@ export default function SoftwareDevelopmentProducts () {
     },
     containerStyle: {
       _hover: {backgroundColor: "neutral.1"},
-      width: {base: "full", sm: "416px"},
       backgroundColor: "transparent",
       borderRadius: 0,
-      border: "none"
+      border: "none",
+      width: {
+        lg: "308px", xl: "296px", "2xl": "336px",
+        base: "full", sm: "416px", md: "242px"
+      }
     }
   };
 
@@ -59,11 +62,10 @@ export default function SoftwareDevelopmentProducts () {
       children = {<Flex
         marginTop = {{base: 0, sm: 0, md: 1, lg: 2, xl: 3, "2xl": 4}}
         gap = {{base: 4, sm: 5, md: 6}}
+        justifyContent = "center"
         transition = "all .2s"
-        direction = {{
-          base: "column", sm: "column", md: "column",
-          lg: "column", xl: "column", "2xl": "row"
-        }}
+        width = "full"
+        wrap = "wrap"
       >
         {/** Open transfer */}
         <ProjectCard
@@ -80,6 +82,17 @@ export default function SoftwareDevelopmentProducts () {
           linkedinLink = {
             "https://www.linkedin.com/feed/update/" +
             "urn:li:share:7238227333369729024"
+          }
+        />
+        {/** Gmp motors africa */}
+        <ProjectCard
+          {...commonProjectCardStyle}
+          description = {t("gmpMotorsDescription")}
+          link = "https://gmp-motors.vercel.app"
+          title = "GMP MOTORS AFRICA"
+          type = {t("webApp")}
+          imageUrl = {
+            "https://gmp-motors.vercel.app/assets/render/render_1.webp"
           }
         />
       </Flex>}

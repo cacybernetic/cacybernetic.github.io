@@ -10,6 +10,7 @@
  */
 
 // Responsive breakpoints.
+const BREAKPOINT_1592: number = 1592;
 const BREAKPOINT_316: number = 316;
 
 // Contact information.
@@ -39,6 +40,7 @@ const SF_BOLD: string = "SFBold";
  */
 export {
   // Responsive breakpoints.
+  BREAKPOINT_1592,
   BREAKPOINT_316,
 
   // Contact information.

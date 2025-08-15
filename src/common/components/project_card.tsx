@@ -5,13 +5,15 @@
  * @supported DESKTOP, MOBILE
  * @file project_card.tsx
  * @created 2025-08-12
- * @updated 2025-08-12
- * @version 0.0.1
+ * @updated 2025-08-15
+ * @version 0.0.2
  */
 
 // React dependencies.
+import {SiArtstation, SiSketchfab, SiGumroad} from "react-icons/si";
 import {ReactElement, useCallback} from "react";
 import {BiLogoPlayStore} from "react-icons/bi";
+import {FaDashcube} from "react-icons/fa";
 import {IconType} from "react-icons/lib";
 import {
 	RiArrowRightUpLine,
@@ -52,8 +54,11 @@ export interface ProjectCardProps {
   sourceLinksStyle?: (LinkProps | null),
   containerStyle?: (FlexProps | null),
   mainLinkStyle?: (LinkProps | null),
+  artStationLink?: (string | null),
   imageStyle?: (ImageProps | null),
   playstoreLink?: (string | null),
+  cubeBrushLink?: (string | null),
+  sketchfabLink?: (string | null),
   titleStyle?: (TextProps | null),
 	appstoreLink?: (string | null),
 	linkedinLink?: (string | null),
@@ -61,6 +66,7 @@ export interface ProjectCardProps {
   typeStyle?: (TextProps | null),
   description?: (string | null),
 	youtubeLink?: (string | null),
+  gumroadLink?: (string | null),
   githubLink?: (string | null),
 	gitlabLink?: (string | null),
   imageUrl?: (string | null),
@@ -77,11 +83,15 @@ export default function ProjectCard ({
   sourceLinksStyle,
   descriptionStyle,
   containerStyle,
+  artStationLink,
   playstoreLink,
+  cubeBrushLink,
+  sketchfabLink,
   skeletonStyle,
   mainLinkStyle,
   appstoreLink,
   linkedinLink,
+  gumroadLink,
   description,
   youtubeLink,
   imageStyle,
@@ -96,11 +106,15 @@ export default function ProjectCard ({
   type
 }: ProjectCardProps) {
   // Attributes.
+  artStationLink = correctString<string>({input: artStationLink});
+  cubeBrushLink = correctString<string>({input: cubeBrushLink});
+  sketchfabLink = correctString<string>({input: sketchfabLink});
   playstoreLink = correctString<string>({input: playstoreLink});
   appstoreLink = correctString<string>({input: appstoreLink});
   linkedinLink = correctString<string>({input: linkedinLink});
   description = correctString<string>({input: description});
   youtubeLink = correctString<string>({input: youtubeLink});
+  gumroadLink = correctString<string>({input: gumroadLink});
   githubLink = correctString<string>({input: githubLink});
   gitlabLink = correctString<string>({input: gitlabLink});
   imageUrl = correctString<string>({input: imageUrl});
@@ -244,7 +258,7 @@ export default function ProjectCard ({
 			>{type}</Text>}
       {/** Title */}
       <Text
-        fontSize = {{base: 16, sm: 18, md: 20, lg: 22}}
+        fontSize = {{base: 16, sm: 18, md: 20, lg: 21}}
         fontFamily = {SF_SEMI_BOLD}
         transition = "all .2s"
         as = "h6"
@@ -264,18 +278,26 @@ export default function ProjectCard ({
         height = "100%"
         {...sourcesContainerStyle}
       >
+        {/** Playstore link */}
+        {buildLink(playstoreLink, BiLogoPlayStore)}
+        {/** Artstation link */}
+        {buildLink(artStationLink, SiArtstation)}
+        {/** Linkedin link */}
+        {buildLink(linkedinLink, RiLinkedinLine)}
+        {/** Appstore link */}
+        {buildLink(appstoreLink, RiAppStoreLine)}
+        {/** Sketchfab link */}
+        {buildLink(sketchfabLink, SiSketchfab)}
+        {/** Youtube link */}
+        {buildLink(youtubeLink, RiYoutubeLine)}
+        {/** Cubebrush link */}
+        {buildLink(cubeBrushLink, FaDashcube)}
         {/** Github link */}
         {buildLink(githubLink, RiGithubLine)}
         {/** Gitlab link */}
         {buildLink(gitlabLink, RiGitlabLine)}
-        {/** Youtube link */}
-        {buildLink(youtubeLink, RiYoutubeLine)}
-        {/** Linkedin link */}
-        {buildLink(linkedinLink, RiLinkedinLine)}
-        {/** Playstore link */}
-        {buildLink(playstoreLink, BiLogoPlayStore)}
-        {/** Appstore link */}
-        {buildLink(appstoreLink, RiAppStoreLine)}
+        {/** Gumroad link */}
+        {buildLink(gumroadLink, SiGumroad)}
       </Flex>
     </Flex>
   </Flex>;
