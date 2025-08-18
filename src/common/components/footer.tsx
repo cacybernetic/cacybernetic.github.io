@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-30
- * @updated 2025-07-14
+ * @updated 2025-08-18
  * @file footer.tsx
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // React dependencies.
@@ -28,7 +28,7 @@ import {useTranslation} from "react-i18next";
 import ImageRenderer from "@/common/components/image_renderer.tsx";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import Section from "@/common/components/section.tsx";
-import appLogo from "/assets/logos/app.webp";
+import appLogo from "/assets/logos/app.svg";
 import {
   POPPINS_SEMI_BOLD,
   SF_SEMI_BOLD
@@ -159,14 +159,8 @@ export default function Footer () {
             <ImageRenderer
               url = {appLogo}
               skeletonStyle = {{
-                height: {
-                  lg: "36px", xl: "38px", "2xl": "40px",
-                  base: "24px", sm: "28px", md: "32px"
-                },
-                width: {
-                  lg: "36px", xl: "38px", "2xl": "40px",
-                  base: "24px", sm: "28px", md: "32px"
-                }
+                height: {base: "24px", sm: "28px", md: "32px", lg: "36px"},
+                width: {base: "24px", sm: "28px", md: "32px", lg: "36px"}
               }}
             />
             {/** Name */}
@@ -200,7 +194,10 @@ export default function Footer () {
               icon: IoLogoWhatsapp
             })}
             {/** YouTube */}
-            {buildSimpleSocialNetwork({icon: RiYoutubeFill, link: "#"})}
+            {buildSimpleSocialNetwork({
+              link: "https://www.youtube.com/@consoleartcybernetic680",
+              icon: RiYoutubeFill
+            })}
             {/** Facebook */}
             {buildSimpleSocialNetwork({
               icon: MdOutlineFacebook,

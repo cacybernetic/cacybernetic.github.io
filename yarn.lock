@@ -1232,6 +1232,7 @@ __metadata:
   dependencies:
     "@chakra-ui/icons": "npm:^2.2.4"
     "@chakra-ui/react": "npm:^3.21.0"
+    "@emailjs/browser": "npm:^4.4.1"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.13.0"
     "@eslint/js": "npm:^9.9.0"
@@ -1294,6 +1295,13 @@ __metadata:
     react: ">=18"
     react-dom: ">=18"
   checksum: 10c0/2c299d22dd7d073296554d84c4fcab2274f0b21fd8db718742046a072ec4579df6486b940ab07b404c20b34ad1c468c4ecfd936858dd80126cd0ac210713b730
+  languageName: node
+  linkType: hard
+
+"@emailjs/browser@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "@emailjs/browser@npm:4.4.1"
+  checksum: 10c0/91c3d1702818dc2db61f382f5295e469ce2e6acb4d683d65239e0a12dea8b635cd8cea60ef9a83f2aa8fce857b1f8f8663e02dcd7f529cbf902f1f0e6d0d1b44
   languageName: node
   linkType: hard
 

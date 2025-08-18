@@ -5,13 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file im_services.tsx
  * @created 2025-08-13
- * @updated 2025-08-14
- * @version 0.0.2
+ * @updated 2025-08-18
+ * @version 0.0.3
  */
 
 // React dependencies.
 import {NavigateFunction, useNavigate} from "react-router-dom";
-import {useCallback} from "react";
 
 // Chakra dependencies.
 import {Box} from "@chakra-ui/react";
@@ -67,25 +66,6 @@ export default function InteractiveMediaService () {
     }
   };
 
-  // Builds stylesheet for associated orientation.
-  const buildLayoutStyle = useCallback((
-    invert: boolean
-  ): PresentationProps => ({
-    invert,
-    descriptionStyle: {
-      ...commonInfoPresentationStyle.descriptionStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    },
-    titleStyle: {
-      ...commonInfoPresentationStyle.titleStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    }
-  // Dependencies.
-  }), [
-    commonInfoPresentationStyle.descriptionStyle,
-    commonInfoPresentationStyle.titleStyle
-  ]);
-
   // Builds tsx code.
   return <Box
     paddingTop = {{base: 12, sm: 12, md: 14}}
@@ -113,7 +93,7 @@ export default function InteractiveMediaService () {
       description = {t("gameTechDescription")}
       imageUrl = {excellenceImage}
       title = {t("gameTechTitle")}
-      {...buildLayoutStyle(true)}
+      invert
     />}/>
     {/** A visual style that stands out */}
     <Section
@@ -123,7 +103,6 @@ export default function InteractiveMediaService () {
         description = {t("gameVisualStyleDescription")}
         title = {t("gameVisualStyleTitle")}
         imageUrl = {efficienceImage}
-        {...buildLayoutStyle(false)}
       />}
     />
     {/** Player first before all */}
@@ -132,7 +111,7 @@ export default function InteractiveMediaService () {
       description = {t("gamePlayerFirstDescription")}
       title = {t("gamePlayerFirstTitle")}
       imageUrl = {technicalImage}
-      {...buildLayoutStyle(true)}
+      invert
     />}/>
     {/** Passion as a driving force */}
     <Section
@@ -142,7 +121,6 @@ export default function InteractiveMediaService () {
         description = {t("gamePassionDescription")}
         title = {t("gamePassionTitle")}
         imageUrl = {technicalImage}
-        {...buildLayoutStyle(false)}
       />}
     />
     {/** Footer */}

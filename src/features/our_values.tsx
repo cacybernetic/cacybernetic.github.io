@@ -5,13 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file our_values.tsx
  * @created 2025-08-04
- * @updated 2025-08-14
- * @version 0.0.3
+ * @updated 2025-08-18
+ * @version 0.0.4
  */
 
 // React dependencies.
 import {NavigateFunction, useNavigate} from "react-router-dom";
-import {useCallback} from "react";
 
 // Chakra dependencies.
 import {Box} from "@chakra-ui/react";
@@ -66,25 +65,6 @@ export default function OurValues () {
     }
   };
 
-  // Builds stylesheet for associated orientation.
-  const buildLayoutStyle = useCallback((
-    invert: boolean
-  ): PresentationProps => ({
-    invert,
-    descriptionStyle: {
-      ...commonInfoPresentationStyle.descriptionStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    },
-    titleStyle: {
-      ...commonInfoPresentationStyle.titleStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    }
-  // Dependencies.
-  }), [
-    commonInfoPresentationStyle.descriptionStyle,
-    commonInfoPresentationStyle.titleStyle
-  ]);
-
   // Builds tsx code.
   return <Box
     paddingTop = {{base: 12, sm: 12, md: 14}}
@@ -113,7 +93,7 @@ export default function OurValues () {
         description = {t("companyExcellenceDescription")}
         title = {t("companyExcellenceTitle")}
         imageUrl = {excellenceImage}
-        {...buildLayoutStyle(true)}
+        invert
       />}
     />
     {/** Company performance */}
@@ -124,7 +104,6 @@ export default function OurValues () {
         description = {t("companyEfficienceDescription")}
         title = {t("companyEfficienceTitle")}
         imageUrl = {efficienceImage}
-        {...buildLayoutStyle(false)}
       />}
     />
     {/** Company creativity */}
@@ -134,7 +113,7 @@ export default function OurValues () {
         description = {t("companyCreativityDescription")}
         title = {t("companyCreativityTitle")}
         imageUrl = {creativityImage}
-        {...buildLayoutStyle(true)}
+        invert
       />}
     />
     {/** Company diversity */}
@@ -145,7 +124,6 @@ export default function OurValues () {
         description = {t("companyDiversityDescription")}
         title = {t("companyDiversityTitle")}
         imageUrl = {diversityImage}
-        {...buildLayoutStyle(false)}
       />}
     />
     {/** Footer */}

@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-08-07
- * @updated 2025-08-08
+ * @updated 2025-08-18
  * @file contact.tsx
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // React dependencies.
@@ -15,6 +15,7 @@ import {MdOutlinePhone} from "react-icons/md";
 import {CiMail} from "react-icons/ci";
 
 // Plugin dependencies.
+import emailjs, {EmailJSResponseStatus} from "@emailjs/browser";
 import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 import {Dispatch} from "@reduxjs/toolkit";
@@ -32,11 +33,9 @@ import {
 } from "@chakra-ui/react";
 
 // Custom dependencies.
-import FetchManager, {FetchMethod} from "@/common/libraries/fetch.ts";
 import {CONTACT_SAVE_KEY} from "@/common/constants/storage_keys.ts";
 import {ToastType, showToast} from "@/common/libraries/toast.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import {API_TEST} from "@/common/constants/api_links.ts";
 import {loadFormData} from "@/common/libraries/std.ts";
 import TextField from "@/common/components/input.tsx";
 import Section from "@/common/components/section.tsx";
@@ -61,9 +60,18 @@ export type ContactData = {
   message?: (string | null),
   email?: (string | null)
 };
+type EmailJSConfigs = {
+  templateID: string,
+  serviceID: string,
+  publicKey: string
+};
 
 // Global attributes.
-const fetcher: FetchManager = new FetchManager();
+const emailConfigs: EmailJSConfigs = {
+  serviceID: "contact_support_service",
+  publicKey: "ZPMXo6pioXt2MUbbL",
+  templateID: "gmail_model"
+};
 const infoSectionCommonStyle: FlexProps = {
   transition: "all .2s",
   direction: "column",
@@ -146,14 +154,21 @@ export default function ContactUs () {
     if (isMailValid() && !isOnGoing) {
       // Disables view.
 			dispatch(onGoing(true));
-      // Sends form data to the remote server.
-      const response: (Response | null) = await fetcher.apiFetch({
-        method: FetchMethod.GET, url: API_TEST
-      });
+      // Tries to send written mail.
+      const response: EmailJSResponseStatus = await emailjs.send(
+				emailConfigs.serviceID,
+				emailConfigs.templateID,
+				{
+					from_name: t("companyName"),
+					user_name: fullName.trim(),
+					user_email: email.trim(),
+					message: message.trim()
+				}, {publicKey: emailConfigs.publicKey}
+			);
       // Enables view.
 			dispatch(onGoing(false));
       // Whether we have something.
-      if (response != null && fetcher.isRequestSucceedded(response)) {
+      if (response.status >= 200 && response.status <= 299) {
         // Clears the current entered message.
         setMessage('');
         // Shows a toast about successful operation.
@@ -166,7 +181,7 @@ export default function ContactUs () {
       });
     }
   // Dependencies.
-  }, [isMailValid, isOnGoing, dispatch, t]);
+  }, [isMailValid, dispatch, isOnGoing, fullName, message, email, t]);
 
   // Called when keydown is detected on any input field.
   const handleKeydown = useCallback((event?: KeyboardEvent): void => {

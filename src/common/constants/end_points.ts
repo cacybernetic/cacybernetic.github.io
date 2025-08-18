@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-08
- * @file end_poins.ts
+ * @updated 2025-08-18
+ * @file end_points.ts
  * @version 0.0.3
  */
 

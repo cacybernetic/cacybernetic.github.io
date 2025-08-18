@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-31
- * @updated 2025-08-05
+ * @updated 2025-08-18
  * @file info_card.tsx
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // React dependencies.
@@ -31,9 +31,9 @@ export interface InfoCardProps {
   descriptionStyle?: (TextProps | null),
   containerStyle?: (FlexProps | null),
   headerStyle?: (FlexProps | null),
+  titleStyle?: (TextProps | null),
+  iconStyle?: (IconProps | null),
   icon?: (IconType | null),
-  titleStyle?: (TextProps),
-  iconStyle?: (IconProps),
   description: string,
   title: string
 }
@@ -122,6 +122,7 @@ export default function InfoCard ({
     <Text
       fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
       transition = "all .2s"
+      textAlign = "justify"
       color = "neutral.8"
       {...descriptionStyle}
     >{description}</Text>

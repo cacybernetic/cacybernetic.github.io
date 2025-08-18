@@ -61,83 +61,83 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            src: "./assets/render/render_1.png",
+            src: "./assets/render/render_1.webp",
             form_factor: "wide",
             sizes: "1920x1080",
-            type: "image/png"
+            type: "image/webp"
           },
           {
-            src: "./assets/render/render_2.png",
+            src: "./assets/render/render_2.webp",
             form_factor: "wide",
             sizes: "1920x1080",
-            type: "image/png"
+            type: "image/webp"
           },
           {
-            src: "./assets/render/render_3.png",
+            src: "./assets/render/render_3.webp",
             form_factor: "wide",
             sizes: "1920x1080",
-            type: "image/png"
+            type: "image/webp"
           },
           {
-            src: "./assets/render/render_4.png",
+            src: "./assets/render/render_4.webp",
             sizes: "1920x1080",
-            type: "image/png"
+            type: "image/webp"
           }
         ],
         icons: [
           {
-            src: "./assets/logos/logo-16.png",
-            type: "image/png",
+            src: "./assets/logos/logo-16.webp",
+            type: "image/webp",
             sizes: "16x16"
           },
           {
-            src: "./assets/logos/logo-32.png",
-            type: "image/png",
+            src: "./assets/logos/logo-32.webp",
+            type: "image/webp",
             sizes: "32x32"
           },
           {
-            src: "./assets/logos/logo-48.png",
-            type: "image/png",
+            src: "./assets/logos/logo-48.webp",
+            type: "image/webp",
             sizes: "48x48"
           },
           {
-            src: "./assets/logos/logo-64.png",
-            type: "image/png",
+            src: "./assets/logos/logo-64.webp",
+            type: "image/webp",
             sizes: "64x64"
           },
           {
-            src: "./assets/logos/logo-72.png",
-            type: "image/png",
+            src: "./assets/logos/logo-72.webp",
+            type: "image/webp",
             sizes: "72x72"
           },
           {
-            src: "./assets/logos/logo-96.png",
-            type: "image/png",
+            src: "./assets/logos/logo-96.webp",
+            type: "image/webp",
             sizes: "96x96"
           },
           {
-            src: "./assets/logos/logo-128.png",
-            type: "image/png",
+            src: "./assets/logos/logo-128.webp",
+            type: "image/webp",
             sizes: "128x128"
           },
           {
-            src: "./assets/logos/logo-144.png",
-            type: "image/png",
+            src: "./assets/logos/logo-144.webp",
+            type: "image/webp",
             sizes: "144x144"
           },
           {
-            src: "./assets/logos/logo-192.png",
-            type: "image/png",
+            src: "./assets/logos/logo-192.webp",
+            type: "image/webp",
             sizes: "192x192"
           },
           {
-            src: "./assets/logos/logo-256.png",
-            type: "image/png",
+            src: "./assets/logos/logo-256.webp",
+            type: "image/webp",
             sizes: "256x256"
           },
           {
-            src: "./assets/logos/logo-512.png",
-            type: "image/png",
+            src: "./assets/logos/logo-512.webp",
+            type: "image/webp",
             sizes: "512x512"
           }
         ]

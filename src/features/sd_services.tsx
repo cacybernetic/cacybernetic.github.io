@@ -5,13 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file sd_services.tsx
  * @created 2025-08-05
- * @updated 2025-08-15
- * @version 0.0.4
+ * @updated 2025-08-18
+ * @version 0.0.5
  */
 
 // React dependencies.
 import {NavigateFunction, useNavigate} from "react-router-dom";
-import {useCallback} from "react";
 
 // Chakra dependencies.
 import {Box} from "@chakra-ui/react";
@@ -21,10 +20,11 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import {PRODUCTS_SOFTWARE_DEV_LINK} from "@/common/constants/end_points.ts";
+import digitalTransitionImage from "/assets/images/digital_transition.webp";
 import architectureImage from "/assets/images/design_architecture.webp";
-import digitalTransition from "/assets/images/digital_transition.webp";
 import programmingImage from "/assets/images/project_programming.webp";
 import teamTrainingImage from "/assets/images/team_training.webp";
+import reviewAuditImage from "/assets/images/review_audit.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -65,25 +65,6 @@ export default function SoftwareDevelopmentService () {
     }
   };
 
-  // Builds stylesheet for associated orientation.
-  const buildLayoutStyle = useCallback((
-    invert: boolean
-  ): PresentationProps => ({
-    invert,
-    descriptionStyle: {
-      ...commonInfoPresentationStyle.descriptionStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    },
-    titleStyle: {
-      ...commonInfoPresentationStyle.titleStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    }
-  // Dependencies.
-  }), [
-    commonInfoPresentationStyle.descriptionStyle,
-    commonInfoPresentationStyle.titleStyle
-  ]);
-
   // Builds tsx code.
   return <Box
     paddingTop = {{base: 12, sm: 12, md: 14}}
@@ -98,8 +79,8 @@ export default function SoftwareDevelopmentService () {
         buttonClick = {(): void => navigate(PRODUCTS_SOFTWARE_DEV_LINK)}
         description = {t("softDevSupportDescription")}
         buttonText = {t("discoverProjects")}
+        imageUrl = {digitalTransitionImage}
         title = {t("softDevSupportTitle")}
-        imageUrl = {digitalTransition}
         buttonStyle = {{
           marginBottom: {base: 1, sm: 1, md: 2, lg: 3},
           marginTop: {base: 1, sm: 1, md: 2, lg: 3}
@@ -111,7 +92,7 @@ export default function SoftwareDevelopmentService () {
       description = {t("softDevDesignDescription")}
       title = {t("softDevDesignTitle")}
       imageUrl = {architectureImage}
-      {...buildLayoutStyle(true)}
+      invert
     />}/>
     {/** Software development */}
     <Section
@@ -121,7 +102,6 @@ export default function SoftwareDevelopmentService () {
         description = {t("softDevDescription")}
         imageUrl = {programmingImage}
         title = {t("softDevTitle")}
-        {...buildLayoutStyle(false)}
       />}
     />
     {/** Team training */}
@@ -130,7 +110,7 @@ export default function SoftwareDevelopmentService () {
       description = {t("softDevTrainingDescription")}
       title = {t("softDevTrainingTitle")}
       imageUrl = {teamTrainingImage}
-      {...buildLayoutStyle(true)}
+      invert
     />}/>
     {/** Audit and review */}
     <Section
@@ -139,8 +119,7 @@ export default function SoftwareDevelopmentService () {
         {...commonInfoPresentationStyle}
         description = {t("softDevReviewDescription")}
         title = {t("softDevReviewTitle")}
-        imageUrl = {teamTrainingImage}
-        {...buildLayoutStyle(false)}
+        imageUrl = {reviewAuditImage}
       />}
     />
     {/** Footer */}

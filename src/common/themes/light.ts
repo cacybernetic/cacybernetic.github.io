@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-23
- * @version 0.0.12
- * @file theme.ts
+ * @updated 2025-08-18
+ * @version 0.0.2
+ * @file light.ts
  */
 
 // Chakra dependencies.

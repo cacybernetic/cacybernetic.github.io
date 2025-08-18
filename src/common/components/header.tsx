@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-08-15
+ * @updated 2025-08-18
  * @file header.tsx
- * @version 0.0.4
+ * @version 0.0.5
  */
 
 // React dependencies.
@@ -49,7 +49,7 @@ import ImageRenderer from "@/common/components/image_renderer.tsx";
 import ProgressBar from "@/common/components/progress_bar.tsx";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {RootState} from "@/common/states/store.ts";
-import appLogo from "/assets/logos/app.webp";
+import appLogo from "/assets/logos/app.svg";
 import {
   ACTIVE_LANGUAGE_SAVE_KEY
 } from "@/common/constants/storage_keys.ts";
@@ -320,7 +320,7 @@ export default function Header () {
       >
         {/** Company logo */}
         <ImageRenderer
-          containerStyle = {{height: "40px", width: "40px"}}
+          containerStyle = {{height: "32px", width: "32px"}}
           url = {appLogo}
         />
         {/** Company name */}

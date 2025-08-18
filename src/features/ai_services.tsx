@@ -5,13 +5,12 @@
  * @supported DESKTOP, MOBILE
  * @file sd_services.tsx
  * @created 2025-08-06
- * @updated 2025-08-14
- * @version 0.0.2
+ * @updated 2025-08-18
+ * @version 0.0.3
  */
 
 // React dependencies.
 import {NavigateFunction, useNavigate} from "react-router-dom";
-import {useCallback} from "react";
 
 // Chakra dependencies.
 import {Box} from "@chakra-ui/react";
@@ -21,10 +20,11 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import technicalImage from "/assets/images/technological_excellence.webp";
-import technologyImage from "/assets/images/company_technology.webp";
-import excellenceImage from "/assets/images/company_excellence.webp";
-import efficienceImage from "/assets/images/company_efficience.webp";
+import aiIntegrationImage from "/assets/images/ai_integration.webp";
+import aiPipelinesImage from "/assets/images/ai_pipelines.webp";
+import aiTrainingImage from "/assets/images/team_training.webp";
 import {CONTACT_LINK} from "@/common/constants/end_points.ts";
+import aiPartnerImage from "/assets/images/ai_partner.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -65,25 +65,6 @@ export default function ArtificialIntelligenceService () {
     }
   };
 
-  // Builds stylesheet for associated orientation.
-  const buildLayoutStyle = useCallback((
-    invert: boolean
-  ): PresentationProps => ({
-    invert,
-    descriptionStyle: {
-      ...commonInfoPresentationStyle.descriptionStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    },
-    titleStyle: {
-      ...commonInfoPresentationStyle.titleStyle,
-      textAlign: (invert ? "left" : {base: "left", xl: "right"})
-    }
-  // Dependencies.
-  }), [
-    commonInfoPresentationStyle.descriptionStyle,
-    commonInfoPresentationStyle.titleStyle
-  ]);
-
   // Builds tsx code.
   return <Box
     paddingTop = {{base: 12, sm: 12, md: 14}}
@@ -99,7 +80,7 @@ export default function ArtificialIntelligenceService () {
         description = {t("aiPartnerDescription")}
         buttonText = {t("contactUs")}
         title = {t("aiPartnerTitle")}
-        imageUrl = {technologyImage}
+        imageUrl = {aiPartnerImage}
         buttonStyle = {{
           marginBottom: {base: 1, sm: 1, md: 2, lg: 3},
           marginTop: {base: 1, sm: 1, md: 2, lg: 3}
@@ -110,8 +91,8 @@ export default function ArtificialIntelligenceService () {
       {...commonInfoPresentationStyle}
       description = {t("aiIntegrationDescription")}
       title = {t("aiIntegrationTitle")}
-      imageUrl = {excellenceImage}
-      {...buildLayoutStyle(true)}
+      imageUrl = {aiIntegrationImage}
+      invert
     />}/>
     {/** AI pipelines development */}
     <Section
@@ -120,8 +101,7 @@ export default function ArtificialIntelligenceService () {
         {...commonInfoPresentationStyle}
         description = {t("aiPipelineDescription")}
         title = {t("aiPipelineTitle")}
-        imageUrl = {efficienceImage}
-        {...buildLayoutStyle(false)}
+        imageUrl = {aiPipelinesImage}
       />}
     />
     {/** Product creation under cutting edge technology */}
@@ -130,7 +110,7 @@ export default function ArtificialIntelligenceService () {
       description = {t("aiCreationDescription")}
       title = {t("aiCreationTitle")}
       imageUrl = {technicalImage}
-      {...buildLayoutStyle(true)}
+      invert
     />}/>
     {/** AI training and skills transfer */}
     <Section
@@ -139,8 +119,7 @@ export default function ArtificialIntelligenceService () {
         {...commonInfoPresentationStyle}
         description = {t("aiTrainingDescription")}
         title = {t("aiTrainingTitle")}
-        imageUrl = {technicalImage}
-        {...buildLayoutStyle(false)}
+        imageUrl = {aiTrainingImage}
       />}
     />
     {/** Footer */}

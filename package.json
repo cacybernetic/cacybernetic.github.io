@@ -50,6 +50,7 @@
     "@chakra-ui/react": "^3.21.0",
     "react-router-dom": "^6.26.2",
     "@emotion/styled": "^11.13.0",
+    "@emailjs/browser": "^4.4.1",
     "@chakra-ui/icons": "^2.2.4",
     "@reduxjs/toolkit": "^2.2.7",
     "vite-plugin-pwa": "^0.20.5",

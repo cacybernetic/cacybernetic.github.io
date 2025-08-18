@@ -26,10 +26,10 @@ the link below :
 
 ## Final result <a id = "result"></a>
 This is the final result of the project :<br/><br/>
-![First render](./public/assets/render/render_1.png)
-![Second render](./public/assets/render/render_2.png)
-![Third render](./public/assets/render/render_3.png)
-![Fourth render](./public/assets/render/render_4.png)
+![First render](./public/assets/render/render_1.webp)
+![Second render](./public/assets/render/render_2.webp)
+![Third render](./public/assets/render/render_3.webp)
+![Fourth render](./public/assets/render/render_4.webp)
 
 ## Project installation <a id = "install"></a>
 This project uses <i><a href = "https://vitejs.dev/guide">Vite</a></i>

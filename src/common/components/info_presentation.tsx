@@ -5,8 +5,8 @@
  * @file info_presentation.tsx
  * @supported DESKTOP, MOBILE
  * @created 2025-07-31
- * @updated 2025-08-14
- * @version 0.0.2
+ * @updated 2025-08-18
+ * @version 0.0.3
  */
 
 // Chakra dependencies.
@@ -127,6 +127,7 @@ export default function InfoPresentation ({
       {description.length > 0 && <Text
         fontSize = {{base: 14, sm: 15, md: 16, lg: 18}}
         transition = "all .2s"
+        textAlign = "justify"
         color = "neutral.8"
         {...descriptionStyle}
       >{description}</Text>}
