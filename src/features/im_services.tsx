@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file im_services.tsx
  * @created 2025-08-13
- * @updated 2025-08-18
- * @version 0.0.3
+ * @updated 2025-08-19
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -19,10 +19,11 @@ import {Box} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
-import technicalImage from "/assets/images/technological_excellence.webp";
-import technologyImage from "/assets/images/company_technology.webp";
-import excellenceImage from "/assets/images/company_excellence.webp";
-import efficienceImage from "/assets/images/company_efficience.webp";
+import gameTechnologyImage from "/assets/images/game_technology.webp";
+import gamePassionImage from "/assets/images/game_technology.webp";
+import playerFirstImage from "/assets/images/player_first.webp";
+import visualStyleImage from "/assets/images/visual_style.webp";
+import gameWorldsImage from "/assets/images/game_worlds.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";
 import Section from "@/common/components/section.tsx";
@@ -81,7 +82,7 @@ export default function InteractiveMediaService () {
         description = {t("gameWorldsDescription")}
         buttonText = {t("discoverProjects")}
         title = {t("gameWorldsTitle")}
-        imageUrl = {technologyImage}
+        imageUrl = {gameWorldsImage}
         buttonStyle = {{
           marginBottom: {base: 1, sm: 1, md: 2, lg: 3},
           marginTop: {base: 1, sm: 1, md: 2, lg: 3}
@@ -91,7 +92,7 @@ export default function InteractiveMediaService () {
     <Section children = {<InfoPresentation
       {...commonInfoPresentationStyle}
       description = {t("gameTechDescription")}
-      imageUrl = {excellenceImage}
+      imageUrl = {gameTechnologyImage}
       title = {t("gameTechTitle")}
       invert
     />}/>
@@ -102,7 +103,7 @@ export default function InteractiveMediaService () {
         {...commonInfoPresentationStyle}
         description = {t("gameVisualStyleDescription")}
         title = {t("gameVisualStyleTitle")}
-        imageUrl = {efficienceImage}
+        imageUrl = {visualStyleImage}
       />}
     />
     {/** Player first before all */}
@@ -110,7 +111,7 @@ export default function InteractiveMediaService () {
       {...commonInfoPresentationStyle}
       description = {t("gamePlayerFirstDescription")}
       title = {t("gamePlayerFirstTitle")}
-      imageUrl = {technicalImage}
+      imageUrl = {playerFirstImage}
       invert
     />}/>
     {/** Passion as a driving force */}
@@ -120,7 +121,7 @@ export default function InteractiveMediaService () {
         {...commonInfoPresentationStyle}
         description = {t("gamePassionDescription")}
         title = {t("gamePassionTitle")}
-        imageUrl = {technicalImage}
+        imageUrl = {gamePassionImage}
       />}
     />
     {/** Footer */}

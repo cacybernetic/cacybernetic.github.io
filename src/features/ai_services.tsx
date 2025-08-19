@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file sd_services.tsx
  * @created 2025-08-06
- * @updated 2025-08-18
- * @version 0.0.3
+ * @updated 2025-08-19
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -19,10 +19,10 @@ import {Box} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
-import technicalImage from "/assets/images/technological_excellence.webp";
 import aiIntegrationImage from "/assets/images/ai_integration.webp";
 import aiPipelinesImage from "/assets/images/ai_pipelines.webp";
 import aiTrainingImage from "/assets/images/team_training.webp";
+import aiCreationImage from "/assets/images/ai_creation.webp";
 import {CONTACT_LINK} from "@/common/constants/end_points.ts";
 import aiPartnerImage from "/assets/images/ai_partner.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
@@ -109,7 +109,7 @@ export default function ArtificialIntelligenceService () {
       {...commonInfoPresentationStyle}
       description = {t("aiCreationDescription")}
       title = {t("aiCreationTitle")}
-      imageUrl = {technicalImage}
+      imageUrl = {aiCreationImage}
       invert
     />}/>
     {/** AI training and skills transfer */}

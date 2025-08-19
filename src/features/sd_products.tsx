@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file sd_products.tsx
  * @created 2025-08-12
- * @updated 2025-08-15
- * @version 0.0.2
+ * @updated 2025-08-19
+ * @version 0.0.3
  */
 
 // Plugin dependencies.
@@ -71,7 +71,7 @@ export default function SoftwareDevelopmentProducts () {
         <ProjectCard
           {...commonProjectCardStyle}
           githubLink = "https://github.com/cacybernetic/opentransfer"
-          link = "https://cacybernetic.github.io/opentransfer"
+          link = "https://cacybernetic.github.io/opentransfer/"
           description = {t("openTransferDescription")}
           title = "Open Transfer"
           type = {t("mobileApp")}
