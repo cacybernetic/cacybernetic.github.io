@@ -4,15 +4,15 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-08-19
+ * @version 0.0.2
  * @file store.ts
  */
 
 // Plugin dependencies.
 import {configureStore, Store} from "@reduxjs/toolkit";
-import alert from "./alert.ts";
-import app from "./app.ts";
+import alert from "@/common/states/alert.ts";
+import app from "@/common/states/app.ts";
 
 // Global store configuration.
 export const store: Store = configureStore({

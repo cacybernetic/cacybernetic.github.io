@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-08-19
+ * @version 0.0.2
  * @file std.ts
  */
 
@@ -14,8 +14,8 @@ import i18next from "i18next";
 
 // Custom dependencies.
 import {SOCKET_HOST, HOST} from "@/common/constants/api_links.ts";
+import {showToast, ToastType} from "@/common/libraries/toast.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import {showToast, ToastType} from "./toast.ts";
 
 // Types.
 type JSObject = {[key: string]: unknown};

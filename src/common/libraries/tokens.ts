@@ -4,13 +4,13 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
+ * @updated 2025-08-19
  * @file tokens.ts
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // Custom dependencies.
-import {correctString} from "./std.ts";
+import {correctString} from "@/common/libraries/std.ts";
 import {
 	LOGGED_USER_ID_SAVE_KEY,
 	REFRESH_TOKEN_SAVE_KEY,

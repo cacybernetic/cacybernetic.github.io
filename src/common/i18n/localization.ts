@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file localization.ts
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-08-19
+ * @version 0.0.2
  */
 
 // Plugin dependencies.
@@ -15,8 +15,8 @@ import i18next from "i18next";
 
 // Custom dependencies.
 import {ACTIVE_LANGUAGE_SAVE_KEY} from "@/common/constants/storage_keys.ts";
-import english from "./english.json";
-import french from "./french.json";
+import english from "@/common/i18n/english.json";
+import french from "@/common/i18n/french.json";
 
 // Attributes.
 export const GLOBAL_LANG: string = "activeLanguage";

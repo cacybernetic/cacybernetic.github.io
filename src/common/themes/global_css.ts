@@ -1,15 +1,15 @@
 /**
- * @fileoverview Global css styles for general effects over the whole app.
  * @project CAC - https://github.com/cacybernetic/cacybernetic.github.io
+ * @fileoverview Global css styles for general effects over whole app.
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-08
+ * @updated 2025-08-19
  * @file global_css.ts
- * @version 0.0.4
+ * @version 0.0.5
  */
 
-// Exports general CSS style.
+// Exports general css.
 export default `
   /** Custom css root variables */
   :root {

@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-08-19
+ * @version 0.0.2
  * @file toast.ts
  */
 
@@ -21,9 +21,9 @@ import i18next from "i18next";
 // Custom dependencies.
 import {MessageBoxProps} from "@/common/components/message_box.tsx";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
+import {correctString} from "@/common/libraries/std.ts";
 import {showWith} from "@/common/states/alert.ts";
 import {store} from "@/common/states/store.ts";
-import {correctString} from "./std.ts";
 
 // Enumerations.
 enum ToastType {

@@ -4,9 +4,9 @@
  * @fileoverview Global fonts pallete.
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
+ * @updated 2025-08-19
  * @file fonts.tsx
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // React dependencies.
@@ -23,10 +23,10 @@ import PoppinsLight from "/assets/fonts/poppins_light.ttf";
 import PoppinsBold from "/assets/fonts/poppins_bold.ttf";
 import SFSemiBold from "/assets/fonts/sf_semibold.otf";
 import SFRegular from "/assets/fonts/sf_regular.otf";
+import global_css from "@/common/themes/global_css";
 import SFMedium from "/assets/fonts/sf_medium.otf";
 import SFLight from "/assets/fonts/sf_light.otf";
 import SFBold from "/assets/fonts/sf_bold.otf";
-import global_css from "./global_css";
 
 // Fonts family.
 export default function Fonts (): ReactElement {

@@ -4,8 +4,8 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
- * @version 0.0.1
+ * @updated 2025-08-19
+ * @version 0.0.2
  * @file fetch.ts
  */
 
@@ -14,12 +14,12 @@ import i18next from "i18next";
 
 // Custom dependencies.
 import {ACCESS_TOKEN_SAVE_KEY} from "@/common/constants/storage_keys.ts";
+import {sendFeedback, ToastType} from "@/common/libraries/toast.ts";
+import {getTokens, clearData} from "@/common/libraries/tokens.ts";
 import {ButtonOption} from "@/common/components/message_box.tsx";
+import {checkNetworkState} from "@/common/libraries/network.ts";
 import {normalizeAPILink, isValidJSObject} from "./std.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import {sendFeedback, ToastType} from "./toast.ts";
-import {getTokens, clearData} from "./tokens.ts";
-import {checkNetworkState} from "./network.ts";
 
 // Enumerations.
 enum FetchMethod {

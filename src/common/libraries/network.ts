@@ -4,17 +4,17 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-07-21
+ * @updated 2025-08-19
  * @file network.ts
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 // Plugin dependencies.
 import i18next from "i18next";
 
 // Custom dependencies.
+import {showToast, ToastType} from "@/common/libraries/toast.ts";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
-import {showToast, ToastType} from "./toast.ts";
 
 // Types.
 type CheckNetworkStateProps = {verbose?: boolean, state: boolean};
