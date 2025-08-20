@@ -5,8 +5,8 @@
  * @supported DESKTOP, MOBILE
  * @file im_services.tsx
  * @created 2025-08-13
- * @updated 2025-08-19
- * @version 0.0.4
+ * @updated 2025-08-20
+ * @version 0.0.5
  */
 
 // React dependencies.
@@ -20,9 +20,9 @@ import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
 import gameTechnologyImage from "/assets/images/game_technology.webp";
-import gamePassionImage from "/assets/images/game_technology.webp";
 import playerFirstImage from "/assets/images/player_first.webp";
 import visualStyleImage from "/assets/images/visual_style.webp";
+import gamePassionImage from "/assets/images/game_passion.webp";
 import gameWorldsImage from "/assets/images/game_worlds.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import {SF_BOLD} from "@/common/constants/variables.ts";

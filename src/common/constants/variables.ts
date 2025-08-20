@@ -4,18 +4,18 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-15
+ * @updated 2025-08-20
  * @file variables.ts
  * @version 0.0.4
  */
 
-// Responsive breakpoints.
-const BREAKPOINT_1592: number = 1592;
-const BREAKPOINT_316: number = 316;
-
 // Contact information.
 const COMPANY_GMAIL: string = "ca.cybernetic@gmail.com";
 const COMPANY_PHONE: string = "(+229) 019 798 5109";
+
+// Responsive breakpoints.
+const BREAKPOINT_1592: number = 1592;
+const BREAKPOINT_316: number = 316;
 
 // Section ids.
 const SCROLL_BOTTOM_ID: string = "div#scroll-helper-bottom";

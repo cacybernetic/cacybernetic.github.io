@@ -4,9 +4,9 @@
  * @fileoverview Displays company history.
  * @supported DESKTOP, MOBILE
  * @created 2025-08-01
- * @updated 2025-08-05
+ * @updated 2025-08-20
  * @file our_story.tsx
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 // Chakra dependencies.
@@ -16,8 +16,8 @@ import {Flex, Box} from "@chakra-ui/react";
 import {useTranslation} from "react-i18next";
 
 // Custom dependencies.
-import technicalImage from "/assets/images/technological_excellence.webp";
 import ourHistoryImage from "/assets/images/our_history.webp";
+import whoAreUsImage from "/assets/images/who_are_us.webp";
 import {GLOBAL_LANG} from "@/common/i18n/localization.ts";
 import InfoCard from "@/common/components/info_card.tsx";
 import {SF_BOLD} from "@/common/constants/variables.ts";
@@ -69,7 +69,7 @@ export default function OurHistory () {
       {...commonInfoPresentationStyle}
       description = {t("whoAreUsDescription")}
       title = {t("whoAreUsTitle")}
-      imageUrl = {technicalImage}
+      imageUrl = {whoAreUsImage}
     />}/>
     {/** More info about us */}
     <Section
