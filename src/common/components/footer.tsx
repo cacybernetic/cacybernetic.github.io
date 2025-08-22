@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-30
- * @updated 2025-08-18
+ * @updated 2025-08-22
  * @file footer.tsx
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 // React dependencies.
@@ -211,7 +211,7 @@ export default function Footer () {
       </Flex>
       {/** Copyright */}
       <Flex
-        padding = {{base: 2, sm: 3, md: 4}}
+        paddingBlock = {{base: 2, sm: 3, md: 4}}
         borderTopColor = "neutral.6"
         justifyContent = "center"
         alignItems = "center"
@@ -220,7 +220,7 @@ export default function Footer () {
       >
         {/** Signature */}
         <Text
-          fontSize = {{base: 12, sm: 13, md: 14}}
+          fontSize = {{base: 11, sm: 12, md: 13, lg: 14}}
           transition = "all .2s"
           textAlign = "center"
         >
