@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-21
- * @updated 2025-08-20
+ * @updated 2025-08-23
  * @file variables.ts
- * @version 0.0.4
+ * @version 0.0.5
  */
 
 // Contact information.
@@ -16,6 +16,7 @@ const COMPANY_PHONE: string = "(+229) 019 798 5109";
 // Responsive breakpoints.
 const BREAKPOINT_1592: number = 1592;
 const BREAKPOINT_316: number = 316;
+const BREAKPOINT_416: number = 416;
 
 // Section ids.
 const SCROLL_BOTTOM_ID: string = "div#scroll-helper-bottom";
@@ -39,10 +40,6 @@ const SF_BOLD: string = "SFBold";
  * @exports *
  */
 export {
-  // Responsive breakpoints.
-  BREAKPOINT_1592,
-  BREAKPOINT_316,
-
   // Contact information.
   COMPANY_GMAIL,
   COMPANY_PHONE,
@@ -51,6 +48,11 @@ export {
   SCROLL_BOTTOM_ID,
   SCROLL_ORIGIN_ID,
   SCROLL_TOP_ID,
+
+  // Responsive breakpoints.
+  BREAKPOINT_1592,
+  BREAKPOINT_416,
+  BREAKPOINT_316,
 
   // Font families.
   POPPINS_SEMI_BOLD,

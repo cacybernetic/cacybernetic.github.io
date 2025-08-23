@@ -4,9 +4,9 @@
  * @author Obrymec - https://obrymec.vercel.app
  * @supported DESKTOP, MOBILE
  * @created 2025-07-22
- * @updated 2025-08-18
+ * @updated 2025-08-23
  * @file header.tsx
- * @version 0.0.5
+ * @version 0.0.6
  */
 
 // React dependencies.
@@ -56,7 +56,7 @@ import {
 import {
   POPPINS_SEMI_BOLD,
   SCROLL_ORIGIN_ID,
-  BREAKPOINT_316,
+  BREAKPOINT_416,
   SF_SEMI_BOLD,
   SF_MEDIUM
 } from "@/common/constants/variables.ts";
@@ -139,7 +139,7 @@ export default function Header () {
   >
     {/** Vector icon */}
     {icon != null && <Icon
-      display = {{base: "inline-block", sm: "inline-block", md: "none"}}
+      display = {{base: "inline-block", lg: "none"}}
       marginRight = {2}
       height = {6}
       width = {6}
@@ -324,7 +324,7 @@ export default function Header () {
           url = {appLogo}
         />
         {/** Company name */}
-        {windowWidth > BREAKPOINT_316 && <Text
+        {windowWidth > BREAKPOINT_416 && <Text
           fontFamily = {POPPINS_SEMI_BOLD}
           whiteSpace = "nowrap"
           lineHeight = {0}
@@ -333,16 +333,13 @@ export default function Header () {
       </Flex>
       {/** Centered part */}
       <Flex
-        display = {{base: "none", sm: "none", md: "inline-flex"}}
         columnGap = {{base: 2, sm: 2, md: 4, lg: 6, xl: 7}}
+        display = {{base: "none", lg: "inline-flex"}}
         transition = "all .2s"
         alignItems = "center"
       >{buildOptions}</Flex>
       {/** Right part */}
-      <Flex
-        columnGap = {{base: 3, sm: 4}}
-        alignItems = "center"
-      >
+      <Flex columnGap = {{base: 3, sm: 4}} alignItems = "center">
         {/** Language selection */}
         <ReactFlagsSelect
           onSelect = {(code: string): void => switchLanguage(code)}
@@ -357,9 +354,9 @@ export default function Header () {
         />
         {/** Emburger menu */}
         <Icon
-          display = {{base: "inline-block", sm: "inline-block", md: "none"}}
           onClick = {(): void => displayMenu(!isMenuDisplayed)}
           as = {isMenuDisplayed ? IoCloseOutline : RiMenu5Fill}
+          display = {{base: "inline-block", lg: "none"}}
           _hover = {{color: "primary.600"}}
           transition = "all .2s"
           color = "neutral.9"
@@ -380,7 +377,8 @@ export default function Header () {
       display = {{
         base: (isMenuDisplayed ? "flex" : "none"),
         sm: (isMenuDisplayed ? "flex" : "none"),
-        md: "none"
+        md: (isMenuDisplayed ? "flex" : "none"),
+        lg: "none"
       }}
     >{buildOptions}</Flex>
   </Flex>;
